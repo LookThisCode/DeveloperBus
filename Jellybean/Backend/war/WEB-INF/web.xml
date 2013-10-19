@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+	 <!-- Servlets -->
+	<servlet>
+	  <servlet-name>greetServlet</servlet-name>
+	  <servlet-class>jellybean_logistic.server.GreetingServiceImpl</servlet-class>
+	</servlet>
+	 
+	<servlet-mapping>
+	  <servlet-name>greetServlet</servlet-name>
+	  <url-pattern>/jellybean_logistic/greet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- API Servlets -->
+	
+	<!-- /api/gethomeposition -->
+	<servlet>
+		<servlet-name>GetHomePositionServlet</servlet-name>
+		<servlet-class>jellybean_logistic.GetHomePositionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetHomePositionServlet</servlet-name>
+		<url-pattern>/api/gethomeposition</url-pattern>
+	</servlet-mapping>
+	
+	<!-- /api/getposition -->
+	<servlet>
+		<servlet-name>GetPositionServlet</servlet-name>
+		<servlet-class>jellybean_logistic.GetPositionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetPositionServlet</servlet-name>
+		<url-pattern>/api/getposition</url-pattern>
+	</servlet-mapping>
+	
+	<!-- /api/getroute -->
+	<servlet>
+		<servlet-name>GetRouteServlet</servlet-name>
+		<servlet-class>jellybean_logistic.GetRouteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetRouteServlet</servlet-name>
+		<url-pattern>/api/getroute</url-pattern>
+	</servlet-mapping>
+	
+	<!-- /api/setroute -->
+	<servlet>
+		<servlet-name>SetPositionServlet</servlet-name>
+		<servlet-class>jellybean_logistic.SetPositionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SetPositionServlet</servlet-name>
+		<url-pattern>/api/setposition</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Default page to serve -->
+	<welcome-file-list>
+	  <welcome-file>viewer.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>
