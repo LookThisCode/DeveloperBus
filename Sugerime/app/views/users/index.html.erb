@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="span8">
+<h1>Usuarios en el shopping</h1>
+
+<ul id="users_list">
+
+<% @users.each do |user| %>
+  <li>
+    <ul>
+    <li>Nombre: <%= user.email %></li>
+    <li>¿Qué busca?: <%= user.need %></li>
+    <li>
+      Ofertas de otros locales
+      <ul>
+        <% user.directed_offers.each do |offer| %>
+        <li>Local: <%=offer.company.name%></li>
+        <li>Oferta: <%=offer.description%></li>
+        <% end %>
+      </ul>
+    </li>
+    <li><%= link_to 'Nueva oferta', offers_directed_offer_path(:user_id => user.id) %></li>
+    </ul>
+  </li>
+<% end %>
+</ul>
+
+<br />
+
+<%= link_to "Salir", destroy_user_session_path, :method => :delete %>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+    update_users = function() {
+
+        $.getJSON("http://localhost:3000/users.json", function(result) {
+            $("#users_list").empty();
+
+            $.each(result, function(elem) {
+
+                var other_offers = "";
+
+                $.each(result[elem].directed_offers, function(o) {
+                   other_offers += "<li>Local: "+result[elem].directed_offers[o].company.name+"</li><li>Oferta: "+result[elem].directed_offers[o].description+"</li>";
+                });
+                           console.log("<li><a href='/offers/directed_offer?user_id='"+result[elem].id+">Nueva oferta</a></li>")
+                $("#users_list").append("<li>"+
+                        "<ul>"+
+                        "<li>Nombre: "+result[elem].email+"</li>"+
+                        "<li>¿Qué busca?: "+result[elem].need+"</li>"+
+                        "<li>"+
+                        "Ofertas de otros locales"+
+                        "<ul>"+
+                        other_offers+
+                        "</ul>"+
+                        "</li>"+
+                        "<li><a href='/offers/directed_offer?user_id="+result[elem].id+"'>Nueva oferta</a></li>"+
+                        "</ul>"+
+                "</li>");
+            })
+
+
+            setTimeout(function() {update_users()}, 5000);
+        });
+
+    }
+
+    $().ready(function() {
+
+        setTimeout(function() {update_users()}, 5000);
+    });
+</script>
+

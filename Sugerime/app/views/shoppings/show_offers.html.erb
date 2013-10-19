@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @shopping.name %>
+</p>
+<h2>Hay <%=@companies_count%> locales esperandote</h2>
+
+<div class="row">
+  <div class="span8">
+    <h2>Promociones</h2>
+
+    <table>
+      <thead>
+          <tr>
+            <th>Local</th>
+            <th>Descripcion</th>
+          </tr>
+      </thead>
+      <tbody id="offers_list">
+          <% @offers.each do |o| %>
+              <tr>
+                <td><%= o.company.name %></td>
+                <td><%= o.description %></td>
+              </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+    update_offers = function() {
+
+        $.getJSON("http://localhost:3000/shoppings/<%= @shopping.id %>+/offers.json", function(result) {
+            $("#offers_list").empty();
+
+            $.each(result, function(elem) {
+                $("#offers_list").append("<tr><td>"+result[elem].company.name+"</td><td>"+result[elem].description+"</td></tr>");
+            })
+
+            setTimeout(function() {update_offers()}, 5000);
+        });
+
+    }
+
+    $().ready(function() {
+
+        setTimeout(function() {update_offers()}, 5000);
+    });
+</script>
+

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if (IE 9)]><html class="no-js ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+
+
+
+  <!-- Meta Tags -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag 'gmaps4rails' %>
+  <%= javascript_include_tag "application" %>
+
+  <!-- Js -->
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+  <script src="/assets/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+  <script src="/assets/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+  <script src="/assets/bootstrap.min.js"></script> <!-- Bootstrap -->
+  <script src="/assets/supersized.3.2.7.min.js"></script> <!-- Slider -->
+  <script src="/assets/waypoints.js"></script> <!-- WayPoints -->
+  <script src="/assets/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
+  <script src="/assets/jquery.isotope.js"></script> <!-- Isotope Filter -->
+  <script src="/assets/jquery.tweet.js"></script> <!-- Tweet -->
+  <script src="/assets/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+  <script src="/assets/main.js"></script> <!-- Default JS -->
+  <!-- End Js -->
+  <%= csrf_meta_tags %>
+
+  <meta name="description" content="Sugerime" />
+
+  <!-- Mobile Specifics -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true"/>
+  <meta name="MobileOptimized" content="320"/>
+
+  <!-- Mobile Internet Explorer ClearType Technology -->
+  <!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
+
+  <!-- Bootstrap -->
+  <link href="/assets/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Main Style -->
+  <link href="/assets/main.css" rel="stylesheet">
+
+  <!-- Supersized -->
+  <link href="/assets/supersized.css" rel="stylesheet">
+  <link href="/assets/supersized.shutter.css" rel="stylesheet">
+
+  <!-- FancyBox -->
+  <link href="/assets/fancybox/jquery.fancybox.css" rel="stylesheet">
+
+  <!-- Font Icons -->
+  <link href="/assets/fonts.css" rel="stylesheet">
+
+  <!-- Shortcodes -->
+  <link href="/assets/shortcodes.css" rel="stylesheet">
+
+  <!-- Responsive -->
+  <link href="/assets/bootstrap-responsive.min.css" rel="stylesheet">
+  <link href="/assets/responsive.css" rel="stylesheet">
+
+  <!-- Supersized -->
+  <link href="/assets/supersized.css" rel="stylesheet">
+  <link href="/assets/supersized.shutter.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+
+  <!-- Fav Icon -->
+  <link rel="shortcut icon" href="#">
+
+  <link rel="apple-touch-icon" href="#">
+  <link rel="apple-touch-icon" sizes="114x114" href="#">
+  <link rel="apple-touch-icon" sizes="72x72" href="#">
+  <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+  <!-- Modernizr -->
+  <script src="/assets/modernizr.js"></script>
+
+  <!-- Analytics -->
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'Insert Your Code']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+  <!-- End Analytics -->
+
+</head>
+
+<body>
+
+
+<!-- This section is for Splash Screen -->
+<div class="ole">
+  <section id="jSplash">
+    <div id="circle"></div>
+  </section>
+</div>
+<!-- End of Splash Screen -->
+
+<div class="bs-docs-example">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <img class="brand" src="/assets/logo_mini.png">
+
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+</div>
+
+
+
+
+
+<!-- Homepage Slider -->
+<!--<div id="home-slider">-->
+  <!--<div class="overlay"></div>-->
+
+  <div class="container">
+
+<%= yield %>
+
+    <%= yield :scripts %>
+
+  </div>
+
+
+<!--</div>-->
+<!-- End Homepage Slider -->
+
+
+
+<!-- Socialize -->
+<div id="social-area" class="page">
+  <div class="container">
+    <div class="row">
+      <div class="span11">
+        <nav id="social">
+          <ul>
+            <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
+            <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
+            <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Socialize -->
+
+<!-- Footer -->
+<footer>
+  <p class="credits">Google Bus <a href="http://www.flipstudios.com.ar">Sugerime</a></p>
+</footer>
+<!-- End Footer -->
+
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+  <i class="font-icon-arrow-simple-up"></i>
+</a>
+<!-- End Back to Top -->
+
+
+
+</body>
+</html>

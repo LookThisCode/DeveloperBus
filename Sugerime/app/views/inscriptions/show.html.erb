@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @inscription.user_id %>
+</p>
+
+<p>
+  <b>Company:</b>
+  <%= @inscription.company_id %>
+</p>
+
+<p>
+  <b>Validation code:</b>
+  <%= @inscription.validation_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_inscription_path(@inscription) %> |
+<%= link_to 'Back', inscriptions_path %>

@@ -1,0 +1,31 @@
+#encoding: utf-8
+
+<%= semantic_nested_form_for [:admin, @shopping] do |f|%>
+
+   <div>
+     <%=f.inputs "Dirección" , :for => [:address, f.object.address || Address.new] do |h|%>
+         
+         <%=h.input :street %>
+         <%=h.input :number %>
+         <%=h.input :country_id, :as => :select, :collection => Country.all %>
+         <%=h.input :state_id, :as => :select, :collection => State.all %>
+         <%=h.input :city %>
+         <%=h.input :gmaps, :as => :hidden, :value => false%>
+     <% end %>
+   </div>
+
+   <div>
+   <%=f.inputs "Info de Empresa" do%>
+       <%= f.input :name %>
+   <%end%>
+   </div>
+
+   <%= f.actions do %>
+       <%= f.action :submit %>
+       <li class="cancel">
+         <%=link_to "Cancelar", admin_shoppings_path%>
+       </li>
+   <% end %>
+
+
+<% end%>

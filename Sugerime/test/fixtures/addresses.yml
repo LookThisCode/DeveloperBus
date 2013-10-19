@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  country_id: 1
+  state_id: 1
+  latitude: 1.5
+  longitude: 1.5
+  gmaps: false
+  street;string: MyString
+  number: MyString
+  city: MyString
+
+two:
+  country_id: 1
+  state_id: 1
+  latitude: 1.5
+  longitude: 1.5
+  gmaps: false
+  street;string: MyString
+  number: MyString
+  city: MyString

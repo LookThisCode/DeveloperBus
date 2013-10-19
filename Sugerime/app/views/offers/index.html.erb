@@ -1,0 +1,27 @@
+<h1>Ofertas</h1>
+
+<table class="table table-condensed">
+  <tr>
+    <th>Descripcion</th>
+    <th>Compania</th>
+    <th>Expiracion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @offers.each do |offer| %>
+  <tr class="success">
+    <td><%= offer.description %></td>
+    <td><%= offer.company_id %></td>
+    <td><%= offer.expiration %></td>
+    <td><%= link_to 'Show', offer %></td>
+    <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+    <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Offer', new_offer_path, :class => "btn button-primary" %>
