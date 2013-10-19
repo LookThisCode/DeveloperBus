@@ -1,0 +1,30 @@
+<%= form_for(@offer) do |f| %>
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
+
+      <ul>
+      <% @offer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <br/>
+    <%= f.hidden_field :company_id, :value => Company.where(:user_id => current_user.id).first.id %>
+    <%= f.hidden_field :user_id, :value => @user.id unless @user.nil? %>
+  </div>
+  <div class="field">
+    <%= f.label :expiration %><br />
+    <%= f.datetime_select :expiration %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
