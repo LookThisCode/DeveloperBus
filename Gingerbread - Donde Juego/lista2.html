@@ -1,0 +1,167 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>&iquest;D&oacute;nde Juego?
+</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" media="screen"/>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+ $(function() {
+    $( "#accordion" ).accordion();
+  });
+  
+  function reservar(){
+  $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      width:400,
+      height:200,
+      closeOnEscape: true,
+      modal: true,
+      buttons: {
+        "Aceptar": function() {
+          window.location.href='reserva.html';
+        },
+        "Cancelar": function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+    }
+</script>
+</head>
+
+<body>
+<div class="divfondo">
+	<div style="height:100px;">
+				<table align="left">
+			    	<tr>
+				         <td>
+				             <input type="button" class="botonimagen" value=""/>
+				         </td>
+			         </tr>
+			         <tr>
+				         <td>
+				             <a href="">Ya estoy registrado</a>
+				         </td>
+			         </tr>
+			    </table>
+			    <table align="right">
+			    	<tr>
+				         <td>
+				             <a href="">Log-in </a> | <a href="">Registrarse </a>
+				         </td>
+			         </tr>
+			    </table>
+	</div>
+	<div style="height:300px;">
+			    <table align="right">
+			    	<tr>
+				         <td>
+				             <input type="button" class="botonprop" value=""/>
+				         </td>
+				         <td>
+				             <input type="button" class="botondesc" value=""/>
+				         </td>
+				         <td>
+				             <input type="button" class="botoncontacto" value=""/>
+				         </td>
+			         </tr>
+			    </table>
+	</div>
+	<div id="accordion">
+	  <h3>Cancha 1</h3>
+	  <div>
+	    <table class="lista" width="100%">
+	    	<tr bgcolor="#3366FF" style="opacity: 0.5;">
+	    		<td  class="titulolista">
+	    			Tenis "La V&iacute;a"
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<table class="lista">
+	    			<tr>
+	    				<td><img src="images/tenis-dcto.jpg"/></td>
+	    				<td rowspan="5">MAPA</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+	    			<tr colspan="2">
+	    				<td>Ven practica y diviertete con nosotros <br/>Te esperamos!</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+
+	    			<tr colspan="2">
+	    				<td>
+	    					<input type="checkbox" name="option1" value="0"/>Polvo de ladrillo<br>
+							<input type="checkbox" name="option2" value="1"/>C&eacute;sped<br>
+							<input type="checkbox" name="option3" value="2" checked/>Cemento<br>	
+	    				</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+					<tr colspan="2">
+	    				<td>
+	    					<ul>
+	    					<li type="circle">Estacionamiento</li>
+	    					<li type="circle">Duchas</li>
+	    					</ul>	
+	    				</td>
+	    			</tr>
+	    		</table>
+	    	</tr>
+	    </table>
+	    <table align="right" class="lista">
+	  		<tr align="right">
+	  			<td>Precio de la Cancha 50%: $75</td>						
+	  			<td>
+					<input type="button" class="botonreservar" onClick="reservar();"/>
+				</td>
+			</tr>		
+	  	</table>
+	  </div>
+	  </div>
+	   <table align="right">
+	  		<tr align="right">						
+	  			<td>
+					<input type="button" class="botonotrabusq" onClick="window.location.href='index.html' "/>
+
+				</td>
+			</tr>	
+	  	</table>
+</div>
+</div>
+</body>
+</html>

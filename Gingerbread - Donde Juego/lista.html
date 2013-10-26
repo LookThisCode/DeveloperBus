@@ -1,0 +1,333 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>&iquest;D&oacute;nde Juego?
+</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="jquery-ui.css" media="screen"/>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script>
+ $(function() {
+    $( "#accordion" ).accordion();
+  });
+  
+ function reservar(){
+  $( "#dialog-confirm" ).dialog({
+      resizable: false,
+      width:400,
+      height:200,
+      closeOnEscape: true,
+      modal: true,
+      buttons: {
+        "Aceptar": function() {
+          window.location.href='reserva.html';
+        },
+        "Cancelar": function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+    }
+</script>
+</head>
+
+<body>
+<div id="dialog-confirm" title="Confirmaci&oacute;n de Reserva">
+  <p><span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0;"></span>&iquest;Est&aacute;s seguro de realizar la Reserva?</p>
+</div>
+<div class="divfondo">
+	<div style="height:100px;">
+				<table align="left">
+			    	<tr>
+				         <td>
+				             <input type="button" class="botonimagen" value=""/>
+				         </td>
+			         </tr>
+			         <tr>
+				         <td>
+				             <a href="">Ya estoy registrado</a>
+				         </td>
+			         </tr>
+			    </table>
+			    <table align="right">
+			    	<tr>
+				         <td>
+				             <a href="">Log-in </a> | <a href="">Registrarse </a>
+				         </td>
+			         </tr>
+			    </table>
+	</div>
+	<div style="height:300px;">
+			    <table align="right">
+			    	<tr>
+				         <td>
+				             <input type="button" class="botonprop" value=""/>
+				         </td>
+				         <td>
+				             <input type="button" class="botondesc" value=""/>
+				         </td>
+				         <td>
+				             <input type="button" class="botoncontacto" value=""/>
+				         </td>
+			         </tr>
+			    </table>
+	</div>
+	<div id="accordion">
+	  <h3>Cancha 1</h3>
+	  <div>
+	    <table class="lista" width="100%">
+	    	<tr bgcolor="#3366FF" style="opacity: 0.5;">
+	    		<td  class="titulolista">
+	    			Serrano Corner - Serrano 250 - Tel. 4464-3948
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<table class="lista">
+	    			<tr>
+	    				<td><img src="images/futbol1.jpg"/></td>
+	    				<td rowspan="5">MAPA</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+	    			<tr colspan="2">
+	    				<td>Canchas amplias, excelente iluminaci&oacute;n, lockers... <br/>Te esperamos!</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+
+	    			<tr colspan="2">
+	    				<td>
+	    					<input type="checkbox" name="option1" value="0" checked/>C&eacute;sped<br>
+							<input type="checkbox" name="option2" value="1"/>C&eacute;sped sint&eacute;tico<br>
+							<input type="checkbox" name="option3" value="2"/>Cemento <br>	
+	    				</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+					<tr colspan="2">
+	    				<td>
+	    					<ul>
+	    					<li type="circle">Estacionamiento</li>
+	    					<li type="circle">Duchas</li>
+	    					</ul>	
+	    				</td>
+	    			</tr>
+	    		</table>
+	    	</tr>
+	    </table>
+	    <table align="right" class="lista">
+	  	<tr align="right">
+	  			<td>Precio de la Cancha: $520</td>						
+	  			<td>
+					<input type="button" class="botonreservar" onClick="reservar();"/>
+				</td>
+			</tr>	
+	  	</table>
+	  </div>
+	  <h3>Cancha 2</h3>
+	  <div>
+	     <table class="lista" width="100%">
+	    	<tr bgcolor="#3366FF" style="opacity: 0.5;">
+	    		<td  class="titulolista">
+	    			F&uacute;tbol Papi5 - Malabia 183 - Tel. 4398-5784
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<table class="lista">
+	    			<tr>
+	    				<td><img src="images/futbol2.jpg"/></td>
+	    				<td rowspan="5">MAPA</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+	    			<tr colspan="2">
+	    				<td>Te invitamos a una de las canchas m&aacute;s grandes<br/>de la Ciudad.</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+
+	    			<tr colspan="2">
+	    				<td>
+	    					<input type="checkbox" name="option1" value="0" checked/>C&eacute;sped<br>
+							<input type="checkbox" name="option2" value="1"/>C&eacute;sped sint&eacute;tico<br>
+							<input type="checkbox" name="option3" value="2"/>Cemento <br>	
+	    				</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+					<tr colspan="2">
+	    				<td>
+	    					<ul>
+	    					<li type="circle">Estacionamiento</li>
+	    					<li type="circle">Bar</li>
+	    					</ul>	
+	    				</td>
+	    			</tr>
+
+	    		</table>
+	    	</tr>
+	    </table>
+	    <table align="right" class="lista">
+	  		<tr align="right">
+	  			<td>Precio de la Cancha: $480</td>						
+	  			<td>
+					<input type="button" class="botonreservar" onClick="reservar();"/>
+				</td>
+			</tr>		
+	  	</table>
+	  </div>
+	  <h3>Cancha 3</h3>
+	  <div>
+	    <table class="lista" width="100%">
+	    	<tr bgcolor="#3366FF" style="opacity: 0.5;">
+	    		<td  class="titulolista">
+	    			Canchitas "Nacho" - Ger&oacute;nimo Salguero 1441 - Tel. 4983-9383
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<table class="lista">
+	    			<tr>
+	    				<td><img src="images/futbol3.jpg"/></td>
+	    				<td rowspan="5">MAPA</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+	    			<tr colspan="2">
+	    				<td>Canchas amplias, excelente iluminaci&oacute;n, lockers... <br/>Te esperamos!</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+
+	    			<tr colspan="2">
+	    				<td>
+	    					<input type="checkbox" name="option1" value="0"/>C&eacute;sped<br>
+							<input type="checkbox" name="option2" value="1" checked/>C&eacute;sped sint&eacute;tico<br>
+							<input type="checkbox" name="option3" value="2"/>Cemento <br>	
+	    				</td>
+	    			</tr>
+	    			<tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+				    <tr  colspan="2">
+				       <td></td>
+				    </tr>
+					<tr colspan="2">
+	    				<td>
+	    					<ul>
+	    					<li type="circle">Duchas</li>
+	    					<li type="circle">Techada</li>
+	    					</ul>	
+	    				</td>
+	    			</tr>
+
+	    		</table>
+	    	</tr>
+	    </table>
+		<table align="right" class="lista">
+	  		<tr align="right">
+	  			<td>Precio de la Cancha: $500</td>						
+	  			<td>
+					<input type="button" class="botonreservar" onClick="reservar();"/>
+				</td>
+			</tr>	
+	  	</table>
+	  </div>
+	  </div>
+	   <table align="right">
+	  		<tr align="right">						
+	  			<td>
+					<input type="button" class="botonotrabusq" onClick="window.location.href='index.html' "/>
+				</td>
+			</tr>	
+	  	</table>
+</div>
+</div>
+</body>
+</html>
