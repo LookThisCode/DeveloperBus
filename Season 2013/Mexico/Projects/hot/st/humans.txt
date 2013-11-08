@@ -1,0 +1,31 @@
+/* TEAM */
+	
+	Project Manager: Andrés de la O Jiménez
+	Twitter: @aojsamurai
+	From: México D.F.
+	
+	Designer: Federico Rabago
+	Twitter: @Bikoellord
+	From: México D.F
+	
+	Developer: Arturo González R.
+	Twitter: @Dax_28
+	From: México D.F.
+	
+	Developer: Luis Daniel Galindo Oropeza
+	Twitter: @spaiks4
+	g+: +LuisDanielGalindoOropeza
+	From: México D.F.
+
+/* THANKS */
+
+	Google Developer Bus
+	Tweepy - https://github.com/tweepy/tweepy
+	ga_twitterbot - https://github.com/nirvanatikku/ga_twitterbot
+
+/* SITE */
+	Last update:2013/11/08
+	Language: Spanish
+	Doctype:HTML5
+	Components: jQuery, API Google Maps, Google App Engine
+	IDE: Notepad++, Gedit
