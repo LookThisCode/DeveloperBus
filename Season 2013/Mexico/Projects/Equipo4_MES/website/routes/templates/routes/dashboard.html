@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <div id="home-map"></div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-8">
+                <div class="col-lg-1"></div>
+
+                <div class="col-lg-6">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="¿Cómo va tu viaje?">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Publicar <span class="caret"></span></button>
+
+                                <ul class="dropdown-menu">
+                                  <li><a href="#"><span class="fa fa-comment"></span> Estado</a></li>
+                                  <li><a href="#"><span class="fa fa-exclamation-circle"></span> Advertir</a></li>
+                                  <li><a href="#"><span class="fa fa-map-marker"></span> Recordatorio</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#"><span class="fa fa-google-plus"></span> Enviar a google+</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Trabajo</h4>
+                    <p class="list-group-item-text">compartido con Juan, Pedro</p>
+                  </a>
+
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Casa</h4>
+                    <p class="list-group-item-text">3 comentarios agregados</p>
+                  </a>
+
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">Emmanuel en concierto</h4>
+                    <p class="list-group-item-text">Advertencias en esta ruta</p>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}

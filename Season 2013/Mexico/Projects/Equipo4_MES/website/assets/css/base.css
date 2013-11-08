@@ -1,0 +1,22 @@
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+
+#home-map {
+    position: absolute;
+    top: 51px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.jumbotron {
+    background: rgba(238, 238, 238, .5);
+}
+
+.navbar-brand {
+    background: url(../img/logo.png) center center no-repeat;
+    width: 51px;
+    height: 51px;
+    background-size: 70%;
+    display: inline-block;
+}
