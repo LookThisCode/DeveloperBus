@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Login_Bus extends Activity{
 
@@ -46,8 +47,14 @@ public class Login_Bus extends Activity{
 		
 		@Override
 		public void onClick(View v) {
-			
+			Toast.makeText(Login_Bus.this, "Registrate", Toast.LENGTH_SHORT).show();
 		}
 	};
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+	}
+	
 	
 }

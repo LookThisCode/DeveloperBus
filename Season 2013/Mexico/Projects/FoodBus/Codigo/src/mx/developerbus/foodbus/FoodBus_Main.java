@@ -1,7 +1,9 @@
 package mx.developerbus.foodbus;
 
+
 import mx.developerbus.foodbus.adpt.ListMenuOptionsAdapter;
 import mx.developerbus.foodbus.enm.MenuOptionType;
+import mx.developerbus.foodbus.frgm.Fragment_MiBus;
 import mx.developerbus.foodbus.manager.FoodBusManager;
 import mx.developerbus.foodbus.model.MenuOption;
 import mx.developerbus.foodbus.utl.foodBUtil;
@@ -51,18 +53,17 @@ public class FoodBus_Main extends FoodBusManager {
 		setContentView(R.layout.layout_food_bus);
 		ActionBar bar = getActionBar();
 		bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#23a7d9")));
-		loginGplus();
-	}
 
-	
-	private void loginGplus(){
 		try {
+			setFragment(getString(R.string.app_name), Fragment_MiBus.class);
 			initDraw();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
+	
 	
 	private void initDraw() throws Exception {
 		mTitle = mDrawerTitle = getTitle();
@@ -110,15 +111,15 @@ public class FoodBus_Main extends FoodBusManager {
 	}
 	
 	private void setProfileGplus(){
-		Bitmap perfil = null;
-		Bitmap circleBitmap = Bitmap.createBitmap(perfil.getWidth(),perfil.getHeight(), Bitmap.Config.ARGB_8888);
-		BitmapShader shader = new BitmapShader(perfil, TileMode.CLAMP, TileMode.CLAMP);
-		Paint paint = new Paint();
-		paint.setShader(shader);
-		Canvas c = new Canvas(circleBitmap);
-		c.drawCircle(perfil.getWidth()/2, perfil.getHeight()/2, perfil.getWidth()/2, paint);
-		userProfilePic.setImageBitmap(circleBitmap);
-		userProfileTxt.setText("Hamburguesas Truck");
+//		Bitmap perfil = null;
+//		Bitmap circleBitmap = Bitmap.createBitmap(perfil.getWidth(),perfil.getHeight(), Bitmap.Config.ARGB_8888);
+//		BitmapShader shader = new BitmapShader(perfil, TileMode.CLAMP, TileMode.CLAMP);
+//		Paint paint = new Paint();
+//		paint.setShader(shader);
+//		Canvas c = new Canvas(circleBitmap);
+//		c.drawCircle(perfil.getWidth()/2, perfil.getHeight()/2, perfil.getWidth()/2, paint);
+//		userProfilePic.setImageBitmap(circleBitmap);
+//		userProfileTxt.setText("Hamburguesas Truck");
 	}
 	
 	private void initListItems(){
@@ -196,6 +197,12 @@ public void onItemClick(AdapterView<?> parent, View view, int position,
 		mDrawerLayout.closeDrawer(mDrawerLeft);
 	}
 	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+	}
+
+
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/item_information">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+   
+            <LinearLayout
+                android:id="@+id/textosuscriptores"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txtSuscriptors"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/suscriptores"
+                    android:textColor="@color/gray_menu"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtPersonas"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/personas"
+                    android:textColor="@color/gray_menu"
+                    android:textStyle="italic" />
+            </LinearLayout>
+            
+            
+            <LinearLayout 
+                android:id="@+id/imagesUsers"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:orientation="vertical">
+                
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    
+                    <ImageView 
+                        android:id="@+id/user1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    
+                    <ImageView 
+                        android:id="@+id/user6"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user7"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user8"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user9"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                    <ImageView 
+                        android:id="@+id/user10"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:contentDescription="@string/img"
+                        android:src="@drawable/ic_launcher"
+                        />
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+        
+           <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            
+            <Button
+                android:id="@+id/txtEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical|end"
+                android:layout_gravity="center_vertical|right"
+                android:text="@string/edit"
+                android:textColor="@color/orange_foodbus"
+                android:visibility="gone" />
+            
+        </LinearLayout>
+            
+            
+    </LinearLayout>
+    
+</LinearLayout>
+    
+
+</LinearLayout>
