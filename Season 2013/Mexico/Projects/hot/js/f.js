@@ -20,18 +20,45 @@ function init(){
     });
 }
 function resize(){
-    // ajusta el mapa en la pantalla par ano mostrar scroll
+    // ajusta el mapa en la pantalla para no mostrar scroll
     iu__.resize();
 }
 
 function get_info(){
-    // traer información del api
+    // traer informaciÃ³n del api
     var tag = $('#tags').val();
-    var url = '/getinfo?tag=' + tag.toString();
-    get_ajax(url, 'put_info');
+    if(tag != '' && tag != undefined){
+	    var url = '/getinfo?tag=' + tag.toString();
+	    get_ajax(url, 'put_info');
+	}
 }
 
 function put_info(txt){
     // coloca la info en el mapa
-    alert(txt);
+    var v = $.parseJSON( txt );
+    m__.clear();
+    for(var i = 0; i < v.objetos.length; i++){
+    	var o = v.objetos[i];
+    	m__.put_marker(o);
+    }
+    if(m__.markers.length > 0){
+    	m__.map.fitBounds(m__.bounds);
+    	// cluster de los mapas
+    	m__.put_cluster();
+    }
 }
+
+function otags(tag, fecha, lon, lat){
+	// objetos de los tags
+	this.tag = tag;
+	this.fecha = fecha;
+	this.lon = lon;
+	this.lat = lat;
+}
+
+function find_location(){
+	// buscamos la ubicación del usuario
+	m__.get_location();
+}
+
+

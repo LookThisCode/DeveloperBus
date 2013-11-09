@@ -15,20 +15,14 @@ class MainHandler(webapp2.RequestHandler):
 		self.response.out.write('done')
 
 	def post(self):
-		tag = self.request.get('tag')
+		tag = u"%s" % self.request.get('tag')
 		t = Twitter()
+		return_ = '{"objetos": []}'
 		if t.conect():
-			val = True
-			self.response.out.write(t.get_tag(tag))
-		#return_ = '{"objetos":['
-		#objetos = db.GqlQuery('select * from Tags where tag  = :tag ',tag=tag)
-		#aux = ''
-		#for objeto in objetos:
-		#	return_ += aux + objeto.tojson()
-		#	aux = ','
-		#return_ += ']}'
-		#self.response.out.write(return_)
-	
+			return_ = t.get_tag(tag)
+		self.response.out.write(return_)
+
+
 
 app = webapp2.WSGIApplication([
 	('/getinfo', MainHandler)

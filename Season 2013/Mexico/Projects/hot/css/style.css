@@ -7,14 +7,14 @@ html{
 
 
 .navbar{
-    background: #e44747;
+    background: #525355;
     margin-bottom: 0px;
+    height: 10;
 }
 .navbar > .container .navbar-brand{
-    color: #FFFFFF;
-    font-family: 'MyryadPro',verdana,helvetica,arial,sans-serif;
-
-    font-size: 32px;
+    color: #D83030;
+    font-family: 'helvetica',verdana,helvetica,arial,sans-serif;
+    position:absolute;
 }
 
 #box-info{
@@ -29,6 +29,83 @@ html{
     padding: 8px;
 }
 
+#bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.hot{
+
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90em;
+    top:80px;
+
+    
+}
+.hot1{
+    
+    
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 39em;
+    top:120px;
+    
+}
+
+.hot-2{
+    
+    
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    top:60px;
+    
+}
+.hot5{
+    
+    
+    position:relative;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    top:60px;
+    
+}
+.cnter{
+    background-image:url('../img/back.png'); 
+    
+}
+
+
 #box-map{
     width: 100%;
+}
+
+#fixed {
+   margin:0 auto;
+   width:78em;   /* you can use px, em or % */
+   text-align:left;
+}
+
+
+
+.1h{
+    line-height:1;
+    color:inherit;
+    font-family:'helvetica';
+    font-size: 12px;
+
+.kd{
+ margin-left: 30%;
+ margin-right: 30%;
+        
+
+        
 }
