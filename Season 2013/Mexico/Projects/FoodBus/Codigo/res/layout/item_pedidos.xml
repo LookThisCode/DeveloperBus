@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_information"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_nombrepedido"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="7"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imgPedido"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/comensal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/nombrePedido"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="@string/nombrepedido"
+                        android:textColor="@color/orange_foodbus"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                
+                <ImageView 
+                    android:id="@+id/imghora"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/clock"/>
+                
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+                    
+                    <TextView 
+                        android:id="@+id/txthora"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/horapedido"
+                        android:textColor="@color/orange_foodbus"
+                        android:textSize="14sp"/>
+                    
+                </LinearLayout>
+                
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/layout_pedido"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+                
+                <ImageView 
+                    android:id="@+id/imgbolsa"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pedido"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8.5"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtPedido"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/pedido"
+                    android:textColor="@color/orange_foodbus"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+        
+        <LinearLayout 
+            android:id="@+id/layout_cantidad"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/gray_light"
+            android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/productopedido"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtcantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                                      android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/cantidadpedido"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtprecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                                      android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/preciopedido"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtsubtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                                      android:gravity="center_horizontal|center_vertical"
+                    android:text="@string/subtotalpedido"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/layout_productos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:orientation="vertical">
+            
+            <LinearLayout 
+                android:id="@+id/layout_pedidouno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    
+                    <ImageView 
+                        android:id="@+id/imgcubiertos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/cubiertos"/>
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+                    
+                    <TextView 
+                        android:id="@+id/txtproductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/menu_uno"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/txtCantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="1"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="89.90"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtSubtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="89.90"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/layout_pedidodos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    
+                    <ImageView 
+                        android:id="@+id/imgcubiertos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/cubiertos"/>
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+                    
+                    <TextView 
+                        android:id="@+id/txtproductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/menu_cuatro"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/txtCantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="4"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="79.90"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtSubtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="319.60"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:id="@+id/layout_pedidotres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    
+                    <ImageView 
+                        android:id="@+id/imgcubiertos"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/cubiertos"/>
+                    
+                </LinearLayout>
+                
+                <LinearLayout 
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="8"
+                    android:orientation="horizontal">
+                    
+                    <TextView 
+                        android:id="@+id/txtproductos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/refresco"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold"/>
+                    
+                </LinearLayout>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView
+                    android:id="@+id/txtCantidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="2"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="15"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtSubtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:text="30"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                
+            </LinearLayout>
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:id="@+id/precioTotal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/gray_light"
+            android:orientation="horizontal">
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:orientation="horizontal">
+                
+                <TextView 
+                    android:id="@+id/txtTotalPago"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/totalpedido"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+                
+                
+            </LinearLayout>
+            
+            <LinearLayout 
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                >
+                
+                <TextView 
+                    android:id="@+id/txtNumerosPago"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="439.50"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            
+            
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+</LinearLayout>
