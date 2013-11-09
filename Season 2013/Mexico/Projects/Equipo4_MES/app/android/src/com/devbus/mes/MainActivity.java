@@ -22,9 +22,9 @@ import com.viewpagerindicator.TitlePageIndicator;
 public class MainActivity extends FragmentActivity {
 	
 	private static final String[] titles = new String[] { 
-		"Feature 1",
-		"Feature 2", 
-		"Feature 3", 
+		"Mapa",
+		"Mis rutas", 
+		"Preferencias", 
 	};
 	
 	private static final Class<?>[] fragments = new Class[] {
@@ -39,7 +39,7 @@ public class MainActivity extends FragmentActivity {
 		setContentView(R.layout.activity_main);
 		
 		ActionBar bar = getActionBar();
-		//bar.setBackgroundDrawable(getResources().getDrawable(R.drawable.ff8000));
+		bar.setBackgroundDrawable(getResources().getDrawable(R.drawable.s_barra));
 		
 		//Set the pager with an adapter
 		ViewPager pager = (ViewPager)findViewById(R.id.pager);

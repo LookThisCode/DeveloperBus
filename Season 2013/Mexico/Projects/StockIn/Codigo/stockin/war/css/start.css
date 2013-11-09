@@ -1,0 +1,142 @@
+@CHARSET "UTF-8";
+
+@font-face {
+	font-family: leaguegothic;
+	src: url('/fonts/leaguegothic-regular-webfont.ttf');
+}
+
+body{
+	font-family: "Helvetica";
+}
+
+div.menu{
+	display: table;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+div.table{
+	display: table;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+
+div.row{
+	display: table-row;
+}
+
+div.cell{
+	display: table-cell;
+	vertical-align: middle
+}
+
+div.option{
+	background-color: #ddd; 
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	width: 150px;
+	height: 150px;
+	margin: 8px;
+	padding: 8px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+div.card{
+	background-color: #ddd; 
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	width: 150px;
+	height: 150px;
+	margin: 8px;
+	padding: 8px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.catalogos{
+	background-color: #5a9bd3;
+}
+
+div.productos{
+	background-color: #c00000;
+}
+
+div.servicios{
+	background-color: #00af50;
+}
+
+div.analisis{
+	background-color: #fbc200;
+}
+
+div.optioncontent{
+	display: inline-block;
+  	vertical-align: middle;
+  	width: 300px;
+  	padding: 10px 15px;
+}
+
+div.option:hover{
+	border: 1px solid #ccc;
+	-webkit-box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.49);
+	-moz-box-shadow:    5px 5px 5px rgba(50, 50, 50, 0.49);
+	box-shadow:         5px 5px 5px rgba(50, 50, 50, 0.49);
+}
+
+div.option span{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-weight: bold;
+}
+
+img{
+	margin-top: 25px;
+}
+
+input[type=button]{
+	background-color: green;
+	color: white;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px 10px 5px 10px;
+}
+
+input[type=button]:hover{
+	background-color: #555;
+}
+
+input[type=button]:active{
+	background-color: #ddd;
+}
+
+input[type=submit]{
+	background-color: green;
+	color: white;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px 10px 5px 10px;
+}
+
+input[type=submit]:hover{
+	background-color: #555;
+}
+
+input[type=submit]:active{
+	background-color: #ddd;
+}
+
+div.message{
+	background-color: yellow;
+	color: #444;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px 10px 5px 10px;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}

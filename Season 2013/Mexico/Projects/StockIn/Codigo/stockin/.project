@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>stockin</name>
+=======
+	<name>stockin-simple</name>
+>>>>>>> 2179bed09109f6e4cfbf3589ffeef159d63bfba9
 	<comment></comment>
 	<projects>
 	</projects>

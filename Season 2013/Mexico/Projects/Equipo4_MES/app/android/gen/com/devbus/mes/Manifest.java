@@ -9,6 +9,6 @@ package com.devbus.mes;
 
 public final class Manifest {
     public static final class permission {
-        public static final String MAPS_RECEIVE="net.learn2develop.googlemaps.permission.MAPS_RECEIVE";
+        public static final String MAPS_RECEIVE="com.devbus.mes.permission.MAPS_RECEIVE";
     }
 }
