@@ -10,5 +10,17 @@
     <string name="publicaciones">Mis Publicaciones</string>
     <string name="menu">Mi Menú</string>
     <string name="nocuenta">¿No tienes cuenta?</string>
+    <string name="suscriptores">Suscriptores</string>
+    <string name="personas">120 Personas</string>
+    <string name="edit">Editar</string>
+    <string name="nameBus">Nombre FoodBus</string>
+    <string name="slogan">Slogan</string>
+    <string name="textoSlogan">Texto Slogan</string>
+    <string name="presentacion">Presentación</string>
+    <string name="textoPresentacion">TextoPresentación</string>
+    <string name="motivos">Motivos para presumir</string>
+    <string name="textoMotivos">Texto para presumir</string>
+    <string name="compartir">Compartir</string>
+    <string name="promocion">Promoción</string>
 	<string name="img"></string>
 </resources>

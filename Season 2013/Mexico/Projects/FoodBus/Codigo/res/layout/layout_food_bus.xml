@@ -36,7 +36,8 @@
             android:layout_marginRight="10dip"
             android:layout_marginTop="5dip"
             android:clickable="true"
-            android:focusable="true" >
+            android:focusable="true"
+            android:orientation="horizontal" >
 
             <ImageView
                 android:id="@+id/usrProfilePic"
@@ -56,20 +57,37 @@
                 android:duplicateParentState="true"
                 android:gravity="center_vertical"
                 android:text="@string/profile"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
             <ListView
                 android:id="@+id/menuOptionsList"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:layout_marginTop="15dip"
+                android:layout_weight="6"
+                android:listSelector="@drawable/list_item_selector"
                 android:divider="@color/orange_foodbus"
                 android:dividerHeight="1dp"
                 android:overScrollMode="never" >
             </ListView>
+
+            <ImageView
+                android:id="@+id/busmenu"
+                android:layout_width="150sp"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:contentDescription="@string/img"
+                android:src="@drawable/busmenu" />
         </LinearLayout>
     </LinearLayout>
 
