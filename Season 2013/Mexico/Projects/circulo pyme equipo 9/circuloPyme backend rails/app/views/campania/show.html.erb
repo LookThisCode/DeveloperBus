@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @campanium.id %>
+</p>
+
+<p>
+<b>Titulo:</b>
+ <%= @campanium.titulo %>
+</p>
+
+<p>
+<b>img url</b>
+<%= @campanium.img_url %>
+</p>
+<p>
+<b>Titulo:</b>
+  <%= @campanium.lugares %>
+</p>
+<p>
+<b>Titulo:</b>
+  <%= @campanium.keywords %>
+</p>
+
+<%= link_to 'Edit', edit_campanium_path(@campanium) %> |
+<%= link_to 'Back', campania_path %>

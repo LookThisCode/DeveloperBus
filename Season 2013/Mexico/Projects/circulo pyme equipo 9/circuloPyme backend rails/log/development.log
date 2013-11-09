@@ -1,0 +1,2599 @@
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 13:53:17 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 13:53:31 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (140.0ms)
+Compiled campaign.css  (0ms)  (pid 4172)
+Compiled global.css  (1ms)  (pid 4172)
+Compiled report.css  (1ms)  (pid 4172)
+Compiled application.css  (345ms)  (pid 4172)
+Compiled jquery.js  (11ms)  (pid 4172)
+Compiled jquery_ujs.js  (7ms)  (pid 4172)
+Compiled campaign.js  (1ms)  (pid 4172)
+Compiled report.js  (1ms)  (pid 4172)
+Compiled application.js  (3461ms)  (pid 4172)
+Completed 500 Internal Server Error in 11375ms
+
+ActionView::Template::Error (Could not find table 'sessions'):
+    2: <title>AdwordsOnRails Demo</title>
+    3: <%= stylesheet_link_tag    "application" %>
+    4: <%= javascript_include_tag "application" %>
+    5: <%= csrf_meta_tags %>
+    6: 
+    7: <div id="global-header">
+    8:   <% account_text = (@selected_account.nil?) ? 'Not selected' : @selected_account %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__617095280_27526092'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (347.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (326.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (263.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddSessionsTable (20110823220412)
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "session_id" varchar(255) NOT NULL, "data" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110823220412')[0m
+  [1m[35m (373.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 13:57:02 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 608ms (Views: 439.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /campaign.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /jquery.js - 200 OK (78ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /report.css - 200 OK (8ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /global.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /jquery_ujs.js - 200 OK (31ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /campaign.js - 200 OK (7ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /report.js - 200 OK (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 13:57:07 -0600
+Served asset /application.js - 200 OK (27ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2013-11-08 13:57:33 -0600
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 13:58:11 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 13:58:11 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 40ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 14:17:13 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 14:17:18 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 448ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 14:17:18 -0600
+Served asset /application.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-08 14:17:18 -0600
+Served asset /campaign.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-08 14:17:19 -0600
+Served asset /global.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-08 14:17:19 -0600
+Served asset /campaign.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-08 14:17:19 -0600
+Served asset /report.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-08 14:17:19 -0600
+Served asset /report.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 14:17:19 -0600
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 14:22:10 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 14:22:10 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 237ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 14:22:11 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-08 14:22:11 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-08 14:22:11 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-08 14:22:11 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-08 14:22:11 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-08 14:22:12 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 14:22:12 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/login/callback?code=4/Cw7uMhYDbdKgtK34OUddoimAzMX3.khXR2_xoJeQdmmS0T3UFEsNyMsZyhAI" for 127.0.0.1 at 2013-11-08 14:22:26 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/Cw7uMhYDbdKgtK34OUddoimAzMX3.khXR2_xoJeQdmmS0T3UFEsNyMsZyhAI"}
+Completed 500 Internal Server Error in 490ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (80.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login/callback?code=4/Cw7uMhYDbdKgtK34OUddoimAzMX3.khXR2_xoJeQdmmS0T3UFEsNyMsZyhAI" for 127.0.0.1 at 2013-11-08 15:24:17 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/Cw7uMhYDbdKgtK34OUddoimAzMX3.khXR2_xoJeQdmmS0T3UFEsNyMsZyhAI"}
+Completed 500 Internal Server Error in 864ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (95.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:25:00 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 15:25:00 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 1158ms (Views: 1141.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 15:25:02 -0600
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-08 15:25:02 -0600
+Served asset /report.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-08 15:25:02 -0600
+Served asset /global.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:25:02 -0600
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-08 15:25:02 -0600
+Served asset /campaign.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:25:02 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-08 15:25:03 -0600
+Served asset /campaign.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-08 15:25:03 -0600
+Served asset /report.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:25:03 -0600
+Served asset /application.js - 304 Not Modified (74ms)
+
+
+Started GET "/login/callback?code=4/kSSbMLO7951N2SrfsSPKGLqD7DKI.4uR1LJVboJ8YmmS0T3UFEsNcGTlzhAI" for 127.0.0.1 at 2013-11-08 15:25:11 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/kSSbMLO7951N2SrfsSPKGLqD7DKI.4uR1LJVboJ8YmmS0T3UFEsNcGTlzhAI"}
+Completed 500 Internal Server Error in 185ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.0ms)
+
+
+Started GET "/login/callback?code=4/kSSbMLO7951N2SrfsSPKGLqD7DKI.4uR1LJVboJ8YmmS0T3UFEsNcGTlzhAI" for 127.0.0.1 at 2013-11-08 15:26:54 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/kSSbMLO7951N2SrfsSPKGLqD7DKI.4uR1LJVboJ8YmmS0T3UFEsNcGTlzhAI"}
+Completed 500 Internal Server Error in 331ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:48:11 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 15:48:36 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 3468ms (Views: 2281.1ms | ActiveRecord: 300.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 15:48:40 -0600
+Served asset /application.css - 200 OK (87ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 44ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /campaign.css - 200 OK (9ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /report.css - 200 OK (11ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /global.css - 200 OK (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /jquery.js - 200 OK (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /jquery_ujs.js - 200 OK (60ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /campaign.js - 200 OK (7ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /report.js - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 15:48:41 -0600
+Served asset /application.js - 200 OK (42ms)
+
+
+Started GET "/login/callback?code=4/He4nj1l4-kYsViGah1WTb-YtzweA.0pY-GFAcTZIUmmS0T3UFEsMwl2RzhAI" for 127.0.0.1 at 2013-11-08 15:48:58 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/He4nj1l4-kYsViGah1WTb-YtzweA.0pY-GFAcTZIUmmS0T3UFEsMwl2RzhAI"}
+Completed 500 Internal Server Error in 1021ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (106.0ms)
+
+
+Started GET "/login/callback?code=4/He4nj1l4-kYsViGah1WTb-YtzweA.0pY-GFAcTZIUmmS0T3UFEsMwl2RzhAI" for 127.0.0.1 at 2013-11-08 15:51:52 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/He4nj1l4-kYsViGah1WTb-YtzweA.0pY-GFAcTZIUmmS0T3UFEsMwl2RzhAI"}
+Completed 500 Internal Server Error in 222ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (49.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 15:52:20 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 15:52:20 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 143ms (Views: 122.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login/callback?code=4/nxw8pqDoi-EaBG8YtXaXKGzH8Swu.cqUTHEw0_OkQmmS0T3UFEsM-C2tzhAI" for 127.0.0.1 at 2013-11-08 15:52:28 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/nxw8pqDoi-EaBG8YtXaXKGzH8Swu.cqUTHEw0_OkQmmS0T3UFEsM-C2tzhAI"}
+Completed 500 Internal Server Error in 181ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (181.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-08 16:06:46 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 56ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-08 16:06:53 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 1297ms (Views: 824.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-08 16:06:54 -0600
+Served asset /application.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-08 16:06:54 -0600
+Served asset /campaign.css - 304 Not Modified (65ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /report.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /global.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /jquery.js - 304 Not Modified (73ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /campaign.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /application.js - 304 Not Modified (74ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-08 16:06:55 -0600
+Served asset /report.js - 304 Not Modified (6ms)
+
+
+Started GET "/login/callback?code=4/TpncFurXcIvPdy60Zh8_uXrjLr3O.Iq0XKBVlHdAURJPr4JvC3xSc34VzhAI" for 127.0.0.1 at 2013-11-08 16:07:07 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/TpncFurXcIvPdy60Zh8_uXrjLr3O.Iq0XKBVlHdAURJPr4JvC3xSc34VzhAI"}
+Completed 500 Internal Server Error in 977ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (147.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-09 01:33:49 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 01:34:01 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (24.0ms)
+Compiled campaign.css  (1ms)  (pid 4444)
+Compiled global.css  (0ms)  (pid 4444)
+Compiled report.css  (2ms)  (pid 4444)
+Compiled application.css  (472ms)  (pid 4444)
+Compiled jquery.js  (12ms)  (pid 4444)
+Compiled jquery_ujs.js  (2ms)  (pid 4444)
+Compiled campaign.js  (1ms)  (pid 4444)
+Compiled report.js  (2ms)  (pid 4444)
+Compiled application.js  (680ms)  (pid 4444)
+Completed 200 OK in 2512ms (Views: 2115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 01:34:04 -0600
+Served asset /application.css - 304 Not Modified (41ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 01:34:04 -0600
+Served asset /global.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 01:34:04 -0600
+Served asset /campaign.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 01:34:04 -0600
+Served asset /report.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 01:34:05 -0600
+Served asset /jquery.js - 304 Not Modified (95ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 01:34:05 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 01:34:05 -0600
+Served asset /campaign.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 01:34:05 -0600
+Served asset /report.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 01:34:05 -0600
+Served asset /application.js - 304 Not Modified (117ms)
+
+
+Started GET "/login/callback?code=4/iO7brxSz51rxmzn6qQba_b-bQlkA.0mtPf2b2OlwUmmS0T3UFEsMMjpV3hAI" for 127.0.0.1 at 2013-11-09 01:34:56 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/iO7brxSz51rxmzn6qQba_b-bQlkA.0mtPf2b2OlwUmmS0T3UFEsMMjpV3hAI"}
+Completed 500 Internal Server Error in 752ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.0ms)
+
+
+Started GET "/login/callback?code=4/iO7brxSz51rxmzn6qQba_b-bQlkA.0mtPf2b2OlwUmmS0T3UFEsMMjpV3hAI" for 127.0.0.1 at 2013-11-09 01:35:45 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/iO7brxSz51rxmzn6qQba_b-bQlkA.0mtPf2b2OlwUmmS0T3UFEsMMjpV3hAI"}
+Completed 500 Internal Server Error in 219ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20110823220412)
+Migrating to CreateCampania (20131109075220)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "campania" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "titulo" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131109075220')[0m
+  [1m[35m (228.0ms)[0m  commit transaction
+Migrating to CreateKeywords (20131109075723)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (4.0ms)[0m  CREATE TABLE "keywords" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "keyword" text, "id_campania" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131109075723')[0m
+  [1m[35m (196.0ms)[0m  commit transaction
+Migrating to CreateLugares (20131109075925)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "lugares" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lugar_nombre" text, "campania_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131109075925')[0m
+  [1m[35m (218.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-09 02:04:34 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 02:04:39 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (26.0ms)
+Compiled campania.css  (221ms)  (pid 5024)
+Compiled keywords.css  (13ms)  (pid 5024)
+Compiled lugares.css  (17ms)  (pid 5024)
+Compiled scaffolds.css  (78ms)  (pid 5024)
+Compiled application.css  (966ms)  (pid 5024)
+Compiled campania.js  (1374ms)  (pid 5024)
+Compiled keywords.js  (479ms)  (pid 5024)
+Compiled lugares.js  (364ms)  (pid 5024)
+Compiled application.js  (2670ms)  (pid 5024)
+Completed 200 OK in 4674ms (Views: 4419.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:44 -0600
+Served asset /campaign.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:44 -0600
+Served asset /application.css - 304 Not Modified (121ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /campania.css - 200 OK (8ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /keywords.css - 200 OK (16ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /global.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /scaffolds.css - 200 OK (100ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /lugares.css - 200 OK (31ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /report.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /jquery.js - 304 Not Modified (63ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:45 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (154ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:46 -0600
+Served asset /campaign.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:46 -0600
+Served asset /campania.js - 200 OK (7ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:46 -0600
+Served asset /keywords.js - 200 OK (8ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:46 -0600
+Served asset /lugares.js - 200 OK (10ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:46 -0600
+Served asset /report.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:46 -0600
+Served asset /application.js - 304 Not Modified (109ms)
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Processing by CampaniaController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 90ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:04:58 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/login/callback?code=4/gXjimji6lp-hr6AXeZ4QlY4LEqr1.EsXC8XMtHMEcmmS0T3UFEsN-BM13hAI" for 127.0.0.1 at 2013-11-09 02:05:14 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/gXjimji6lp-hr6AXeZ4QlY4LEqr1.EsXC8XMtHMEcmmS0T3UFEsN-BM13hAI"}
+Completed 500 Internal Server Error in 476ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (212.0ms)
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 02:05:28 -0600
+Processing by CampaniaController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 02:05:28 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 80ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /lugares.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:05:29 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/login/callback?code=4/D_RbiLweXrNszpzWMXoXHGR8GYDE.wlhXcJjw8WkZmmS0T3UFEsPwFNJ3hAI" for 127.0.0.1 at 2013-11-09 02:08:00 -0600
+Processing by LoginController#callback as HTML
+  Parameters: {"code"=>"4/D_RbiLweXrNszpzWMXoXHGR8GYDE.wlhXcJjw8WkZmmS0T3UFEsPwFNJ3hAI"}
+Completed 500 Internal Server Error in 145ms
+
+Faraday::ConnectionFailed (SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed):
+  app/controllers/login_controller.rb:25:in `callback'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (92.0ms)
+
+
+Started GET "/keywords" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Processing by KeywordsController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 84ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Served asset /keywords.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:37 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /campaign.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:11:38 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/lugares" for 127.0.0.1 at 2013-11-09 02:22:56 -0600
+Processing by LugaresController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 02:23:04 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 745ms (Views: 525.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /campaign.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /application.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /campania.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /keywords.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /global.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /lugares.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /report.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /jquery.js - 304 Not Modified (73ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /campaign.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /campania.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /keywords.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /lugares.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:05 -0600
+Served asset /report.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:06 -0600
+Served asset /application.js - 304 Not Modified (44ms)
+
+
+Started GET "/lugares" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Processing by LugaresController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 86ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /keywords.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /campaign.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:18 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /report.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:23:19 -0600
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 02:26:41 -0600
+Processing by CampaniaController#index as HTML
+  [1m[36mCampanium Load (1.0ms)[0m  [1mSELECT "campania".* FROM "campania" [0m
+  Rendered campania/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 307ms (Views: 295.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /application.css - 304 Not Modified (63ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /global.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /campania.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /lugares.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /campaign.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /keywords.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /report.css - 304 Not Modified (71ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /jquery.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /campaign.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:46 -0600
+Served asset /campania.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:47 -0600
+Served asset /keywords.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:47 -0600
+Served asset /lugares.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:47 -0600
+Served asset /report.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:47 -0600
+Served asset /application.js - 304 Not Modified (93ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 02:26:50 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (83.0ms)
+  Rendered campania/new.html.erb within layouts/application (138.0ms)
+Completed 200 OK in 208ms (Views: 194.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:51 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:52 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:26:52 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/campania" for 127.0.0.1 at 2013-11-09 02:27:01 -0600
+Processing by CampaniaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgzLzorvzfQwJOxFSLqyXyy4e1y9jVf5C1iWet0imKo=", "campanium"=>{"id"=>"3", "titulo"=>"hola"}, "commit"=>"Create Campanium"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (103.0ms)[0m  [1mINSERT INTO "campania" ("created_at", "id", "titulo", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Sat, 09 Nov 2013 08:27:01 UTC +00:00], ["id", 3], ["titulo", "hola"], ["updated_at", Sat, 09 Nov 2013 08:27:01 UTC +00:00]]
+  [1m[35m (157.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/campania/3
+Completed 302 Found in 275ms (ActiveRecord: 260.0ms)
+
+
+Started GET "/campania/3" for 127.0.0.1 at 2013-11-09 02:27:02 -0600
+Processing by CampaniaController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCampanium Load (1.0ms)[0m  [1mSELECT "campania".* FROM "campania" WHERE "campania"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered campania/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 66ms (Views: 59.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:02 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:02 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /keywords.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:03 -0600
+Served asset /report.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:04 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania/" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Processing by CampaniaController#index as HTML
+  [1m[35mCampanium Load (1.0ms)[0m  SELECT "campania".* FROM "campania" 
+  Rendered campania/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 64ms (Views: 60.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:34 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:35 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/campania/all" for 127.0.0.1 at 2013-11-09 02:27:43 -0600
+Processing by CampaniaController#show as HTML
+  Parameters: {"id"=>"all"}
+  [1m[36mCampanium Load (0.0ms)[0m  [1mSELECT "campania".* FROM "campania" WHERE "campania"."id" = ? LIMIT 1[0m  [["id", "all"]]
+Completed 404 Not Found in 4ms
+
+ActiveRecord::RecordNotFound (Couldn't find Campanium with id=all):
+  app/controllers/campania_controller.rb:16:in `show'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (59.0ms)
+
+
+Started GET "/campania/" for 127.0.0.1 at 2013-11-09 02:27:48 -0600
+Processing by CampaniaController#index as HTML
+  [1m[35mCampanium Load (1.0ms)[0m  SELECT "campania".* FROM "campania" 
+  Rendered campania/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 64ms (Views: 60.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:48 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:48 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:48 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /campania.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /lugares.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:27:49 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania.json" for 127.0.0.1 at 2013-11-09 02:27:59 -0600
+Processing by CampaniaController#index as JSON
+  [1m[36mCampanium Load (1.0ms)[0m  [1mSELECT "campania".* FROM "campania" [0m
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-09 02:29:47 -0600
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 104ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /report.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:49 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /report.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 02:29:50 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/login/logout" for 127.0.0.1 at 2013-11-09 10:43:18 -0600
+Processing by LoginController#logout as HTML
+Redirected to https://www.google.com/accounts/Logout
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-09 11:41:33 -0600
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login/prompt
+Filter chain halted as :authenticate rendered or redirected
+Completed 302 Found in 122ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login/prompt" for 127.0.0.1 at 2013-11-09 11:41:35 -0600
+Processing by LoginController#prompt as HTML
+  Rendered login/prompt.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 2187ms (Views: 723.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /campania.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /report.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:38 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:39 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:39 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:39 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 11:41:39 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20110823220412)
+Migrating to CreateCampania (20131109075220)
+Migrating to CreateKeywords (20131109075723)
+Migrating to CreateLugares (20131109075925)
+Migrating to EditFieldsForTable (20131109174237)
+  [1m[35m (5.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (6.0ms)[0m  ALTER TABLE "campania" ADD "img_url" text
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "campania" ADD "lugares" text[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "campania" ADD "keywords" text
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131109174237')[0m
+  [1m[35m (190.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 11:55:17 -0600
+Processing by CampaniaController#index as HTML
+  [1m[35mCampanium Load (1.0ms)[0m  SELECT "campania".* FROM "campania" 
+  Rendered campania/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 281ms (Views: 148.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /report.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:18 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:19 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:19 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:19 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:19 -0600
+Served asset /lugares.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:19 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:19 -0600
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 11:55:22 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (143.0ms)
+  Rendered campania/new.html.erb within layouts/application (179.0ms)
+Completed 200 OK in 473ms (Views: 471.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /lugares.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /report.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:23 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:24 -0600
+Served asset /campania.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:24 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:24 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:24 -0600
+Served asset /report.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 11:55:24 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/campania" for 127.0.0.1 at 2013-11-09 11:56:37 -0600
+Processing by CampaniaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgzLzorvzfQwJOxFSLqyXyy4e1y9jVf5C1iWet0imKo=", "campanium"=>{"titulo"=>"Organizacion Eventos", "img_url"=>"http://www.turinews.com.mx/home/wp-content/uploads/2013/07/boda2.jpg", "lugares"=>"Mexico, DF", "keywords"=>"Boda, Matrimonio, Hola"}, "commit"=>"Create Campanium"}
+Completed 500 Internal Server Error in 17ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: img_url, lugares, keywords):
+  app/controllers/campania_controller.rb:45:in `new'
+  app/controllers/campania_controller.rb:45:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (96.0ms)
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 11:59:05 -0600
+Processing by CampaniaController#index as HTML
+  [1m[36mCampanium Load (1.0ms)[0m  [1mSELECT "campania".* FROM "campania" [0m
+  Rendered campania/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 101ms (Views: 71.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:05 -0600
+Served asset /campaign.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:05 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:05 -0600
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:05 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /keywords.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 11:59:06 -0600
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Processing by CampaniaController#index as HTML
+  [1m[35mCampanium Load (1.0ms)[0m  SELECT "campania".* FROM "campania" 
+  Rendered campania/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /application.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /campaign.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /campaign.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /campania.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /report.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:23 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/campania" for 127.0.0.1 at 2013-11-09 12:00:32 -0600
+Processing by CampaniaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgzLzorvzfQwJOxFSLqyXyy4e1y9jVf5C1iWet0imKo=", "campanium"=>{"titulo"=>"Organizacion Eventos", "img_url"=>"http://www.turinews.com.mx/home/wp-content/uploads/2013/07/boda2.jpg", "lugares"=>"Mexico, DF", "keywords"=>"Boda, Matrimonio, Hola"}, "commit"=>"Create Campanium"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (133.0ms)[0m  INSERT INTO "campania" ("created_at", "img_url", "keywords", "lugares", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 09 Nov 2013 18:00:32 UTC +00:00], ["img_url", "http://www.turinews.com.mx/home/wp-content/uploads/2013/07/boda2.jpg"], ["keywords", "Boda, Matrimonio, Hola"], ["lugares", "Mexico, DF"], ["titulo", "Organizacion Eventos"], ["updated_at", Sat, 09 Nov 2013 18:00:32 UTC +00:00]]
+  [1m[36m (136.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/campania/4
+Completed 302 Found in 375ms (ActiveRecord: 270.0ms)
+
+
+Started GET "/campania/4" for 127.0.0.1 at 2013-11-09 12:00:33 -0600
+Processing by CampaniaController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCampanium Load (2.0ms)[0m  SELECT "campania".* FROM "campania" WHERE "campania"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered campania/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 71ms (Views: 64.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:33 -0600
+Served asset /campania.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:33 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:33 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /keywords.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:34 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Processing by CampaniaController#index as HTML
+  [1m[36mCampanium Load (1.0ms)[0m  [1mSELECT "campania".* FROM "campania" [0m
+  Rendered campania/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 145ms (Views: 141.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:46 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:00:47 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (10.0ms)
+  Rendered campania/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:30 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:01:31 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to AddSessionsTable (20110823220412)
+Migrating to CreateCampania (20131109075220)
+Migrating to CreateKeywords (20131109075723)
+Migrating to CreateLugares (20131109075925)
+Migrating to EditFieldsForTable (20131109174237)
+Migrating to AddFieldsForStores (20131109183912)
+  [1m[35m (10.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.0ms)[0m  ALTER TABLE "campania" ADD "tienda_1_reference" text
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "campania" ADD "tienda_2_reference" text[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "campania" ADD "tienda_3_reference" text
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "campania" ADD "tienda_4_reference" text[0m
+  [1m[35m (2.0ms)[0m  ALTER TABLE "campania" ADD "tienda_5_reference" text
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131109183912')[0m
+  [1m[35m (105.0ms)[0m  commit transaction
+  [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 12:45:21 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (1915.1ms)
+  Rendered campania/new.html.erb within layouts/application (2337.1ms)
+Completed 200 OK in 4415ms (Views: 3204.2ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:43 -0600
+Served asset /application.css - 304 Not Modified (74ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:43 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:43 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:43 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:44 -0600
+Served asset /campaign.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:45 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:45 -0600
+Served asset /campania.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:45 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:45 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:45:45 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 12:54:46 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (15.0ms)
+  Rendered campania/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 154ms (Views: 153.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /campaign.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /keywords.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:47 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:48 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:48 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:48 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:48 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:48 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:48 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (13.0ms)
+  Rendered campania/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 105ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /global.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:58 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /campaign.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /lugares.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 12:54:59 -0600
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 13:28:17 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (88.0ms)
+  Rendered campania/new.html.erb within layouts/application (122.0ms)
+Completed 200 OK in 611ms (Views: 454.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:21 -0600
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /keywords.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /lugares.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:22 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:23 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:23 -0600
+Served asset /keywords.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:23 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:23 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 13:28:23 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/campania" for 127.0.0.1 at 2013-11-09 13:28:36 -0600
+Processing by CampaniaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgzLzorvzfQwJOxFSLqyXyy4e1y9jVf5C1iWet0imKo=", "campanium"=>{"titulo"=>"SFA", "img_url"=>"GSADGASDOI", "lugares"=>"OASIDFJOADSI", "keywords"=>"OASIDJFOASDIFJ", "tienda_1_reference"=>"OIJASDOFIJASD", "tienda_2_reference"=>"OIJQDSFO", "tienda_3_reference"=>"OSODIF", "tienda_4_reference"=>"OISJDF", "tienda_5_reference"=>"OISADF"}, "commit"=>"Create Campanium"}
+Completed 500 Internal Server Error in 42ms
+
+ActiveModel::MassAssignmentSecurity::Error (Can't mass-assign protected attributes: tienda_1_reference, tienda_2_reference, tienda_3_reference, tienda_4_reference, tienda_5_reference):
+  app/controllers/campania_controller.rb:45:in `new'
+  app/controllers/campania_controller.rb:45:in `create'
+
+
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (39.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (249.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/campania" for 127.0.0.1 at 2013-11-09 13:32:09 -0600
+Processing by CampaniaController#index as HTML
+  [1m[36mCampanium Load (1.0ms)[0m  [1mSELECT "campania".* FROM "campania" [0m
+  Rendered campania/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 867ms (Views: 818.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /application.css - 304 Not Modified (43ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /keywords.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /campania.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /global.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /lugares.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /campaign.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /report.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:16 -0600
+Served asset /jquery.js - 304 Not Modified (70ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /campania.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /campaign.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /keywords.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /lugares.js - 304 Not Modified (68ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /report.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:17 -0600
+Served asset /application.js - 304 Not Modified (47ms)
+
+
+Started GET "/campania/new" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Processing by CampaniaController#new as HTML
+  Rendered campania/_form.html.erb (115.0ms)
+  Rendered campania/new.html.erb within layouts/application (163.0ms)
+Completed 200 OK in 221ms (Views: 220.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/campania.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /campania.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /campaign.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/global.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /global.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /keywords.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/lugares.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /lugares.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:26 -0600
+Served asset /report.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campaign.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /campaign.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/campania.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /campania.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/keywords.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /keywords.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/lugares.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /lugares.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/report.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /report.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-09 13:32:27 -0600
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/campania" for 127.0.0.1 at 2013-11-09 13:32:37 -0600
+Processing by CampaniaController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UgzLzorvzfQwJOxFSLqyXyy4e1y9jVf5C1iWet0imKo=", "campanium"=>{"titulo"=>"sdofsijdfodasi", "img_url"=>"oi", "lugares"=>"qjodfsijfsao", "keywords"=>"joqdsfiojdsafoi", "tienda_1_reference"=>"oisjdfoiasdjf", "tienda_2_reference"=>"aosidfjoadsifj", "tienda_3_reference"=>"oisjdofiasdjoi", "tienda_4_reference"=>"oasidjfoasd", "tienda_5_reference"=>"a+´sdfjipadsfoasd"}, "commit"=>"Create Campanium"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (121.0ms)[0m  [1mINSERT INTO "campania" ("created_at", "img_url", "keywords", "lugares", "tienda_1_reference", "tienda_2_reference", "tienda_3_reference", "tienda_4_reference", "tienda_5_reference", "titulo", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 09 Nov 2013 19:32:37 UTC +00:00], ["img_url", "oi"], ["keywords", "joqdsfiojdsafoi"], ["lugares", "qjodfsijfsao"], ["tienda_1_reference", "oisjdfoiasdjf"], ["tienda_2_reference", "aosidfjoadsifj"], ["tienda_3_reference", "oisjdofiasdjoi"], ["tienda_4_reference", "oasidjfoasd"], ["tienda_5_reference", "a+´sdfjipadsfoasd"], ["titulo", "sdofsijdfodasi"], ["updated_at", Sat, 09 Nov 2013 19:32:37 UTC +00:00]]
+  [1m[35m (120.0ms)[0m  commit transaction
+Redirected to http://jm.uvicate.com/circulopyme/#inicio
+Completed 302 Found in 254ms (ActiveRecord: 241.0ms)

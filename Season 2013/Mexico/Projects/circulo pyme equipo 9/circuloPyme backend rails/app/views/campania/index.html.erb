@@ -1,0 +1,38 @@
+<h1>Listing campania</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Titulo</th>
+    <th>img_url</th>
+    <th>lugares</th>
+    <th>keywords</th>
+    <th>tienda_1_reference</th>
+    <th>tienda_2_reference</th>
+    <th>tienda_3_reference</th>
+    <th>tienda_4_reference</th>
+    <th>tienda_5_reference</th>
+  </tr>
+
+<% @campania.each do |campanium| %>
+  <tr>
+    <td><%= campanium.id %></td>
+    <td><%= campanium.titulo %></td>
+    <td><%= campanium.img_url %></td>
+    <td><%= campanium.lugares %></td>
+    <td><%= campanium.keywords %></td>
+    <td><%= campanium.tienda_1_reference %></td>
+    <td><%= campanium.tienda_2_reference %></td>
+    <td><%= campanium.tienda_3_reference %></td>
+    <td><%= campanium.tienda_4_reference %></td>
+    <td><%= campanium.tienda_5_reference %></td>
+    <td><%= link_to 'Show', campanium %></td>
+    <td><%= link_to 'Edit', edit_campanium_path(campanium) %></td>
+    <td><%= link_to 'Destroy', campanium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Campanium', new_campanium_path %>

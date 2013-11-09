@@ -1,0 +1,12 @@
+<h1>Circulo Pyme, Publicidad Colaborativa</h1>
+
+<% if flash[:alert] %>
+  <div class="alert"><%= flash[:alert] %></div>
+<% end %>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<p>Conectate a circulo pyme con una cuenta de google</p>
+
+<p><a href="<%= @login_url %>">Proceed</a></p>
