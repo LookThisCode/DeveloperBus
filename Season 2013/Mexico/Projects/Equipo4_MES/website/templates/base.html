@@ -1,0 +1,66 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>{% block title %}{% endblock %} | move, enjoy, share</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#"></a>
+  </div>
+
+  {% if user.is_authenticated %}
+
+  <ul class="nav navbar-nav navbar-right">
+      <li><a href="{% url 'home' %}"><span class="fa fa-home"></span></a></li>
+
+      <li><a href="#"><span class="fa fa-users"></span></a></li>
+
+      <li><a href="#"><span class="fa fa-map-marker"></span></a></li>
+
+      <li><a href="#"><span class="fa fa-usd"></span></a></li>
+
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ user.get_full_name }} <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Configuración</a></li>
+            <li class="divider"></li>
+            <li><a href="{% url 'accounts:logout' %}">Salir</a></li>
+          </ul>
+        </li>
+  </ul>
+  {% else %}
+  <span id="signinButton" class="navbar-text pull-right">
+    <span class="g-signin" data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+                           data-clientid="523004285561-6tb9mkvcdbg2u1rb81blslf8vf6ms2th.apps.googleusercontent.com"
+                           data-redirecturi="postmessage"
+                           data-accesstype="offline"
+                           data-cookiepolicy="single_host_origin"
+                           data-callback="signInCallback"
+                           data-height="short"
+                           data-width="wide">
+    </span>
+  </span>
+  {% endif %}
+</nav>
+
+{% block content %}{% endblock %}
+
+<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+{% block javascript %}{% endblock %}
+
+</body>
+</html>
