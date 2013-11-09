@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devbus.sweethistory"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.devbus.sweethistory.MainActivity"
+            android:label="@string/sectionTimeLine" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.devbus.sweethistory.FormElementActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.devbus.sweethistory.FormBabyActivity"
+            android:label="@string/sectionBabyRegister" >
+        </activity>
+        <activity
+            android:name="com.devbus.sweethistory.FormDoctorActivity"
+            android:label="@string/sectionDoctorRegister" >
+        </activity>
+        <activity
+            android:name="com.devbus.sweethistory.AlarmActivity"
+            android:label="@string/sectionAlarms" >
+        </activity>
+
+        <receiver android:name=".SampleAlarmReceiver" />
+        <receiver
+            android:name=".SampleBootReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".SampleSchedulingService" />
+    </application>
+
+</manifest>

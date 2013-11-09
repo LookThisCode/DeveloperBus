@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" 
+    android:layout_marginTop="25dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/imgBackground" 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">            
+
+            <ImageView
+                android:id="@+id/imgFormElement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtFormElement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/question"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/txtElementDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="100"
+        android:inputType="textMultiLine"
+        android:hint="Mi bebé..." >
+
+        <requestFocus />
+    </EditText>
+    
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/camara" />
+    
+    <SurfaceView
+          android:id = "@+id/surface"
+          android:layout_width = "200dp"
+          android:layout_height = "200dp"
+          android:visibility="invisible">
+     </SurfaceView>
+
+    
+
+</LinearLayout>

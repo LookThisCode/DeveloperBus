@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SweetHistory</string>
+    <string name="action_addSintom">Agregar síntoma</string>
+    <string name="action_addEvent">Agregar evento</string>
+    <string name="titleSectionAdvices">CONSEJOS</string>
+    <string name="titleSectionEvents">EVENTOS</string>
+    <string name="titleSectionSintoms">SÍNTOMAS</string>
+	<string name="drawer_open">Drawer Open</string>
+	<string name="drawer_close">Drawer Closed</string>
+    <string name="name">nombre(s)</string>
+    <string name="lastname">apellidos</string>
+    <string name="birthday">fecha de nacimiento</string>
+    <string name="weigth">peso</string>
+    <string name="heigth">medida</string>
+    <string name="genre">sexo</string>
+    <string name="apgar">apgar</string>
+    <string name="lastVisit">última visita</string>
+    <string name="city">ciudad</string>
+    <string name="save">Guardar</string>
+    <string name="cellNumber">núm. celular</string>
+    <string name="officeNumber">núm. consultorio</string>
+    <string name="email">correo electrónico</string>
+    <string name="address">dirección</string>
+    <string name="question">¿Qué esta pasando?</string>
+    <string name="addAlarm">Alarmas</string>
+	<string name="cancelAlarm">Cancelar</string>
+	<string name="notificationTitle">Recuerda&#8230; </string>
+	<string name="datePickerTitle">Selecciona una fecha</string>
+	<string name="txtAlarm">Recordar qué&#8230;</string>
+
+	<string name="sectionTimeLine">Historia</string>
+	<string name="sectionBabyRegister">Registrar Bebé</string>
+	<string name="sectionDoctorRegister">Registrar Doctor</string>
+	<string name="sectionAlarms">Recordatorios</string>
+	<string-array name="sectionNames">
+		<item>@string/sectionTimeLine</item>
+		<item>@string/sectionBabyRegister</item>
+		<item>@string/sectionAlarms</item>
+		<item>@string/sectionDoctorRegister</item>
+    </string-array>
+    <string name="hintEach">Cada&#8230;</string>
+    <string name="txtDateInitial">A partir de&#8230;</string>
+    <string name="txtTimeInitial">A las&#8230;</string>
+    <string name="timePickerTile">Selecciona una hora</string>
+    <string name="errorEmptyFiels">Se deben llenar todos los campos</string>
+    <string name="alarmDeleted">Alarma eliminada correctamente</string>
+
+
+    <string-array name="units">
+        <item>segundo (s)</item>
+        <item>minuto (s)</item>
+        <item>hora (s)</item>
+        <item>día (s)</item>
+        <item>semana (s)</item>
+    </string-array>
+</resources>
