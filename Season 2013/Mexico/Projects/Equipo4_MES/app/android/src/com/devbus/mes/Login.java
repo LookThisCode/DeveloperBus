@@ -1,5 +1,9 @@
 package com.devbus.mes;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,6 +20,12 @@ public class Login extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+		
+		ActionBar bar = getActionBar();
+		bar.setBackgroundDrawable(getResources().getDrawable(R.drawable.s_barra));
+		
+		
+		
 		
 		login = (ImageView) findViewById(R.id.img_login);
 		login.setOnClickListener(new OnClickListener() {

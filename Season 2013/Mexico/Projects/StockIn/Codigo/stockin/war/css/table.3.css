@@ -1,0 +1,90 @@
+/* @group Data Tables */
+
+.ws_data_table {
+  border-collapse: collapse;
+  border-color: #00af50;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 15px;
+}
+
+.ws_data_table caption {
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.ws_data_table th {
+  text-transform: inherit;
+  white-space: nowrap;
+  background-color: #00af50;
+  color: #FFFFFF;
+  padding: 2px 10px 2px 10px;
+  border-right: #FFFFFF;
+  border-width: 1px;
+  border-style: none dotted none none;
+}
+
+.ws_data_table td {
+  padding: 5px 10px 5px 10px;
+  border-right: #cccccc;
+  border-width: 1px;
+  border-style: none dotted none none;
+  vertical-align: top;
+}
+
+.ws_data_table tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+
+.ws_data_table tr:nth-child(even) {
+  background-color: #E6E6E6;
+}
+
+.ws_data_table tr:hover{
+	background-color: rgba(0, 175, 80, 0.3);
+}
+
+/* @end */
+
+/* @group tablesorter */
+
+.header {
+  cursor: pointer;
+}
+
+.headerSortDown:after {
+  content: " ▾";
+  font-family: Arial, sans-serif;
+}
+
+.headerSortUp:after {
+  content: " ▴";
+  font-family: Arial, sans-serif;
+}
+
+/* @end */
+
+
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }
+   
+.styled-select {
+    width: 240px;
+    height: 30px;
+    overflow: hidden;
+    background: url("/img/down_arrow_select.jpg") no-repeat scroll right center rgb(221, 221, 221);
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    margin: 3px;
+}
