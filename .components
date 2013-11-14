@@ -1,0 +1,9 @@
+---
+:orm: mongoid
+:test: none
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: none
+:namespace: Klou
+:migration_format: number
