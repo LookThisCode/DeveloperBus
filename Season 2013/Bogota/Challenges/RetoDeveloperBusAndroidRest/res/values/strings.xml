@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">DeveloperBus Reto</string>
+    
+    <string name="label_tweet_search_loader">Descargando tweets Developer Bus&#8230;</string>
+    <string name="label_tweets_not_found">No se encontraron tweets.</string>
+    <string name="label_tweets_downloaded">Tweets descargados exitosamente - Developer Bus</string>
+
+</resources>
