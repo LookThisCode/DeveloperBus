@@ -7,8 +7,13 @@ source 'https://rubygems.org'
 # gem 'thin' # or mongrel
 # gem 'trinidad', :platform => 'jruby'
 
+gem 'foreman'
+
 # Optional JSON codec (faster performance)
-# gem 'oj'
+gem 'oj'
+
+gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'compass'
 
 # Project requirements
 gem 'rake'
