@@ -1,10 +1,14 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" itemscope itemtype="http://schema.org/Organization">
 <head>
 	<link rel="stylesheet" href="/stylesheets/app.css">
 	<meta charset="UTF-8">
 	<title><%= @title %></title>
 	<meta charset="utf-8">
+  <meta itemprop="name" content="<%= @title %>">
+  <meta itemprop="description" content="<%= @descrip %>">
+  <meta itemprop="image" content="/images/logo-250x250-1.jpg">
+  <meta itemprop="image" content="/images/logo-250x250-2.jpg">
   <meta content="<%= @title %>" property="og:title">
   <meta content="website" property="og:type">
   <meta content="http://klou.co" property="og:url">
