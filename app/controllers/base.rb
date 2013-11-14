@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 Klou::App.controllers :base, :map => '/' do
   
   layout :page
