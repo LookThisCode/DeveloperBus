@@ -21,7 +21,7 @@ gem 'mongoid_slug'
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.2'
-gem 'httpparty'
+gem 'httparty'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
