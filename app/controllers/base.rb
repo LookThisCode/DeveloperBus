@@ -3,6 +3,8 @@ Klou::App.controllers :base, :map => '/' do
   layout :page
 
   get :index do
+    @title = "Klou - Lo dificil no parece facil, es facil!"
+    @descrip = "Lo dificil no parece facil, es facil!"
     erb :"base/index"
   end
 
