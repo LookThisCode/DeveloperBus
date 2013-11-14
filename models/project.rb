@@ -1,15 +1,13 @@
 class Project
   include Mongoid::Document
   include Mongoid::Timestamps # adds created_at and updated_at fields
+  include Mongoid::Slug
 
-  # field <name>, :type => <type>, :default => <value>
   field :name, :type => String
   field :description, :type => String
-  field :slug, :type => String
+  slug :name
 
-  # You can define indexes on documents using the index macro:
-  # index :field <, :unique => true>
+  belongs_to :user
+  has_many_and_belongs_to :instances
 
-  # You can create a composite key in mongoid to replace the default id using the key macro:
-  # key :field <, :another_field, :one_more ....>
 end

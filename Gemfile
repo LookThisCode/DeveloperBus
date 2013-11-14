@@ -14,13 +14,14 @@ source 'https://rubygems.org'
 gem 'rake'
 
 # Component requirements
-gem 'slim'
 gem 'mongoid', '~>3.0.0'
+gem 'mongoid_slug'
 
 # Test requirements
 
 # Padrino Stable Gem
 gem 'padrino', '0.11.2'
+gem 'httpparty'
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'

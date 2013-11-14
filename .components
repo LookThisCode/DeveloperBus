@@ -3,7 +3,7 @@
 :test: none
 :mock: none
 :script: none
-:renderer: slim
+:renderer: erb
 :stylesheet: none
 :namespace: Klou
 :migration_format: number
