@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nombre: MyString
+  nit_cedula: MyString
+  logo_o_foto: MyString
+  descripcion: MyString
+  motivacion_registro: MyString
+  calificacion: 1
+
+two:
+  nombre: MyString
+  nit_cedula: MyString
+  logo_o_foto: MyString
+  descripcion: MyString
+  motivacion_registro: MyString
+  calificacion: 1

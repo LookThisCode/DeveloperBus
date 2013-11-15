@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  keyword: MyString
+  descripcion: MyString
+  productor_id: 
+
+two:
+  keyword: MyString
+  descripcion: MyString
+  productor_id: 

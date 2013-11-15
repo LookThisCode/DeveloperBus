@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  comentario: MyString
+  distribuidor_id: 
+  productor_id: 
+
+two:
+  comentario: MyString
+  distribuidor_id: 
+  productor_id: 
