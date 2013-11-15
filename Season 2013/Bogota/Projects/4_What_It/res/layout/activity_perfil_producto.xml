@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Nickname" />
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="99dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/encabe_proyecto"
+        android:gravity="right" >
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="¿Que desea para tu" />
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView1"
+                android:layout_width="240dp"
+                android:layout_height="30dp"
+                android:background="#FFFFFF" >
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="45dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Presupuesto" 
+	        android:textStyle="bold"
+	        android:textSize="20sp"
+	        android:textColor="#1b75bb"/>
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FFFFFF"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Materiales"
+            android:textColor="#1b75bb"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FFFFFF"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Colores"
+            android:textColor="#1b75bb"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FFFFFF"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Dimensiones del Lugar"
+            android:textColor="#1b75bb"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="#FFFFFF"
+            android:ems="10" />
+        
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/enviar"
+            android:height="60dp"
+            android:minHeight="10dp" />
+
+    </LinearLayout>
+
+    
+
+</LinearLayout>
