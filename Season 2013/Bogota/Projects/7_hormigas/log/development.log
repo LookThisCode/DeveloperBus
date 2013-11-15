@@ -2374,3 +2374,13 @@ WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_ce
   [1m[35m (127.6ms)[0m  BEGIN
   [1m[36mSQL (127.5ms)[0m  [1mINSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 21:57:37', '2013-11-15 21:57:37')[0m
   [1m[35m (195.1ms)[0m  COMMIT
+WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_cedula, nombre_representante_legal, logo_o_foto, descripcion, motivacion_registro, calificacion
+
+  [1m[36m (127.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (127.7ms)[0m  INSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 22:06:24', '2013-11-15 22:06:24')
+  [1m[36m (174.4ms)[0m  [1mCOMMIT[0m
+WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_cedula, nombre_representante_legal, logo_o_foto, descripcion, motivacion_registro, calificacion
+
+  [1m[35m (127.9ms)[0m  BEGIN
+  [1m[36mSQL (127.9ms)[0m  [1mINSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 22:06:48', '2013-11-15 22:06:48')[0m
+  [1m[35m (176.2ms)[0m  COMMIT
