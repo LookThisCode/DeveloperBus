@@ -1,0 +1,3 @@
+function needsController( $scope ){
+	
+}

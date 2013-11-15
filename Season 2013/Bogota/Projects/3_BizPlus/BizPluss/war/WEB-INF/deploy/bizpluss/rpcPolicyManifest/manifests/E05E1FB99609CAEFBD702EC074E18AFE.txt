@@ -1,0 +1,2 @@
+serviceClass: main.client.GreetingService
+path: 6214F4CD35692393760EA4E1706D35D5.gwt.rpc

@@ -1,0 +1,124 @@
+/*---------------------------------------*
+ * Colors
+ *---------------------------------------*/
+/*---------------------------------------*
+ * Sass Partials: Import
+ *---------------------------------------*/
+input[type=text],
+input[type=email],
+input[type=password] {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  padding: 9px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px; }
+
+textarea {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  margin-bottom: 10px; }
+
+select {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  padding: 9px;
+  -webkit-appearance: none; }
+
+.btn,
+input[type=submit],
+button {
+  border: none;
+  background: #ff4400;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 9px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+/*---------------------------------------*
+ * HTML Tags
+ *---------------------------------------*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal; }
+
+.content-wrapper {
+  background: url("../img/bg.jpg") center top;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.main_content {
+  position: relative;
+  padding: 20px 0; }
+
+/*---------------------------------------*
+ * Header
+ *---------------------------------------*/
+header .logo {
+  margin: 0 auto 40px;
+  padding-top: 120px;
+  text-align: center; }
+  header .logo a {
+    display: block; }
+
+/*---------------------------------------*
+ * Menus
+ *---------------------------------------*/
+nav li {
+  list-style: none; }
+
+#about-nav {
+  position: absolute;
+  top: 20px;
+  right: 0; }
+  #about-nav li {
+    margin-bottom: 10px;
+    opacity: 0.8; }
+  #about-nav a {
+    color: #fff;
+    display: block;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 50px; }
+    #about-nav a.first {
+      background-color: #ff4400; }
+    #about-nav a.last {
+      background-color: #d57800; }
+
+/*---------------------------------------*
+* Landig Page
+*---------------------------------------*/
+#form-what-do-you-need #what {
+  width: 100%; }
+#form-what-do-you-need #category {
+  clear: both;
+  width: 100%; }
+#form-what-do-you-need #city,
+#form-what-do-you-need #deadline,
+#form-what-do-you-need #budget {
+  float: left; }
+#form-what-do-you-need #city {
+  margin-right: 1%;
+  width: 30%; }
+#form-what-do-you-need #deadline {
+  margin-right: 1%;
+  width: 38%; }
+#form-what-do-you-need #budget {
+  float: right;
+  width: 30%; }
+#form-what-do-you-need #submit {
+  float: right; }
+
+/*@ sourceMappingURL=app.css.map */

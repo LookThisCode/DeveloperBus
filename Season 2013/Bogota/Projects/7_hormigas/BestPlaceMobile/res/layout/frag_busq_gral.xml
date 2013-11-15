@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:orientation="horizontal"
+        android:paddingLeft="20dip"
+        android:paddingBottom="5dip"
+        android:paddingTop="30dip" >
+
+        <EditText
+            android:id="@+id/txtBusquedaDistProd"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            android:ems="10"
+            android:fontFamily="sans-serif-thin"
+            android:inputType="textAutoComplete"            
+            android:textColor="@android:color/black"
+            android:textStyle="normal" >
+        </EditText>
+
+        <Button
+            android:id="@+id/btnBusqueda"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@drawable/ic_busqueda" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"        
+        android:paddingLeft="10dip"
+        android:paddingTop="15dip"
+        android:orientation="horizontal"
+        android:layout_gravity="center" >
+
+        <RadioButton
+            android:id="@+id/rbProductor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:fontFamily="sans-serif-thin"
+            android:paddingRight="20dip"
+            android:text="@string/tab_registro_productor"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbDistribuidor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/tab_registro_distribuidor"
+            android:textColor="@android:color/darker_gray"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

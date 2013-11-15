@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:orientation="vertical" >
+
+ 
+  <Button
+      android:id="@+id/btn_fadein"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Fade In"/>
+  <Button
+      android:id="@+id/btn_fadeout"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:text="Fade Out"/>
+  
+ <LinearLayout
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:orientation="vertical"
+     android:gravity="center">
+
+     <ImageView
+         android:id="@+id/my_image"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:src="@drawable/android" />
+   
+ </LinearLayout>  
+
+</LinearLayout>

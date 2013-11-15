@@ -1,0 +1,49 @@
+input[type=text],
+input[type=email],
+input[type=password] {
+  @include font_p;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  padding: 9px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+textarea {
+  @include font_p;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  margin-bottom: 10px;
+}
+
+select {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  color: #000;
+  @include font_p;
+  font-weight: normal;
+  margin-bottom: 10px;
+  padding: 9px;
+  -webkit-appearance:none;
+}
+
+fieldset {
+
+}
+
+.btn,
+input[type=submit],
+button {
+
+  border: none;
+  background: $orange;
+  color: #fff;
+  @include font_p;
+  font-weight: 300;
+  padding: 9px;
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
