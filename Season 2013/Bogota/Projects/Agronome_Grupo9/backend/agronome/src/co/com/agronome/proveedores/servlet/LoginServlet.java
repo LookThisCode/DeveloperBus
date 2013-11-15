@@ -44,14 +44,11 @@ public class LoginServlet extends HttpServlet{
 			throws ServletException, IOException {
 		String usuario = req.getParameter("usuario");
 		String pass = req.getParameter("pass");
-		PrintWriter out = resp.getWriter();
 		
 		Entity proveedor = Proveedor.getSingleProveedor(usuario, pass);
 		if (proveedor != null) {
-			List<Entity> entities = new ArrayList<Entity>();
-			entities.add(proveedor);
-			out.println(Util.writeJSON( entities));
 			req.getSession().setAttribute("user", proveedor);
+			resp.sendRedirect("editar.html");
 		}else{
 			return;
 		}
