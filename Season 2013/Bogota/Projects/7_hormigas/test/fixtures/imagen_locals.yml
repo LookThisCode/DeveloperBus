@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  url: MyString
+  descripcion: MyString
+  distribuidor_id: 
+
+two:
+  url: MyString
+  descripcion: MyString
+  distribuidor_id: 

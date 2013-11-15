@@ -1,0 +1,4 @@
+*.py[co]
+*.log
+src/.gaedata
+.settings

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Best Place Mobile</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Abierto</string>
+    <string name="drawer_close">Cerrado</string>
+    <string name="tab_registro_distribuidor">Distribuidor</string>
+    <string name="tab_registro_productor">Productor</string>
+    <string name="string_aviso_registro">Por favor complete los campos a continuación para se agregado a Best Places</string>
+    <string name="string_nombre_negocio">Nombre del Negocio:</string>
+    <string name="string_NIT">NIT o Cédula:</string>
+    <string name="string_representante_legal">Representante Legal:</string>
+    <string name="string_porque_distribuir_nosotros">Porque desea comercializar con nosotros:</string>
+    <string name="string_logo_imagen">Logo o Imagen:</string>
+    <string name="string_description_config">Imagen Configuración</string>
+    <string name="string_conf_conf">Configure la forma en que recibira notificaciones</string>
+    <string name="string_conf_edit_profile">Organize sus productos</string>
+    <string name="string_conf_reuqest">Tiene notificaciones</string>
+    <string name="string_conf_active">Verifique los compromisos</string>
+    <string name="img_description_config">Configuración</string>
+    <string name="string_palabraClave">Palabras Claves:</string>
+    <string name="string_num_comentarios">Comentarios</string>
+
+    <string-array name="array_MenuPpal">
+        <item>Registro</item>
+        <item>Configuración</item>
+        <item>Busqueda</item>
+        <item>Acerca</item>
+    </string-array>
+
+    <string name="title_activity_inicio">Best Place Mobile Sign In</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_busqueda">BusquedaActivity</string>
+
+</resources>

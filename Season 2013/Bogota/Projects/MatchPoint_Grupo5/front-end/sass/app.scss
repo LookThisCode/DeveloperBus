@@ -1,0 +1,116 @@
+@import 'config';
+
+/*---------------------------------------*
+ * HTML Tags
+ *---------------------------------------*/
+body {
+  @include font_p;
+  font-weight: normal;
+}
+
+.content-wrapper {
+  background: url("../img/bg.jpg") center top;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main_content {
+  position: relative;
+  padding: 20px 0;
+}
+/*---------------------------------------*
+ * Header
+ *---------------------------------------*/
+header {
+  .logo {
+    margin: 0 auto 40px;
+    padding-top: 120px;
+    text-align: center;
+
+    a {
+      display: block;
+    }
+  }
+}
+
+
+/*---------------------------------------*
+ * Menus
+ *---------------------------------------*/
+nav {
+
+  li {
+    list-style: none;
+  }
+}
+
+#about-nav {
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  li {
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  a {
+    color: #fff;
+    display: block;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px 0 50px;
+
+    &.first {
+      background-color: $orange;
+    }
+
+    &.last {
+      background-color: $yellow;
+    }
+  }
+}
+
+/*---------------------------------------*
+* Landig Page
+*---------------------------------------*/
+#form-what-do-you-need {
+  #what {
+    width: 100%;
+  }
+
+  #category {
+    clear: both;
+    width: 100%;
+  }
+
+  #city,
+  #deadline,
+  #budget {
+    float: left;
+  }
+
+  #city{
+    margin-right: 1%;
+    width: 30%;
+  }
+
+  #deadline {
+    margin-right: 1%;
+    width: 38%;
+  }
+  #budget {
+    float: right;
+    width: 30%;
+  }
+
+  #submit {
+    float: right;
+  }
+}
+
+

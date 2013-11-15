@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  acuerdo: MyString
+  distribuidor_id: 
+  productor_id: 
+
+two:
+  acuerdo: MyString
+  distribuidor_id: 
+  productor_id: 
