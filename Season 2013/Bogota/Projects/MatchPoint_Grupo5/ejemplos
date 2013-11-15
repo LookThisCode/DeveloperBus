@@ -1,0 +1,33 @@
+service = Service()
+service.name = "Contaduría"
+service.description = "Consultorías, análisis financiero, asistencias"
+service.put()
+
+	
+user = UserMP()
+user.pyme_name = "Engenial"
+user.pyme_ubication = "Manizales"
+user.put()
+
+
+need = Need()
+need.delivery_time = "0 a 1 semana"
+need.budget = "$100.000 - $500.000"
+need.put()
+
+
+
+
+need = Need()
+need.user = user
+need.service = Service.get_by_id(5910974510923776)
+need.put()
+
+
+for user in UserMP.all():
+    print(user.pyme_verified)
+    user.pyme_verified = True
+    user.put()
+    print(user.pyme_ubication)
+    print(user.pyme_name)
+    print(user.pyme_service)
