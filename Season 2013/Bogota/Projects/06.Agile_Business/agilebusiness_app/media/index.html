@@ -15,55 +15,55 @@
             function init(){
                 var apiRoot = '//' + window.location.host + '/_ah/api';
                 gapi.client.load('goal', 'v1', function() {
-                    loadTodos();
+                    loadGoals();
                 },apiRoot);
             }
 
-            function addTodo(button){
+            function addGoal(button){
                 button.disabled = true;
                 var title = document.getElementById("newTitle").value;
-                gapi.client.todo.insert({'title':title}).execute(function(resp) {
+                gapi.client.goal.insert({'title':title}).execute(function(resp) {
                     setTimeout(function(){
                         document.getElementById("newTitle").value = '';
-                        loadTodos();
+                        loadGoals();
                         button.disabled = false;
                     }, 500);
                 });
             }
 
-            function delTodo(id, button){
+            function delGoal(id, button){
                 button.disabled = true;
-                gapi.client.todo.delete({'id':id}).execute(function(resp) {
+                gapi.client.goal.delete({'id':id}).execute(function(resp) {
                     setTimeout(function(){
-                        loadTodos();
+                        loadGoals();
                         button.disabled = false;
                     }, 500);
                 });
             }
 
-            function toggleTodo(id){
-                gapi.client.todo.toggle({'id':id}).execute(function(resp) {
+            function toggleGoal(id){
+                gapi.client.goal.toggle({'id':id}).execute(function(resp) {
                     console.log(resp);
                 });
             }
 
-            function loadTodos(){
-                gapi.client.todos.list().execute(function(resp) {
+            function loadGoals(){
+                gapi.client.goal.list().execute(function(resp) {
                     console.log(resp.items);
-                    todoListStr = "";
+                    goalListStr = "";
                     items = resp.items;
                     for(index in items){
-                        todoListStr += "<div>"
-                        todoListStr += "<span>"+items[index].title+"</span>"
-                        todoListStr += " <input type='checkbox' onchange='toggleTodo("+items[index].id+")'"
+                        goalListStr += "<div>"
+                        goalListStr += "<span>"+items[index].title+"</span>"
+                        goalListStr += " <input type='checkbox' onchange='toggleGoal("+items[index].id+")'"
                         if (items[index].completed){
-                            todoListStr += "checked";
+                            goalListStr += "checked";
                         }
-                        todoListStr += "/>"
-                        todoListStr += " <button type='button' class='btn' onclick='delTodo("+items[index].id+",this)'>-</button> <br/>"
-                        todoListStr += "</div>"
+                        goalListStr += "/>"
+                        goalListStr += " <button type='button' class='btn' onclick='delGoal("+items[index].id+",this)'>-</button> <br/>"
+                        goalListStr += "</div>"
                     }
-                    document.getElementById('todo-list').innerHTML = todoListStr;
+                    document.getElementById('goal-list').innerHTML = goalListStr;
                 });
             }
         </script>
@@ -81,10 +81,10 @@
         </div>
 
         <div class="container">
-            <div id="todo-list">
+            <div id="goal-list">
             </div>
             <br/>
-            <input type="text" id="newTitle"/> <button id="addButton" class="btn btn-primary"  onclick="addTodo(this)"  type="button"> +</button>
+            <input type="text" id="newTitle"/> <button id="addButton" class="btn btn-primary"  onclick="addGoal(this)"  type="button"> +</button>
         </div>
     </body>
 </html>

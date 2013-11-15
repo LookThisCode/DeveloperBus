@@ -35,7 +35,7 @@ class GoalApi(remote.Service):
 
     @GoalModel.query_method(query_fields=('limit', 'order', 'pageToken'),
                             collection_fields=('completed','title','id'),
-                            path='goals',
-                            name='goals.list')
+                            path='goal',
+                            name='list')
     def GoalsList(self, query):
         return query
