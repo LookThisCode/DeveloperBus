@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20131115202222) do
   add_index "imagen_locals", ["distribuidor_id"], name: "index_imagen_locals_on_distribuidor_id", using: :btree
 
   create_table "keywords", force: true do |t|
-    t.string   "keyword"
+    t.string   "tag"
     t.string   "descripcion"
     t.integer  "productor_id"
     t.integer  "distribuidor_id"

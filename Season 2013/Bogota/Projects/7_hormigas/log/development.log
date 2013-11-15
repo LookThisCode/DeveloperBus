@@ -2109,3 +2109,268 @@ Migrating to CreateProductos (20131115202222)
   [1m[35mSQL (127.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115202222')
   [1m[36m (172.9ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (131.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-15 15:36:22 -0500
+
+Mysql2::Error (Lost connection to MySQL server at 'reading authorization packet', system error: 104):
+  mysql2 (0.3.14) lib/mysql2/client.rb:67:in `connect'
+  mysql2 (0.3.14) lib/mysql2/client.rb:67:in `initialize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `new'
+  activerecord (4.0.0) lib/active_record/connection_adapters/mysql2_adapter.rb:18:in `mysql2_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:440:in `new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:450:in `checkout_new_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:421:in `acquire_connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:356:in `block in checkout'
+  /home/valentina/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `checkout'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /home/valentina/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:546:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:79:in `retrieve_connection'
+  activerecord (4.0.0) lib/active_record/connection_handling.rb:53:in `connection'
+  activerecord (4.0.0) lib/active_record/migration.rb:792:in `current_version'
+  activerecord (4.0.0) lib/active_record/migration.rb:800:in `needs_migration?'
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2639241490949114397__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  thin (1.5.1) lib/thin/controllers/controller.rb:86:in `start'
+  thin (1.5.1) lib/thin/runner.rb:187:in `run_command'
+  thin (1.5.1) lib/thin/runner.rb:152:in `run!'
+  thin (1.5.1) bin/thin:6:in `<top (required)>'
+  /home/valentina/.rbenv/versions/2.0.0-p247/bin/thin:23:in `load'
+  /home/valentina/.rbenv/versions/2.0.0-p247/bin/thin:23:in `<main>'
+
+
+  Rendered /home/valentina/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /home/valentina/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/valentina/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/valentina/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-11-15 15:36:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (128.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 99ms (Views: 75.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-11-15 15:36:28 -0500
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-11-15 15:36:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-11-15 15:36:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-11-15 15:36:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-11-15 15:36:28 -0500
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-11-15 15:36:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-11-15 15:36:29 -0500
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-11-15 15:36:29 -0500
+
+
+Started GET "/assets/sign-in-with-google.png" for 127.0.0.1 at 2013-11-15 15:36:29 -0500
+WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_cedula, nombre_representante_legal, logo_o_foto, descripcion, motivacion_registro, calificacion
+
+  [1m[36m (126.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (126.5ms)[0m  INSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 21:48:29', '2013-11-15 21:48:29')
+  [1m[36m (212.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mKeyword Load (126.4ms)[0m  SELECT `keywords`.* FROM `keywords` WHERE `keywords`.`distribuidor_id` = 1
+  [1m[36m (126.1ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Keyword: keyword
+
+  [1m[35mSQL (126.9ms)[0m  INSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:49:34', 1, '2013-11-15 21:49:34')
+  [1m[36m (172.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (127.9ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes for Keyword: keyword
+
+  [1m[36mSQL (126.2ms)[0m  [1mINSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:50:24', 1, '2013-11-15 21:50:24')[0m
+  [1m[35m (169.7ms)[0m  COMMIT
+  [1m[36m (125.6ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Keyword: keyword
+
+  [1m[35mSQL (145.2ms)[0m  INSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:50:47', 1, '2013-11-15 21:50:47')
+  [1m[36m (175.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (125.8ms)[0m  BEGIN
+  [1m[36mSQL (127.7ms)[0m  [1mINSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:50:55', 1, '2013-11-15 21:50:55')[0m
+  [1m[35m (179.1ms)[0m  COMMIT
+  [1m[36m (407.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (768.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (126.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateUsers (20131115145130)
+  [1m[35m (370.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `provider` varchar(255), `uid` varchar(255), `email` text, `encripted_password` varchar(255), `salt` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (126.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (125.9ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115145130')
+  [1m[36m (188.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateDistribuidors (20131115192147)
+  [1m[35m (376.4ms)[0m  CREATE TABLE `distribuidors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `nit_cedula` varchar(255), `nombre_representante_legal` varchar(255), `logo_o_foto` varchar(255), `descripcion` varchar(255), `motivacion_registro` varchar(255), `calificacion` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (125.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (126.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115192147')
+  [1m[36m (172.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToDistribuidors (20131115192840)
+  [1m[35m (860.9ms)[0m  ALTER TABLE `distribuidors` ADD `user_id` int(11)
+  [1m[36m (125.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (127.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115192840')
+  [1m[36m (174.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddDistribuidorIdToUsers (20131115193059)
+  [1m[35m (872.1ms)[0m  ALTER TABLE `users` ADD `distribuidor_id` int(11)
+  [1m[36m (125.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (126.7ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115193059')
+  [1m[36m (179.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateImagenLocals (20131115193607)
+  [1m[35m (350.2ms)[0m  CREATE TABLE `imagen_locals` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url` varchar(255), `descripcion` varchar(255), `distribuidor_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (688.6ms)[0m  [1mCREATE INDEX `index_imagen_locals_on_distribuidor_id` ON `imagen_locals` (`distribuidor_id`) [0m
+  [1m[35m (125.9ms)[0m  BEGIN
+  [1m[36mSQL (126.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115193607')[0m
+  [1m[35m (175.6ms)[0m  COMMIT
+Migrating to CreateProductors (20131115194844)
+  [1m[36m (399.0ms)[0m  [1mCREATE TABLE `productors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `nit_cedula` varchar(255), `logo_o_foto` varchar(255), `descripcion` varchar(255), `motivacion_registro` varchar(255), `calificacion` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (126.9ms)[0m  BEGIN
+  [1m[36mSQL (126.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115194844')[0m
+  [1m[35m (173.5ms)[0m  COMMIT
+Migrating to AddUserIdToProductors (20131115194940)
+  [1m[36m (1040.0ms)[0m  [1mALTER TABLE `productors` ADD `user_id` int(11)[0m
+  [1m[35m (126.4ms)[0m  BEGIN
+  [1m[36mSQL (126.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115194940')[0m
+  [1m[35m (172.2ms)[0m  COMMIT
+Migrating to AddProductorIdToUsers (20131115194958)
+  [1m[36m (1183.9ms)[0m  [1mALTER TABLE `users` ADD `productor_id` int(11)[0m
+  [1m[35m (125.7ms)[0m  BEGIN
+  [1m[36mSQL (126.4ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115194958')[0m
+  [1m[35m (173.1ms)[0m  COMMIT
+Migrating to CreateKeywords (20131115195302)
+  [1m[36m (350.8ms)[0m  [1mCREATE TABLE `keywords` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag` varchar(255), `descripcion` varchar(255), `productor_id` int(11), `distribuidor_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (672.2ms)[0m  CREATE INDEX `index_keywords_on_productor_id` ON `keywords` (`productor_id`) 
+  [1m[36m (694.8ms)[0m  [1mCREATE INDEX `index_keywords_on_distribuidor_id` ON `keywords` (`distribuidor_id`) [0m
+  [1m[35m (126.7ms)[0m  BEGIN
+  [1m[36mSQL (126.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115195302')[0m
+  [1m[35m (355.8ms)[0m  COMMIT
+Migrating to CreateNegociacions (20131115201345)
+  [1m[36m (358.5ms)[0m  [1mCREATE TABLE `negociacions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `acuerdo` varchar(255), `distribuidor_id` int(11), `productor_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (671.5ms)[0m  CREATE INDEX `index_negociacions_on_distribuidor_id` ON `negociacions` (`distribuidor_id`) 
+  [1m[36m (734.6ms)[0m  [1mCREATE INDEX `index_negociacions_on_productor_id` ON `negociacions` (`productor_id`) [0m
+  [1m[35m (126.2ms)[0m  BEGIN
+  [1m[36mSQL (126.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115201345')[0m
+  [1m[35m (185.4ms)[0m  COMMIT
+Migrating to CreateComentarios (20131115201604)
+  [1m[36m (493.2ms)[0m  [1mCREATE TABLE `comentarios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `comentario` varchar(255), `distribuidor_id` int(11), `productor_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (756.6ms)[0m  CREATE INDEX `index_comentarios_on_distribuidor_id` ON `comentarios` (`distribuidor_id`) 
+  [1m[36m (656.7ms)[0m  [1mCREATE INDEX `index_comentarios_on_productor_id` ON `comentarios` (`productor_id`) [0m
+  [1m[35m (125.4ms)[0m  BEGIN
+  [1m[36mSQL (126.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20131115201604')[0m
+  [1m[35m (174.6ms)[0m  COMMIT
+Migrating to CreateProductosDistribuidorsJoinTable (20131115201832)
+  [1m[36m (344.6ms)[0m  [1mCREATE TABLE `productos_distribuidors` (`producto_id` int(11), `distribuidor_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (630.6ms)[0m  CREATE INDEX `index_productos_distribuidors_on_producto_id_and_distribuidor_id` ON `productos_distribuidors` (`producto_id`, `distribuidor_id`) 
+  [1m[36m (125.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (125.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115201832')
+  [1m[36m (253.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateProductos (20131115202222)
+  [1m[35m (505.1ms)[0m  CREATE TABLE `productos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (126.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (125.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131115202222')
+  [1m[36m (173.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (126.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (126.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mSQL (125.4ms)[0m  DELETE FROM `imagen_locals`
+  [1m[36mSQL (126.5ms)[0m  [1mDELETE FROM `comentarios`[0m
+  [1m[35mSQL (125.7ms)[0m  DELETE FROM `keywords`
+  [1m[36mSQL (126.1ms)[0m  [1mDELETE FROM `negociacions`[0m
+  [1m[35mSQL (126.5ms)[0m  DELETE FROM `productos`
+  [1m[36mSQL (126.3ms)[0m  [1mDELETE FROM `distribuidors`[0m
+  [1m[35mSQL (126.1ms)[0m  DELETE FROM `productors`
+  [1m[36mSQL (126.1ms)[0m  [1mDELETE FROM `users`[0m
+WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_cedula, nombre_representante_legal, logo_o_foto, descripcion, motivacion_registro, calificacion
+
+  [1m[35m (126.9ms)[0m  BEGIN
+  [1m[36mSQL (126.4ms)[0m  [1mINSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 21:53:27', '2013-11-15 21:53:27')[0m
+  [1m[35m (174.8ms)[0m  COMMIT
+  [1m[36m (127.8ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[35mSQL (126.2ms)[0m  INSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:53:28', 1, '2013-11-15 21:53:28')
+  [1m[36m (195.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (126.6ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[36mSQL (126.9ms)[0m  [1mINSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:53:29', 1, '2013-11-15 21:53:29')[0m
+  [1m[35m (179.7ms)[0m  COMMIT
+  [1m[36m (126.3ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[35mSQL (126.2ms)[0m  INSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:53:29', 1, '2013-11-15 21:53:29')
+  [1m[36m (173.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (128.2ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[36mSQL (126.4ms)[0m  [1mINSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:53:30', 1, '2013-11-15 21:53:30')[0m
+  [1m[35m (173.1ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (127.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (127.9ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_cedula, nombre_representante_legal, logo_o_foto, descripcion, motivacion_registro, calificacion
+
+  [1m[36m (127.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (127.9ms)[0m  INSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 21:55:40', '2013-11-15 21:55:40')
+  [1m[36m (176.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (128.4ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[36mSQL (128.7ms)[0m  [1mINSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:55:55', 2, '2013-11-15 21:55:55')[0m
+  [1m[35m (173.4ms)[0m  COMMIT
+  [1m[36mKeyword Load (127.9ms)[0m  [1mSELECT `keywords`.* FROM `keywords` WHERE `keywords`.`distribuidor_id` = 2[0m
+  [1m[35m (128.2ms)[0m  BEGIN
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[36mSQL (128.3ms)[0m  [1mINSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:56:38', 2, '2013-11-15 21:56:38')[0m
+  [1m[35m (173.7ms)[0m  COMMIT
+  [1m[36m (128.2ms)[0m  [1mBEGIN[0m
+WARNING: Can't mass-assign protected attributes for Keyword: tag
+
+  [1m[35mSQL (127.7ms)[0m  INSERT INTO `keywords` (`created_at`, `distribuidor_id`, `updated_at`) VALUES ('2013-11-15 21:56:43', 2, '2013-11-15 21:56:43')
+  [1m[36m (174.9ms)[0m  [1mCOMMIT[0m
+WARNING: Can't mass-assign protected attributes for Distribuidor: nombre, nit_cedula, nombre_representante_legal, logo_o_foto, descripcion, motivacion_registro, calificacion
+
+  [1m[35m (127.6ms)[0m  BEGIN
+  [1m[36mSQL (127.5ms)[0m  [1mINSERT INTO `distribuidors` (`created_at`, `updated_at`) VALUES ('2013-11-15 21:57:37', '2013-11-15 21:57:37')[0m
+  [1m[35m (195.1ms)[0m  COMMIT
