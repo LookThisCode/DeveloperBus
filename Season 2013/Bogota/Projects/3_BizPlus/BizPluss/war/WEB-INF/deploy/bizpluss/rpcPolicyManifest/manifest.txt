@@ -1,0 +1,3 @@
+# Module bizpluss
+# RPC service class, partial path of RPC policy file
+main.client.GreetingService, 6214F4CD35692393760EA4E1706D35D5.gwt.rpc
