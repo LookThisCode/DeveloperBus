@@ -16,6 +16,18 @@
   %body
     / Header navbar
     %nav.navbar.navbar-default{role: "navigation"}
-    	.navbar-header
-    		%a.navbar-brand BestPlaces - Conectando pequeños productores y distribuidores
-    	.collapse.navbar-collapse{id: "bs-example-navbar-collapse-1"}
+      .navbar-header
+        %a.navbar-brand
+          %img{src: "/assets/logo.png"}
+      .collapse.navbar-collapse{id: "bs-example-navbar-collapse-1"}
+        .nav.navbar-nav.navbar-right
+          %li
+            %a{:href=>"/"}
+              %span.glyphicon.glyphicon-home
+                Home
+          %li
+            - if current_user
+              = link_to("Cerrar sesión", '/logout', method: :get)
+            - else
+              %a{href: "/auth/google_oauth2"}
+                %img{src: "/assets/sign-in-with-google.png"}
