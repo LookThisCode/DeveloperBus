@@ -49,12 +49,13 @@ class Need(db.Model):
 	user = db.ReferenceProperty(UserMP, collection_name="needs", default=None)
 	service = db.ReferenceProperty(Service, default=None)
 
+	description = db.StringProperty(default=None)
 	delivery_time = db.StringProperty(default=None)
 	budget = db.StringProperty(default=None)
 	life = db.IntegerProperty(default=None)
 	local_ubication = db.BooleanProperty(default=False)
 	ubication = db.StringProperty(default=None)
-	
+
 	publish = db.DateTimeProperty(auto_now_add=True)
 
 	def to_dict(self):

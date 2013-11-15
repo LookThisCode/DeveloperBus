@@ -77,11 +77,26 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 
 app = webapp2.WSGIApplication([
+    #GET Necesidades publicadas
+    #POST Nueva necesidad
     webapp2.Route(r'/api/need' , NeedHandler),
+    #Una necesidad
     webapp2.Route(r'/api/need/<id:\d+>' , NeedHandler),
+    #Ofertas de una necesidad
+    webapp2.Route(r'/api/need/<id:\d+>/<data:offers>' , NeedHandler),
+    #POST Nueva oferta
+    webapp2.Route(r'/api/offer' , OfferHandler),
+    #Una oferta
+    webapp2.Route(r'/api/offer/<id:\d+>' , OfferHandler),
+    #Un usuario
     webapp2.Route(r'/api/user/<id:\d+>' , UserMPHandler),
+    #Necesidades que ha publicado un usuario
     webapp2.Route(r'/api/user/<id:\d+>/<data:needs>' , UserMPHandler),
-    webapp2.Route(r'/api/services' , ServiceHandler),
+    #Ofertas que ha publicado un usuario
+    webapp2.Route(r'/api/user/<id:\d+>/<data:offers>' , UserMPHandler),
+    #Todos los servicios
+    webapp2.Route(r'/api/service' , ServiceHandler),
+    #Un servicio
     webapp2.Route(r'/api/service/<id:\d+>' , ServiceHandler),
 ], debug=True)
 
