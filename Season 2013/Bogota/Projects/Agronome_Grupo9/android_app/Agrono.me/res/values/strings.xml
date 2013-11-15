@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndrodAnimationDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="lorem_ipsum">Lorem Ipsum</string>
+    <string name="action_previous">Anterior</string>
+    <string name="action_next">Siguiente</string>
+
+</resources>
