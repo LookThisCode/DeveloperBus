@@ -5,13 +5,32 @@
     android:orientation="vertical"
     android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:text="Nickname" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="#65FFFFFF"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="4dp"
+            android:text="Nickname/"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#F05A28"
+            android:layout_marginTop="4dp"
+            android:text="Describe un producto"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="350dp"
@@ -34,7 +53,7 @@
                 android:textSize="22sp"
                 android:textColor="#fff"
                 android:textStyle="bold"
-                android:text="¿Que desea para tu" />
+                android:text="¿Que deseas para tu" />
 
             <AutoCompleteTextView
                 android:id="@+id/autoCompleteTextView1"
@@ -56,14 +75,30 @@
         android:layout_marginTop="60dp"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Presupuesto" 
-	        android:textStyle="bold"
-	        android:textSize="20sp"
-	        android:textColor="#1b75bb"/>
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presupuesto"
+                android:textColor="#1b75bb"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ImageView01"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="-2dp"
+                android:orientation="horizontal"
+                android:src="@drawable/help" />
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editText1"
@@ -72,15 +107,29 @@
             android:background="#FFFFFF"
             android:ems="10" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Materiales"
-            android:textColor="#1b75bb"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TextView02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Materiales"
+                android:textColor="#1b75bb"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ImageView02"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:orientation="horizontal"
+                android:src="@drawable/help" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editText2"
@@ -89,15 +138,29 @@
             android:background="#FFFFFF"
             android:ems="10" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Colores"
-            android:textColor="#1b75bb"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Colores"
+                android:textColor="#1b75bb"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ImageView03"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:orientation="horizontal"
+                android:src="@drawable/help" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editText3"
@@ -106,15 +169,29 @@
             android:background="#FFFFFF"
             android:ems="10" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginTop="30dp"
-            android:text="Dimensiones del Lugar"
-            android:textColor="#1b75bb"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/TextView04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dimensiones del lugar"
+                android:textColor="#1b75bb"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ImageView04"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:orientation="horizontal"
+                android:src="@drawable/help" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editText4"
@@ -131,7 +208,9 @@
             android:layout_marginTop="50dp"
             android:background="@drawable/enviar"
             android:height="60dp"
-            android:minHeight="10dp" />
+            android:minHeight="10dp"
+            android:text="Enviar"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 
