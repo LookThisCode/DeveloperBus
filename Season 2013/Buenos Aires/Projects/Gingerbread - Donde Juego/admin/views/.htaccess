@@ -1,0 +1,12 @@
+<Files upload_*.*>
+	Order deny,allow
+	Deny from all
+</Files>
+<Files show_*.*>
+	Order deny,allow
+	Deny from all
+</Files>
+<Files modify_*.*>
+	Order deny,allow
+	Deny from all
+</Files>

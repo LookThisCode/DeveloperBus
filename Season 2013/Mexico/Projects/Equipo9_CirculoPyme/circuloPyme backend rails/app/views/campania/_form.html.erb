@@ -1,0 +1,53 @@
+<%= form_for(@campanium) do |f| %>
+  <% if @campanium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@campanium.errors.count, "error") %> prohibited this campanium from being saved:</h2>
+
+      <ul>
+      <% @campanium.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :img_url %><br />
+    <%= f.text_field :img_url %>
+  </div>
+  <div class="field">
+    <%= f.label :lugares %><br />
+    <%= f.text_field :lugares %>
+  </div>
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :tienda_1_reference %><br />
+    <%= f.text_field :tienda_1_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :tienda_2_reference %><br />
+    <%= f.text_field :tienda_2_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :tienda_3_reference %><br />
+    <%= f.text_field :tienda_3_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :tienda_4_reference %><br />
+    <%= f.text_field :tienda_4_reference %>
+  </div
+  <div class="field">
+    <%= f.label :tienda_5_reference %><br />
+    <%= f.text_field :tienda_5_reference %>
+  </div
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

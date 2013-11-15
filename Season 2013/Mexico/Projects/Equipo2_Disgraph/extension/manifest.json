@@ -1,0 +1,31 @@
+{
+	"name": "Disgraph",
+	"icons": {
+		"48": "images/icon-48.png",
+		"128": "images/icon-128.png"
+	},
+	"version": "0.1.0",
+	"description": "Disgraph tool.",
+	"background": { "page": "background.html" },
+	"content_scripts": [{
+		"matches": ["http://*/*","https://*/*"],
+		"js": ["inject.js"],
+		"run_at": "document_end"
+    }],
+	"browser_action": {
+		"default_icon": "images/icon-19.png",
+		"default_title": "Disgraph Disabled"
+	},
+	"permissions": [
+		"tabs",
+        "http://*/*",
+        "https://*/*"
+	],
+	"web_accessible_resources": [
+		"FBStyle.css",
+		"animate.css",
+		"jquery.js",
+		"inject2.js"
+    ],
+	"manifest_version": 2
+}

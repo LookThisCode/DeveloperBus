@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Eclipse-SourceBundle: com.google.gson;version="2.2.4"
+Built-By: jleitch
+Build-Jdk: 1.6.0_27
+Bundle-Version: 2.2.4
+Bundle-ManifestVersion: 2
+Created-By: Apache Maven
+Bundle-SymbolicName: com.google.gson.source
+Archiver-Version: Plexus Archiver
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/saveElement"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/save"/>
+    
+    <item
+            android:id="@+id/menu_item_share"
+            android:showAsAction="never"
+            android:title="Compartir"
+            android:actionProviderClass=
+                "android.widget.ShareActionProvider" />
+    
+
+</menu>

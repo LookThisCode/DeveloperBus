@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="getData">Actualizar</string>
+    <string name="app_name"></string>
+    <string name="alerta_name">Alertas</string>
+    <string name="donacion_name">Donación</string>
+    <string name="action_settings">Settings</string>
+	<string name="perfil">Perfil</string>
+    <string name="proyectos">Proyectos</string>
+    <string name="asocia">Asociaciones</string>
+    <string name="dona">Donar</string>
+</resources>

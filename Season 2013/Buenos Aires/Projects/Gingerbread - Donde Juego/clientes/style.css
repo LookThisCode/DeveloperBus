@@ -1,0 +1,383 @@
+body {
+	margin: 0;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+#map-canvas 
+{
+		border:1px solid black;
+        height: 350px;
+		width: 420px;
+        margin: 0px;
+        padding: 0px
+ }
+
+
+#headder {
+	z-index: 99999;
+	position:fixed;
+	height: 40px;
+	top:0;
+	left: 0;
+	right: 0;
+	background: #1b1b1b;
+	color: #aaa;
+	border: 1px solid #1b1b1b;
+	margin:0;
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#222),to(#111));
+	background-image: -moz-linear-gradient(top,#222,#111);
+	background-image: -webkit-linear-gradient(top,#222,#111);
+	background-image: -o-linear-gradient(top,#222,#111);
+	background-image: linear-gradient(to bottom,#222,#111);
+	background-repeat: repeat-x;
+	margin-bottom: 30px;
+}
+
+.fondoNegro {
+	background: #111;
+	color: #fff;
+}
+
+.botonHeadder{
+	float:left;
+}
+
+.cerrarSesion{
+	float: right;
+	margin-right: 20px;
+}
+
+.cerrarSesion  a{
+	width: 100px;
+}
+
+.botonHeadder h2, .botonHeadder a{
+	display:table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height: 40px;
+	width: 200px;
+}
+
+.bienvenidoUsuario {
+	float: right;
+	margin-right: 40px;
+}
+
+.bienvenidoUsuario p{
+	display:table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height:40px;
+	font-size: 16px;
+	font-weight: 400;
+	color: #aaa;
+}
+
+.botonHeadder a{
+	width: 100px;
+	font-size: 16px;
+	text-decoration:none;
+	color: #aaa;
+}
+
+.botonHeadder a:hover, .menuAcordion:hover {
+	color: #fff;
+}
+
+#wrapper {
+	width: 900px;
+	min-height: 20px;
+	padding: 19px;
+	margin:70px auto 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	overflow:hidden;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+.log {
+	margin-bottom: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border:1px dashed red;
+	background: #ffcdcd;
+	color: red;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/*ACORDION*/
+
+.menuAcordion  a{
+	width: 160px;
+}
+
+.contenidoAcordion {
+	position: relative;
+	top: 100%;
+	display: none;
+	z-index: 1000;
+	width: 158px;
+	padding: 5px 0;
+	margin: 0;
+	list-style: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-webkit-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+	
+}
+
+.miniImagen{
+	width: 14px;
+	height: 14px;
+	margin-top: 5px;
+	line-height: 16px;
+	vertical-align: text-top;
+	background-image: url("images/glyphicons-halflings.png");
+	background-position: 14px 14px;
+	background-repeat: no-repeat;
+}
+
+span.imgcolores{
+background-position: -72px -72px;
+}
+span.imgnino, span.imghombre, span.imgmujer{
+background-position: -168px -24px;
+}
+span.imgactividades{
+background-position: -96px -120px;
+}
+span.imgpermisos{
+background-position: -144px -72px;
+}
+span.imgusuarios{
+background-position: -168px 0;
+}
+span.imgproductos{
+background-position: -120px 0;
+}
+
+
+.contenidoAcordion li a{
+	display: inline-block;
+	width: 120px;
+	margin:none;
+	padding: 2px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 25px;
+	color: #333;
+	white-space: nowrap;
+	border:none;
+	height:25px;
+}
+
+.contenidoAcordion a:hover{
+	color: #fff;
+	text-decoration: none;
+	background-color: #08c;
+	background-image: -moz-linear-gradient(top,#08c,#0077b3);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#0077b3));
+	background-image: -webkit-linear-gradient(top,#08c,#0077b3);
+	background-image: -o-linear-gradient(top,#08c,#0077b3);
+	background-image: linear-gradient(to bottom,#08c,#0077b3);
+	background-repeat: repeat-x;
+	filter: progid:dximagetransform.microsoft.gradie
+
+}
+
+/*FORMULARIOS*/
+.tituloForm {
+	margin:0 0 15px 20px;
+	font-size: 28px; 
+	color: #000;
+	font-family: "Arial Narrow", Arial;
+
+}
+
+.bordeAmarillo {
+	padding: 10px;
+	border: #c2c20e 1px dashed;
+	font-size: 12px;
+	color: #000;
+	background-color: #ffffcc;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;	
+}
+
+.bordeAzul {
+	padding: 10px;
+	border: #0066cc 1px dashed; 
+	font-size: 12px;
+	color: #000; 
+	background-color: #cce6ff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+form {
+	width: 510px;
+}
+
+form h1 {
+margin-left: 70px;
+}
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+form ul li label{
+float: left;
+clear: left;
+width: 120px;
+text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+form ul li input, select, span {
+float: left;
+margin-bottom: 10px;
+}
+
+form textarea {
+float: left;
+width: 350px;
+height: 150px;
+}
+
+.submit {
+clear: left;
+float:right;
+font-size:14px;
+margin-top: 10px;
+}
+
+p {
+margin-left: 70px;
+font-weight: bold;
+}
+            
+
+/*LISTAS PERMISOS*/
+#listaPermitidos, #listaDenegados {
+	padding: 10px 10px 0;
+    margin:10px 6px;
+    width:215px;
+    min-height:60px;
+    float:left;
+	border:1px dashed;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.listasColores #listaPermitidos, .listasColores #listaDenegados {
+	background: none !important;
+	margin: 0 auto;
+	width: 475px;
+	margin-bottom: 10px;
+}
+
+#listaPermitidos{
+	border-color: green;
+	color:green;
+	background: #ceffce;
+}
+#listaDenegados{
+	background: #ffcdcd;
+	border-color: red;
+	color:red;
+}
+
+.grabarPermisos{
+	float:right;
+	clear: left;
+	cursor: pointer;
+}
+
+.divListas ul{
+	margin:5px;  
+	padding:5px;  
+	list-style:none;
+	text-align: center;
+}
+
+.divListas ul p{
+	margin: 0 0 10px;
+	list-style:none;
+	text-align: center;
+}
+
+.divListas li{
+	position: relative; 
+	display:inline-block;
+	padding: 3px;
+	margin: 0 5px 10px;
+	border: 1px solid;
+	cursor: pointer;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#listaPermitidos li {
+	background: #ceffce;
+}
+
+#listaDenegados li {
+	background: #ffcdcd;
+}
+
+.listasColores li {
+	min-width: 55px;
+	max-width: 65px;
+	font-weight: bold;
+	background-color: #f5f5f5 !important;
+	color: black;
+}
+
+.divListas li div{
+	margin: 4px auto;
+	width:80%; 
+	height:45px; 
+	border: 1px solid black;
+}
+
+.divColores ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-align: center;
+}
+
+.divColores li {
+	position: relative; 
+	display:inline-block;
+	margin-right:1px;
+}

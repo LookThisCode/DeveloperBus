@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="DeveloperBus - Equipo 1 -HotStreet">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <title>Hot street!</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body >
+
+    <!-- Static navbar -->
+    <div id="box-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand"><img src="/img/hotstreet.png" width="150"></a>
+        </div>
+      </div>
+    </div> 
+    <!-- / .navbar -->
+    
+    <div id="box-info" class="row col-xs-9 col-sm-9 col-md-6 col-lg-5">
+
+        <form id="form-init" class="form-inline" action="#" role="form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="tags" placeholder="Que estas buscando?">
+            </div>
+        <div class="form-group">
+            <button id="generar" type="submit" class="btn btn-default">Buscar</button>
+        </div>
+            <div class="form-group">
+                <button id="ubicacion" type="button" class="btn btn-info" onclick="find_location()">Ubicame</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="box-map" class="row col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
+    <!-- Script source-->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&language=es"></script>
+    <script src="https://code.jquery.com/jquery-1.9.0.min.js"></script>
+    <script src="js/markerclusterer.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/oiu.js"></script>
+    <script src="js/omapa.js"></script>
+    <script src="js/f.js"></script>
+  </body>
+</html>

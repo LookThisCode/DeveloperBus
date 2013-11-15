@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<<<<<<< HEAD
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<servlet>
+		<servlet-name>Stockin</servlet-name>
+		<servlet-class>com.devbus.stockin.StockinServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Stockin</servlet-name>
+		<url-pattern>/stockin</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>RemoteApi</servlet-name>
+		<servlet-class>com.google.apphosting.utils.remoteapi.RemoteApiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RemoteApi</servlet-name>
+		<url-pattern>/remote_api</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>stockin.jsp</welcome-file>
+=======
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Stockin_simple</servlet-name>
+		<servlet-class>mx.stockin.Stockin_simpleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Stockin_simple</servlet-name>
+		<url-pattern>/stockin_simple</url-pattern>
+	</servlet-mapping>  
+	<servlet>
+	    <servlet-name>spring</servlet-name>
+	    <servlet-class>mx.stockin.StockinDispatcherServlet</servlet-class>
+	    <init-param>
+	      <param-name>contextConfigLocation</param-name>
+	      <param-value>/WEB-INF/spring/application-context.xml</param-value>
+	    </init-param>
+	    <load-on-startup>1</load-on-startup>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>spring</servlet-name>
+	    <url-pattern>*.mvc</url-pattern>
+	  </servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Stockin</servlet-name>
+		<servlet-class>mx.stockin.StockinServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Stockin</servlet-name>
+		<url-pattern>/stockin</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>start.mvc</welcome-file>
+>>>>>>> 2179bed09109f6e4cfbf3589ffeef159d63bfba9
+	</welcome-file-list>
+</web-app>

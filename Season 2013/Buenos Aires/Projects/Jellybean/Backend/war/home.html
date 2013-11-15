@@ -1,0 +1,339 @@
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600italic' rel='stylesheet' type='text/css'>
+<style>
+body {
+margin: 0;
+padding: 0;
+font-family: 'Titillium Web', sans-serif;
+background-position: center;
+}
+#todo {
+
+}
+table {
+	font-size: 14px;
+	background-color: #eeeeee;
+}
+.ABM {
+font-size: 10px;
+margin: 0;
+}
+#header {
+	background-position: 0,0;
+	border-bottom:5px solid #eeeeee;
+
+}
+#container{
+background-color: #ffffff;
+width: 1024px;
+margin-left: auto;
+margin-right:auto;
+
+}
+.titulos{
+font-weight:bold;
+background-color: #bdbdbd;
+text-align: center;
+
+}
+#main-a{
+	border-bottom:5px solid #eeeeee;
+	height: 420px;
+}
+#main-b{
+	border-bottom:5px solid #eeeeee;
+	height: 350px;
+}
+#
+#recorr {
+	text-align: center;
+	padding-left: 20px;
+
+}
+.par{
+	background-color:#dddddd;
+	height:48px;
+}
+.impar{
+	height:48px;
+}
+.Entregados {
+	text-align: center;
+}
+.Notyet {
+	text-align: center;
+}
+.hecho {
+background-color: #bbbbbb;
+border-style: solid;
+}
+.nohecho {
+background-color: #eeeeee;
+border-style: dotted;
+}
+#mapa{
+ float:right;
+ margin-top:30px;
+ margin-right:20px;
+}
+
+</style>
+<link rel="shortcut icon" href="res\images\favicon.png">
+<title>Don Santiago Almac�n de Bebidas  | Flotee</title>
+</head>
+	<body>
+	<div id="todo">
+		<div id="container" style="  padding-top: 30px;">
+
+			<div id="header">
+				<div id="logindata" style="width:140px;  float:right; padding-top:30px;">
+					<a href=""><img src="res\images\user.png" style="float:left; padding-top:15px;"></a>
+					<p><strong>+Horacio</strong><br/>Salir</p>
+				</div>
+				<div id="logo" style="width:100px; margin-left: 5%;float:left; ">
+					<a href=""><img src="logo.png" ></a>
+				</div>
+				<div id="branding" style="width:386px; margin-left:auto; margin-right: auto; margin-bottom: 20px; " >
+					<img src="res\images\donsantiago.jpg" />
+				</div>
+			</div>
+			<div id="main-a">
+			<div id="recorr" style="margin-left: 30px; margin-top: 30px; float:left; ">
+				<table border="0">
+				<tr class="impar">
+				<td class="titulos">
+					<p>Recorridos activos</p>
+				</td>
+				<td class="titulos">
+					<p>Pedidos entregados</p>
+				</td>
+				<td class="titulos">
+					<p>Pedidos pendientes</p>
+				</td>
+				<td class="titulos">
+					<p>ETA</p>
+				</td>
+				<td class="titulos">
+					<p>Alerta</p>
+				</td>
+				</tr>
+				<tr class="par">
+				<td class="Recorrido">
+					<p><a href="viewer.html">Furgoneta 1</a></p>
+				</td>
+				<td class="Entregados">
+					<p>1</p>
+				</td>
+				<td class="Notyet">
+					<p>4</p>
+				</td>
+				<td class="ETA">
+					<p>22:30</p>
+				</td>
+				<td class="Alerta">
+				</td>
+				</tr>
+				<tr class="impar">
+				<td class="Recorrido">
+					<p><a href="">Furgoneta 2</a></p>
+				</td>
+				<td class="Entregados">
+					<p>4</p>
+				</td>
+				<td class="Notyet">
+					<p>7</p>
+				</td>
+				<td class="ETA">
+					<p>22:54</p>
+				</td>
+
+				<td class="Alerta">
+					<img src="res\images\alerta.png" />
+				</td>
+				</tr>
+				<tr class="par">
+				<td class="Recorrido">
+					<p><a href=""></a></p>
+				</td>
+				<td class="Entregados">
+					<p></p>
+				</td>
+				<td class="Notyet">
+					<p></p>
+				</td>
+				<td class="ETA">
+					<p></p>
+				</td>
+				<td class="Alerta">
+				</td>
+				</tr>
+				<tr class="impar">
+				<td class="Recorrido">
+					<p><a href=""></a></p>
+				</td>
+				<td class="Entregados">
+					<p></p>
+				</td>
+				<td class="Notyet">
+					<p></p>
+				</td>
+				<td class="ETA">
+					<p></p>
+				</td>
+
+				<td class="Alerta">
+				</td>
+				</tr>
+				<tr class="par">
+				<td class="Recorrido">
+					<p><a href=""></a></p>
+				</td>
+				<td class="Entregados">
+					<p></p>
+				</td>
+				<td class="Notyet">
+					<p></p>
+				</td>
+				<td class="ETA">
+					<p></p>
+				</td>
+				<td class="Alerta">
+				</td>
+				</tr>
+					<tr class="impar">
+					<td class="Agregar">
+						<img src="res\images\new.png" width="32px"><p style="float:right;"><a href="ABM-recorrldo.html"><strong>Agregar recorrido</strong></a></p>
+					</td>
+				</tr>
+				</table>
+			</div>
+			<div id="mapa">
+				<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com.ar/maps/ms?msa=0&amp;msid=206983273400767014872.0004e908bce7af941949a&amp;hl=en&amp;ie=UTF8&amp;ll=-34.915372,-57.955032&amp;spn=0,0&amp;t=m&amp;output=embed"></iframe><br /><small>View <a href="https://www.google.com.ar/maps/ms?msa=0&amp;msid=206983273400767014872.0004e908bce7af941949a&amp;hl=en&amp;ie=UTF8&amp;ll=-34.915372,-57.955032&amp;spn=0,0&amp;t=m&amp;source=embed" style="color:#0000FF;text-align:left">Recorridos en vivo</a> in a larger map</small>
+			</div>
+			</div>
+			<div id="main-b">
+			<div id="choferes" style="margin-left: 30px; margin-top: 30px; float:left; ">
+				<table border="0">
+				<tr class="impar">
+				<td class="titulos" width="150">
+					<p>Veh�culos habilitados</p>
+				</td>
+				<td class="titulos" width="100">
+					<p>Patente</p>
+				</td>
+				<td class="titulos" width="130">
+					<p>Chofer</p>
+				</td>
+				<td class="titulos" width="80">
+					<p>Marca</p>
+				</td>
+				<td class="titulos" width="80">
+					<p>Modelo</p>
+				</td>
+				<td class="titulos">
+					<p>Cambios</p>
+				</td>
+				</tr>
+				<tr class="par">
+				<td>
+					<p><a href="">Camioneta 1</a></p>
+				</td>
+				<td>
+					<p>XQV456</p>
+				</td>
+				<td>
+					<p>Diego Ramos</p>
+				</td>
+				<td>
+					<p>Renault</p>
+				</td>
+				<td>
+					<p>Traffic</p>
+				</td>
+				<td>
+									<img src="res\images\pencilmedium.png" height="32" />
+
+				</td>
+				</tr>
+					<tr class="impar">
+					<td>
+						<p><a href="">Furgoneta 1</a></p>
+					</td>
+					<td>
+						<p>RSD324</p>
+					</td>
+					<td>
+						<p>Pedro P�rez</p>
+					</td>
+					<td>
+						<p>Citr�en</p>
+					</td>
+					<td>
+						<p>Berlingo</p>
+					</td>
+					<td>
+					<img src="res\images\pencilmedium.png" height="32" />
+					</td>
+				</tr>
+					<tr class="par">
+					<td>
+						<p><a href="">Furgoneta 2</a></p>
+					</td>
+					<td>
+						<p>CDE987</p>
+					</td>
+					<td>
+						<p>Luis Mario</p>
+					</td>
+					<td>
+						<p>Peugeot</p>
+					</td>
+					<td>
+						<p>Partner</p>
+					</td>
+					<td>
+											<img src="res\images\pencilmedium.png" height="32" />
+
+					</td>
+				</tr>
+					<tr class="impar">
+					<td class="Agregar">
+						<img src="res\images\new.png" width="32px"><p style="float:right;"><a href=""><strong>Agregar veh�culo</strong></a></p>
+					</td>
+				</tr>
+				</table>
+			</div>
+			<div id="stats" style="margin-left: 30px; margin-top: 30px; float:left; ">
+				<table border="0">
+				<tr class="impar">
+				<td class="titulos" width="300">
+					<p>Historial</p>
+				</td>
+				<tr class="par">
+				<td width="300" height="150">
+					<a href="stats.html"><img src="res\images\piechart.png" style="margin-left:35px;"></a>
+					<a href=""><img src="res\images\list.png" style="margin-left:40px;"></a>
+					<a href=""><img src="res\images\folder.png"style="margin-left:40px;"></a>
+					<p style="margin-left:35px;">
+						<a href="stats.html">Gr�ficos</a>
+						&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+						<a href="">Estad�sticas</a>
+						&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+						<a href="">Descargar </a>
+					</p>
+				</td>
+				<tr class="impar">
+				<td width="300" height="50">
+
+				</td>
+				</table>
+		</div>
+
+		</div>
+				<div id="footer" style="">
+					<p  style="text-align:center; font-size: 12px; margin-bottom: 20px;"> Copyright 2013 - Flotee SRL </p>
+		</div>
+		</div>
+	</body>
+</html>

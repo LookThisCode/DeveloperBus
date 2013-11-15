@@ -1,0 +1,36 @@
+<div class="row text-center " >
+  <div class="offset4 span4 border"> </br>
+    <img class="image-wrap" src="/assets/logo_mini.png">
+
+    <h3>Ingresa:</h3>
+<%= form_for(resource, :as => resource_name,:class => "form-horizontal" , :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">Email</label>
+          <div class="controls">
+  <%= f.email_field :email, :autofocus => true %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">Password</label>
+          <div class="controls">
+  <%= f.password_field :password %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="inputPassword">Re Password</label>
+          <div class="controls">
+  <%= f.password_field :password_confirmation %>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger">Registrar</button>
+<% end %>
+
+<%= render "devise/shared/links"  %>
+
+      </div>
+</div>

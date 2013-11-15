@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">jellybean-logistic</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="error_when_retrieving_data">Error obteniendo datos</string>
+    <string name="visitado">Visitado</string>
+    <string name="ausente">Ausente</string>
+
+</resources>

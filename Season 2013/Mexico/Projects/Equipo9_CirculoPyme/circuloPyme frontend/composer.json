@@ -1,0 +1,5 @@
+{"require":{
+"uvicate/webapp": "dev-master", "twitter/bootstrap": "dev-master"
+}
+
+}

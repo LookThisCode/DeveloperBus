@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <div id="home-map"></div>
+
+    <div class="fluid-row">
+        <div class="col-lg-12">
+            <div class="col-lg-5">
+                <div class="jumbotron">
+                  <h1>Bla ipsum sit</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed velit porta, euismod ipsum quis, malesuada mauris. Curabitur molestie diam libero.</p>
+                  <p><span id="signinButton2">
+                        <span class="g-signin" data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile"
+                                               data-clientid="523004285561-6tb9mkvcdbg2u1rb81blslf8vf6ms2th.apps.googleusercontent.com"
+                                               data-redirecturi="postmessage"
+                                               data-accesstype="offline"
+                                               data-cookiepolicy="single_host_origin"
+                                               data-callback="signInCallback"
+                                               data-height="tall"
+                                               data-width="wide">
+                        </span>
+                        </span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="google-plus" method="post" action="{% url 'social:complete' "google-plus" %}">{% csrf_token %}
+        <input id="at" type="hidden" name="access_token" value="" />
+        <input id="code" type="hidden" name="code" value="" />
+    </form>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'js/home.js' %}"></script>
+
+<script>
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://plus.google.com/js/client:plusone.js?onload=start';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+{% endblock %}

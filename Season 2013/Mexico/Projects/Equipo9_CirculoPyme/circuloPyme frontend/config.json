@@ -1,0 +1,13 @@
+{
+	"modules": {
+		"inicio": {},
+		"nosotros": {},
+		"board": {
+			"main":"",
+			"bodas": "",
+			"ferreterias": ""
+			}
+		
+	},
+	"modules_path":"modules/"
+}

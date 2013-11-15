@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Country:</b>
+  <%= @address.country_id %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @address.state_id %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @address.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @address.longitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @address.gmaps %>
+</p>
+
+<p>
+  <b>Street;string:</b>
+  <%= @address.street;string %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @address.number %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @address.city %>
+</p>
+
+
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Back', addresses_path %>

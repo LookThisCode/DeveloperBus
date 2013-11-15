@@ -1,0 +1,2 @@
+serviceClass: jellybean_logistic.client.GreetingService
+path: 904F5918992ED3ACBB18DE026FED7CBE.gwt.rpc

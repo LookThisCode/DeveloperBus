@@ -1,0 +1,174 @@
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600italic' rel='stylesheet' type='text/css'>
+    <style>
+        #map-canvas {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Titillium Web', sans-serif;
+            <!--background-image: url('res/images/fondo.png');-->
+        }
+        table {
+            font-size: 14px;
+            width: 100%;
+            border: 0;
+        }
+        #tableContainer {
+            width: 90%;
+            margin-left: auto;
+            margin-right:auto;
+            margin-top: 10px;
+        }
+        .main {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 5%;
+        }
+        .abm {
+            width: 10%;
+            display: block;
+        }
+        .center {
+            margin-left:auto;
+            margin-right:auto;
+        }
+        #container {
+            background-color: #ffffff;
+            position: absolute;
+            border-right-style: solid, 1%;
+        }
+        .visited {
+            background-color: #bbbbbb;
+            border-style: solid;
+        }
+        .notvisited {
+            background-color: #eeeeee;
+            border-style: dotted;
+        }
+        .absent {
+            background-color: #eeeeee;
+            border-style: dotted;
+        }
+        .newroute {
+            width: 90%;
+            margin-left: auto;
+            margin-right:auto;
+        }
+        .notify {
+        	width: 5%;
+        }
+    </style>
+    <link href="/menu_assets/styles.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="/favicon.png">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="res/scripts/jquery-1.10.2.js"></script>
+    <script src="res/scripts/distance.js"></script>
+    <script src="res/scripts/script.js"></script>
+</head>
+<body>
+<div id="container" style="width:30%; height: 100%;">
+	<div id="tercero" style="width:300px; margin-left: 10%;float:left;margin-top:30px;height: 140px; ">
+		<a href="home.html"><img src="res\images\donsantiago.jpg" style="width:300px;" ></a>
+	</div>
+    <div id="menu" style="width: 90%; margin-left: auto; margin-right:auto;">
+        <!--<div id="alert" style="height: 250px; width: 400px; background-color: red; color: white; font-size: 20px; position: absolute; left: 50%; top: 50%; ">
+            <span>ALERTA<br>Recorrido</span>
+        </div>-->
+        <select id="lstTransports" name="transports" style="width: 100%; font-family:" onchange="changeTransport()">
+            <option value="1">Camión 1 - GAN857</option>
+            <option value="2">Camión 2 - TYU857</option>
+            <option value="1">Camión 3 - RGS954</option>
+            <option value="1">Camión 4 - XVB187</option>
+        </select>
+        <div id="alert" style="height: 150px; width: 100%; background-color: red; color: white; font-size: 40px; text-align: center; vertical-align: middle">
+            <span>ALERTA<br>Transporte</span>
+        </div>
+    </div>
+    <div id="tableContainer">
+        <table id="tableRoutes">
+            <tr class="visited">
+            	<td class="notify">
+            	</td>
+                <td class="main">
+                    <p><strong>NOMBRE DEL LOCAL 1</strong><br/>Dirección<br/>NOTA</p>
+                </td>
+                                <td class="abm">
+				                    <a href=""><img src="res/images/arrowskipup.png" width="24px"></a><br/>
+				                    <a href=""><img src="res/images/remove.png" width="24px"></a><br/>
+				                    <a href=""><img src="res/images/arrowskipdown.png" width="24px"></a>
+                </td>
+            </tr>
+            <tr class="notvisited">
+                        	<td class="notify">
+            	</td>
+                <td class = "main">
+                    <p><strong>NOMBRE DEL LOCAL 1</strong><br/>Dirección<br/>NOTA</p>
+                </td>
+                                <td class="abm">
+				                    <a href=""><img src="res/images/arrowskipup.png" width="24px"></a><br/>
+				                    <a href=""><img src="res/images/remove.png" width="24px"></a><br/>
+				                    <a href=""><img src="res/images/arrowskipdown.png" width="24px"></a>
+                </td>
+            </tr>
+            <tr class="notvisited">
+                        	<td class="notify">
+            	</td>
+                <td class="main">
+                    <p><strong>NOMBRE DEL LOCAL 1</strong><br/>Dirección<br/>NOTA</p>
+                </td>
+
+                                <td class="abm">
+				                    <a href=""><img src="res/images/arrowskipup.png" width="24px"></a><br/>
+				                    <a href=""><img src="res/images/remove.png" width="24px"></a><br/>
+				                    <a href=""><img src="res/images/arrowskipdown.png" width="24px"></a>
+                </td>
+            </tr>
+            <tr class="notvisited">
+                <td class="notify">
+            	</td>
+                <td class="main">
+                    <p><strong>NOMBRE DEL LOCAL 1</strong><br/>Dirección<br/>NOTA</p>
+                </td>
+                <td class="abm">
+                    <a href=""><img src="res/images/arrowskipup.png" width="24px"></a><br/>
+                    <a href=""><img src="res/images/remove.png" width="24px"></a><br/>
+                    <a href=""><img src="res/images/arrowskipdown.png" width="24px"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <p class="newroute"><img src="res/images/pencilmedium.png" width="20px"><a href="">Agregar recorrido</a></p>
+    </div>
+       <button onclick="stop()">Stop Update Position</button>
+    <div id="logo" style="width:300px; margin-left: 10%; float:left; height: 100px;">
+		<a href="home.html"><img src="logo.png" style="width:60px; margin-top: 16px;" ></a>
+	</div>
+</div>
+<script>
+    // Global Directions Service
+    var directionsService = new google.maps.DirectionsService();
+
+    function initialize() {
+        // Limpio el mapa
+        cleanMap();
+
+        $('#alert').hide();
+    }
+
+    // Listener
+    google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div id="containerMap"style="width:70%; height: 100%; float: right;">
+    <div id="map-canvas"></div>
+</div>
+</body>
+</html>

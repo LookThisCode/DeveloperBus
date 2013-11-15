@@ -1,0 +1,23 @@
+#myCarousel {
+margin-left: -15px;
+margin-right: -15px;
+-webkit-box-shadow: 0 8px 6px -6px rgb(153, 153, 153);
+-moz-box-shadow: 0 8px 6px -6px rgb(153, 153, 153);
+box-shadow: 0 8px 6px -6px rgb(153, 153, 153);
+}
+
+.btn-comienza {
+color: #fff!important;
+text-shadow: 0 1px 0 rgba(0,0,0,0.1) !important;
+-webkit-box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
+-moz-box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
+box-shadow: inset 0 -4px 0 rgba(0,0,0,0.1);
+background: #22945d;
+border: 0;
+-webkit-transition: all .4s ease;
+-moz-transition: all .4s ease;
+-ms-transition: all .4s ease;
+-o-transition: all .4s ease;
+transition: all .4s ease;
+padding: 20px;
+}

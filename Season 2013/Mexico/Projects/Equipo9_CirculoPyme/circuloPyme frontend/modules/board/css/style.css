@@ -1,0 +1,61 @@
+.row.board{
+
+	background: url('../../../img/circulos/ciudad.jpg');
+	background-size: cover;
+
+
+}
+
+.row.board.bodas{
+
+  background: url('../../../img/circulos/boda/background.jpg');
+  background-size: cover;
+
+
+}
+
+.row.board.ferreterias{
+
+  background: url('../../../img/circulos/ferreterias/background.jpg');
+  background-size: cover;
+
+
+}
+
+
+
+
+.container-mas {
+    -moz-column-count: 5;
+    -moz-column-gap: 10px;
+    -webkit-column-count: 5;
+    -webkit-column-gap: 10px;
+    column-count: 5;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.board div {
+   background-color: transparent;
+  padding: 10px;
+}
+
+.board div .interno{
+
+
+background: #FFF;
+width: 100%;
+text-align: center;
+border: 1px solid rgb(240, 240, 240);
+border-radius: 3px;
+
+}
+#menuHolder {
+display: none;
+}
+
+.alert {
+
+margin-bottom: 0px;
+
+}

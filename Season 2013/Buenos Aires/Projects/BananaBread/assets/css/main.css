@@ -1,0 +1,186 @@
+@font-face {
+  font-family: Din;
+  src: url(din.ttf);
+}
+
+body {
+  font-family: Din;
+  padding-bottom: 40px;
+  background: #353535;
+  color: #000;
+}
+
+a {
+  color: #e87c05!important;
+}
+
+.content {
+  background: #FFF;
+}
+
+.main-band {
+  background: #000 top right no-repeat;
+  height: 1000px;
+  position: relative;
+  padding: 0;
+}
+
+.main-band .band-data {
+  position: absolute;
+  left: 10px;
+  top: 20%;
+}
+
+.main-band .band-data .title-big, .main-band .sub-title {
+  display: inline-block;
+  color:  black;
+  background: #e87c05;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+.main-band .band-data .title-big {
+  font-size: 70px;
+  line-height: 70px;
+}
+.main-band .band-data .sub-title {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.main-band .band-tags {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #666;
+  color: #FFF;
+  margin: 0;
+  font-family: Arial;
+  padding: 2px;
+}
+.main-band .band-tags a {
+  color: #FFF!important;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.main-band .listening {
+  position: absolute;
+  height: 100;
+  bottom: 20px;
+  width: 100%;
+}
+
+.masthead li a  {
+  margin: 3px;
+  color: #e87c05;
+}
+
+.real-data {
+  padding: 15px 0;
+}
+
+.band-list .title {
+  font-size: 70px;
+  text-align: center;
+  line-height: 90px;
+}
+/********* SEARCH **********/
+.search-input {
+  margin: 50px 0 15px 0;
+}
+.search-input input {
+  display: block;
+  margin: 10px auto;
+  -webkit-box-shadow: 0px 0px 0px 5px rgba(232,124,5,1);
+  -moz-box-shadow: 0px 0px 0px 5px rgba(232,124,5,1);
+  box-shadow: 0px 0px 0px 5px rgba(232,124,5,1);
+  border-radius: 0;
+  border: 1px solid #000;
+}
+
+/******** band DISPALY *******/
+.band-display {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 400px;
+}
+.band-display .band-data {
+  margin-left: 85px;
+}
+.band-display .band-data p {
+  margin: 0;
+}
+
+/*********** login-popup ***********/
+.login-popup .span6 {
+  text-align: center;
+}
+
+/*************** SHOW BAND ***************/
+.show-band-top {
+  padding: 10px 0;
+  overflow: hidden;
+  color: grey;
+}
+.show-band-top img {
+  margin-right: 5px;
+  border: 5px solid #e87c05;
+}
+.show-band-top .title {
+  margin-top: 5px;
+  font-size: 30px;
+  color: #e87c05;
+}
+
+.next-shows  {
+  margin: 10px 0;
+}
+.next-shows h3 {
+  color: #333;
+}
+
+.event-display {
+  overflow: hidden;
+  margin: 10px 0;
+}
+.event-display .day {
+  padding: 5px;
+  margin: 0 5px;
+  background: #e87c05;
+  color: #FFF;
+  font-size: 60px;
+  line-height: 60px;
+  border-radius: 5px
+}
+.event-display .event-description {
+  margin-left: 40px
+}
+.event-display p { 
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #666;
+}
+.medias {
+  overflow: hidden;
+}
+.medias img {
+  cursor: pointer;
+}
+.medias .title {
+  padding-bottom: 3px;
+  margin-bottom: 5px;
+  border-bottom: 5px solid #e87c05;
+}
+
+.band-search-item {
+  width: 90%;
+  padding-bottom: 20px;
+  margin: 30px auto;
+  border-bottom: 1px solid #999;
+}
+.band-search-item img {
+  margin-right: 10px;
+}

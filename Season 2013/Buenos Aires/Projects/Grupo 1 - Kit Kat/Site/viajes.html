@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Viaje Ecológico</title>
+  
+    
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href='http://fonts.googleapis.com/css?family=GFS+Didot' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" href="ico/apple-touch-icon-57.png">
+
+    <style>
+
+      html, body, #map-canvas {
+
+        height: 100%;
+
+        margin: 0px;
+
+        padding: 0px
+
+      }
+
+      #panel {
+
+        position: absolute;
+
+        top: 5px;
+
+        left: 50%;
+
+        margin-left: -180px;
+
+        z-index: 5;
+
+        background-color: #fff;
+
+        padding: 5px;
+
+        border: 1px solid #999;
+
+      }
+
+    </style>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    <script>
+
+var directionsDisplay;
+
+var directionsService = new google.maps.DirectionsService();
+
+var map;
+
+
+
+function initialize() {
+
+  directionsDisplay = new google.maps.DirectionsRenderer();
+
+  var moron = new google.maps.LatLng(-34.56, -58.43);
+
+  var mapOptions = {
+
+    zoom:7,
+
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+    center: moron
+
+  }
+
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  directionsDisplay.setMap(map);
+
+}
+
+
+
+function calcRoute() {
+
+  var start = 'chivilcoy, ar';
+
+  var end = 'san miguel, ar';
+
+  var request = {
+
+      origin:start,
+
+      destination:end,
+
+      travelMode: google.maps.DirectionsTravelMode.DRIVING
+
+  };
+
+  directionsService.route(request, function(response, status) {
+
+    if (status == google.maps.DirectionsStatus.OK) {
+
+      directionsDisplay.setDirections(response);
+
+    }
+
+  });
+
+}
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+    </script>
+
+  </head>
+  
+  <body>
+<section id="services" class="pad-small">
+
+
+	<div class="row">
+		<div class="twelve columns" style="text-align: center;">
+			<a href="index.html"><img src="img/ve_logo.svg" alt="Viaje Ecológico">
+			<h1 style="color: #719904;text-shadow: 1px 1px #B2DB05;">VIAJE ECOLÓGICO</h1></a>
+					<div id="copy-text" style="line-height: 15px;">Carpooling con conciencia ecológica, de verdad <div class="icon icon-leaf">
+					</div>
+		</div>
+	</div>
+</section>
+
+    <input type="submit" value="Calcular Distancia" onclick="calcRoute()">
+    <div id="map-canvas"></div>
+
+
+
+  </body>
+
+</html>
+
+
+<!-- Localized -->

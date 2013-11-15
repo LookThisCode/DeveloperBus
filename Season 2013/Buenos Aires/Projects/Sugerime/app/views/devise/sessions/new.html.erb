@@ -1,0 +1,30 @@
+      <div class="row text-center " >
+     <div class="offset4 span4 border"> </br>
+      <img class="image-wrap" src="/assets/logo_mini.png">
+      <h3>Ingresa:</h3>
+      <%= form_for(resource,:class => "form-horizontal" ,:as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Email</label>
+            <div class="controls">
+          <%= f.email_field :email, :class => "input wide", :placeholder=>"Email" , :required => true%>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="inputPassword">Password</label>
+            <div class="controls">
+
+          <%= f.password_field :password, :class => "input wide", :placeholder => "Contraseña", :required => true%>
+            </div>
+          </div>
+
+          <p><a href="#myModalPassword" role="button" class="forgot-pass" data-toggle="modal">Olvidé mi contraseña</a></p>
+          <p>¿Todavía no sos miembro? <a href="<%= new_user_registration_path %>"></br>Registrate en Sugerime.</a></p>
+          <% if devise_mapping.rememberable? -%>
+                <%= f.check_box :remember_me, :class =>"checkbox" %> Recordarme
+          <% end %> <br/>
+
+          <button type="submit" class="btn btn-danger">Entrar</button>
+      <% end %>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+	<color name="menuBackground">#d4daf9</color>
+    <color name="tabSelected">#a86ee5</color>
+
+    
+</resources>

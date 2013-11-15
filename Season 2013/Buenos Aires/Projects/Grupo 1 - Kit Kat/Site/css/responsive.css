@@ -1,0 +1,45 @@
+/********* MOBILE PHONES *********/
+
+@media only screen and (max-width: 767px){
+
+	#home-slider .display-h{ font-size: 35px; }
+	.work-item-wrapper{ margin:0px auto; margin-bottom: 22px; }
+	.mid-row .work-item-wrapper{ left: 0px; }
+	.last-row{ padding-bottom: 0px; }
+	.project-details p{ columns: 100px 1; -webkit-columns: 100px 1; -moz-columns: 100px 1; }
+	#client-divider img{ max-width: 50%; }
+	#mobile-toggle{ display: block; }
+	#menu li{ float: none; margin-right: 0px; margin-bottom: 22px; }
+	#menu{ float: none; }
+	#home-slider .slides li{ background-attachment: scroll !important; }
+	#testimonials{ background-attachment: scroll; }
+	#testimonials{ background-attachment: scroll; }
+	#client-divider{ background-attachment: scroll; }
+}
+
+/************* TABLETS (portrait and landscape) ************/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+	#home-slider .slides li{ background-attachment: scroll !important; }
+	#testimonials{ background-attachment: scroll; }
+	#testimonials{ background-attachment: scroll; }
+	#client-divider{ background-attachment: scroll; }
+
+}
+
+
+/*********** TABLETS (portrait) ************/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+	#home-slider .display-h{ font-size: 45px; }
+	.work-item-wrapper{ margin:0px auto; margin-bottom: 22px; }
+	.mid-row .work-item-wrapper{ left: 0px; }
+	.last-row{ padding-bottom: 0px; }
+	.work-row .large-4{ width: 100%; }
+
+}
