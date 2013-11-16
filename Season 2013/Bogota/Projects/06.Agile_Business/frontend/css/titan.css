@@ -1,0 +1,12 @@
+
+header.t {
+    max-height: 2em;
+}
+
+header.t.fixed {
+    position: fixed;
+}
+
+.content.t {
+    font-size: 14px;
+}

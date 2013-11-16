@@ -1,0 +1,127 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/11/2013, 09:48:10 AM
+    Author     : Dolly
+*/
+
+
+body{font-family: arial, sans-serif;}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold.eot');
+    src: url('../fonts/roboto-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-bold.woff') format('woff'),
+         url('../fonts/roboto-bold.ttf') format('truetype'),
+         url('../fonts/roboto-bold.svg#robotobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light.eot');
+    src: url('../fonts/roboto-light.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-light.woff') format('woff'),
+         url('../fonts/roboto-light.ttf') format('truetype'),
+         url('../fonts/roboto-light.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium.eot');
+    src: url('../fonts/roboto-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-medium.woff') format('woff'),
+         url('../fonts/roboto-medium.ttf') format('truetype'),
+         url('../fonts/roboto-medium.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+div.clear {
+    clear:both;
+}
+
+.cuerpo_primera{
+    background:#afd466 url('../img/interfaz_inicial_movil.png') no-repeat top center;
+    padding-top:260px;
+    padding-bottom:280px;
+     
+}
+
+.movil{width:380px;margin:auto;}
+
+form{
+    background:#fff;
+    border-radius:5px;
+   -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.75);
+    width:70%;
+    margin:auto;
+    
+}
+
+.login_input{
+    margin:20px 20px 0px 20px;
+    border: 1px solid #e5d3c2;
+    border-radius:5px;
+    padding:5px 10px 5px 5px;
+    width:80%;
+    font-family:'robotolight', sans-serif;
+    
+}
+
+.form_under{
+    background:#ddf1f2;
+    padding:10px 15px 10px 15px;
+    margin-top:20px;
+    
+}
+
+.login{
+   background:#257d97;
+   display:block;
+   float:right;
+   padding:10px 5% 10px 5%;
+   color:#fff;
+   font-family: 'robotomedium', arial, sans-serif;
+   font-size:1.000em;
+   text-decoration:none;
+   border-radius:5px;
+    
+}
+
+.login:hover{background:#2a8dab;}
+
+.input[type="checkbox"]{
+    border:#b2afab 1px solid;
+    width:12px;
+    height:12px;
+    display:inline;
+    
+}
+
+label{color:#7b7b7c;font-size:1.000em;font-family:'robotolight', sans-serif;}
+
+.main_section{background:#fff url('../img/borde_superior.png') no-repeat top center;padding-top:30px;}
+
+h1{-top:20px;}
+
+
+
