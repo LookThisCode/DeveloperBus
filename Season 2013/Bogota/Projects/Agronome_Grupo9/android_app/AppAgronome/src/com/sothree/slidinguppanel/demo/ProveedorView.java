@@ -31,6 +31,8 @@ public class ProveedorView extends LinearLayout {
 	
 	public void setProveedor(Proveedor p) {
 		final int id_proveedor = p.getId();
+		final String lat = p.getLat();
+		final String lng = p.getLng();
 		nombre.setText("NOMBRE: "+ p.getNombre());
 		ubicacion.setText("CIUDAD: "+p.getCiudad());
 		calificacion.setNumStars(5);
@@ -43,6 +45,8 @@ public class ProveedorView extends LinearLayout {
 			public void onClick(View arg0) {
 				Intent i = new Intent(getContext(), Comentarios.class);
 				i.putExtra("id_proveedor", id_proveedor);
+				i.putExtra("lng", lng);
+				i.putExtra("lat", lat);
 				getContext().startActivity(i);
 			}
 		});
@@ -53,6 +57,8 @@ public class ProveedorView extends LinearLayout {
 			public void onClick(View arg0) {
 				Intent i = new Intent(getContext(), DetalleProveedor.class);
 				i.putExtra("id_proveedor", id_proveedor);
+				i.putExtra("lng", lng);
+				i.putExtra("lat", lat);
 				getContext().startActivity(i);
 			}
 		});

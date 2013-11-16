@@ -17,16 +17,33 @@ import android.widget.Button;
 
 public class DetalleProveedor extends Activity {
 	
-	static final LatLng HAMBURG = new LatLng(53.558, 9.927);
-	static final LatLng KIEL = new LatLng(53.551, 9.993);
+	private LatLng ME;
+	private LatLng PROVIDER;
 	private GoogleMap map;
 	Button comments;
+	private String lat;
+	private String lng;
+	private String lat2;
+	private String lng2;
+	GPSTracker gps;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detalle_proveedor);
 		comments = (Button) findViewById(R.id.button1);
+		
+		Bundle reicieveParams = getIntent().getExtras();
+        lat = reicieveParams.getString("lat");
+        lng = reicieveParams.getString("lng");
+        
+        gps = new GPSTracker(getApplicationContext());
+        
+        miPosicion();
+        
+        PROVIDER = new LatLng(Double.parseDouble(lat), Double.parseDouble(lng));
+        
+        ME = new LatLng(Double.parseDouble(lat2), Double.parseDouble(lng2));
 		
 		comments.setOnClickListener(new OnClickListener() {
 
@@ -42,15 +59,31 @@ public class DetalleProveedor extends Activity {
 		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		    
 		    if (map!=null){
-		      Marker hamburg = map.addMarker(new MarkerOptions().position(HAMBURG)
-		          .title("Hamburg"));
+		      Marker hamburg = map.addMarker(new MarkerOptions().position(ME)
+		          .title("Yo"));
 		      Marker kiel = map.addMarker(new MarkerOptions()
-		          .position(KIEL)
-		          .title("Kiel")
-		          .snippet("Kiel is cool")
+		          .position(PROVIDER)
+		          .title("Proveedor")
+		          .snippet("Acá estoy para ofrecerte lo mejor.")
 		          .icon(BitmapDescriptorFactory
 		              .fromResource(R.drawable.ic_launcher)));
 		    }
+	}
+	
+	public void miPosicion(){
+		if(gps.canGetLocation()){
+        	
+        	lat2 = String.valueOf(gps.getLatitude());
+        	lng2 = String.valueOf(gps.getLongitude());
+        	
+        	// \n is for new line
+        	//Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitud + "\nLong: " + longitud, Toast.LENGTH_LONG).show();	
+        }else{
+        	// can't get location
+        	// GPS or Network is not enabled
+        	// Ask user to enable GPS/network in settings
+        	gps.showSettingsAlert();
+        }
 	}
 
 }
