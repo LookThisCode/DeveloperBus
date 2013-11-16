@@ -1,3 +1,5 @@
 class ImagenLocal < ActiveRecord::Base
-  belongs_to :distribuidor
+	attr_accessible :url
+
+  belongs_to :local
 end

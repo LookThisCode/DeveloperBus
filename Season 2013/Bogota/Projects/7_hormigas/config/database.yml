@@ -18,7 +18,7 @@ development:
   username: <%= ENV['BESTPLACES_DEV_DB_DATABASE_USER'] %>
   password: <%= ENV['BESTPLACES_DEV_DB_DATABASE_PASSWORD'] %>
   #host: localhost
-  host: 173.194.107.112
+  host: 173.194.107.129
   secure_auth: false
   port: 3306
   encoding: utf8
@@ -47,7 +47,7 @@ test:
   username: <%= ENV['BESTPLACES_TEST_DB_DATABASE_USER'] %>
   password: <%= ENV['BESTPLACES_TEST_DB_DATABASE_PASSWORD'] %>
   #host: localhost
-  host: 173.194.107.112
+  host: 173.194.107.129
   secure_auth: false
   port: 3306
   encoding: utf8
@@ -58,7 +58,7 @@ production:
   username: <%= ENV['BESTPLACES_PROD_DB_DATABASE_USER'] %>
   password: <%= ENV['BESTPLACES_PROD_DB_DATABASE_PASSWORD'] %>
   #host: localhost
-  host: 173.194.107.112
+  host: 173.194.107.129
   secure_auth: false
   port: 3306
   encoding: utf8

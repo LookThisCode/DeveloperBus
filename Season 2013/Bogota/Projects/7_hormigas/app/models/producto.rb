@@ -1,3 +1,6 @@
 class Producto < ActiveRecord::Base
-	has_and_belongs_to_many :distribuidor
+	attr_accessible :nombre, :descripcion, :url_imagen
+
+  belongs_to :productor
+  has_many   :negocio_cerrado
 end
