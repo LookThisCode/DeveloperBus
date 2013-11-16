@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+    <servlet>
+	    <servlet-name>ConnectServlet</servlet-name>
+	    <servlet-class>main.ConnectServlet</servlet-class>
+	  </servlet>
+	<servlet-mapping>
+	    <servlet-name>ConnectServlet</servlet-name>
+	    <url-pattern>/connect</url-pattern>
+	  </servlet-mapping>
+	  <servlet>
+    <servlet-name>DisconnectServlet</servlet-name>
+	    <servlet-class>main.DisconnectServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>DisconnectServlet</servlet-name>
+	    <url-pattern>/disconnect</url-pattern>
+	  </servlet-mapping>
+	  
+	<servlet>
+    <servlet-name>UsersServlet</servlet-name>
+	    <servlet-class>main.UsersServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>UsersServlet</servlet-name>
+	    <url-pattern>/users</url-pattern>
+	  </servlet-mapping>
+	  
+	  <servlet>
+    <servlet-name>CompaniesServlet</servlet-name>
+	    <servlet-class>main.CompaniesServlet</servlet-class>
+	  </servlet>
+	  <servlet-mapping>
+	    <servlet-name>CompaniesServlet</servlet-name>
+	    <url-pattern>/companies</url-pattern>
+	  </servlet-mapping>
+	  
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>html/index.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>
