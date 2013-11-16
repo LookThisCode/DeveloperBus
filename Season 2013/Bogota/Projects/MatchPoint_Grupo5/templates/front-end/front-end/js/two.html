@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Two</title>		
+		<script type="text/javascript" src="lib/angular.js"></script>
+		<script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.min.js"></script>
+		<script src='app/controllers/servicesController.js'></script>
+		<script src='app/controllers/persistenceController.js'></script>
+	</head>
+	<body>
+		<!--<div ng-controller='twoController'>
+			<input type="text" placeholder='Search ...' ng-model='key_word'>
+			<button ng-click="search( key_word )" >Search</button>
+		</div>-->		
+
+		<!--<div ng-controller='twoController'>
+			Total de items {{ services.length }}
+			<br />
+			<p ng-repeat='service in services'>
+				{{ service.name }}
+			</p>
+		</div>-->
+
+		<div ng-controller='persistenceController'>
+			<button ng-click='fetch( "GET" )'>Request!</button>
+		</div>
+	</body>
+</html>

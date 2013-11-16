@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
+		 <style>
+		  body {
+			padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+		  }
+          div span {
+              width: 200px;
+              float: left;
+          }
+		</style>
+
+        <script>
+            function init(){
+                var apiRoot = '//' + window.location.host + '/_ah/api';
+                gapi.client.load('goal', 'v1', function() {
+                    loadGoals();
+                },apiRoot);
+            }
+
+            function addGoal(button){
+                button.disabled = true;
+                var title = document.getElementById("newTitle").value;
+                gapi.client.goal.insert({'title':title}).execute(function(resp) {
+                    setTimeout(function(){
+                        document.getElementById("newTitle").value = '';
+                        loadGoals();
+                        button.disabled = false;
+                    }, 500);
+                });
+            }
+
+            function delGoal(id, button){
+                button.disabled = true;
+                gapi.client.goal.delete({'id':id}).execute(function(resp) {
+                    setTimeout(function(){
+                        loadGoals();
+                        button.disabled = false;
+                    }, 500);
+                });
+            }
+
+            function toggleGoal(id){
+                gapi.client.goal.toggle({'id':id}).execute(function(resp) {
+                    console.log(resp);
+                });
+            }
+
+            function loadGoals(){
+                gapi.client.goal.list().execute(function(resp) {
+                    console.log(resp.items);
+                    goalListStr = "";
+                    items = resp.items;
+                    for(index in items){
+                        goalListStr += "<div>"
+                        goalListStr += "<span>"+items[index].title+"</span>"
+                        goalListStr += " <input type='checkbox' onchange='toggleGoal("+items[index].id+")'"
+                        if (items[index].completed){
+                            goalListStr += "checked";
+                        }
+                        goalListStr += "/>"
+                        goalListStr += " <button type='button' class='btn' onclick='delGoal("+items[index].id+",this)'>-</button> <br/>"
+                        goalListStr += "</div>"
+                    }
+                    document.getElementById('goal-list').innerHTML = goalListStr;
+                });
+            }
+        </script>
+    </head>
+
+    <body>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="brand" href="#">Endpoints</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+            <div id="goal-list">
+            </div>
+            <br/>
+            <input type="text" id="newTitle"/> <button id="addButton" class="btn btn-primary"  onclick="addGoal(this)"  type="button"> +</button>
+        </div>
+    </body>
+</html>

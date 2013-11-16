@@ -11,6 +11,8 @@ handlers:
 
 - url: /api/.*
   script: main.app
+  http_headers: 
+  	Access-Control-Allow-Origin: *
 
 - url: .*
   script: main.app_html

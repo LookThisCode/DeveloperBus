@@ -3,7 +3,11 @@
 one:
   nombre: MyString
   descripcion: MyString
+  url_imagen: MyString
+  productor_id: 
 
 two:
   nombre: MyString
   descripcion: MyString
+  url_imagen: MyString
+  productor_id: 

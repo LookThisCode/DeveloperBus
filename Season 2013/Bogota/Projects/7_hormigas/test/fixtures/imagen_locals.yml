@@ -2,10 +2,8 @@
 
 one:
   url: MyString
-  descripcion: MyString
-  distribuidor_id: 
+  local_id: 
 
 two:
   url: MyString
-  descripcion: MyString
-  distribuidor_id: 
+  local_id: 
