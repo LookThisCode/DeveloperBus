@@ -21,6 +21,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -28,6 +29,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -52,6 +54,7 @@ public class MainProveedores extends Activity {
 		textoBusqueda = (EditText) findViewById(R.id.txt_busqueda);
 		
 		
+		
 		proveedores = new ArrayList<Proveedor>();
 
 		adaptador = new ProveedorAdapter(proveedores);
@@ -71,7 +74,7 @@ public class MainProveedores extends Activity {
 				
 			}
 		});
-		
+
 		//new ProveedoresTask().execute("keyword");
 
 	}

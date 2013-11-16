@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class ProveedorView extends LinearLayout {
 	
-	private ImageView imagen, suscribir;
+	private ImageView imagen, suscribir, vermas;
 	private Bitmap foto;
 	private TextView nombre,ubicacion;
 	private RatingBar calificacion;
@@ -26,12 +26,13 @@ public class ProveedorView extends LinearLayout {
 		ubicacion = (TextView) findViewById(R.id.ubicacion); 
 		calificacion = (RatingBar) findViewById(R.id.prov_rate);	
 		suscribir = (ImageView) findViewById(R.id.btn_suscribir);
+		vermas = (ImageView) findViewById(R.id.vermas);
 	}
 	
 	public void setProveedor(Proveedor p) {
 		final int id_proveedor = p.getId();
-		nombre.setText(p.getNombre());
-		ubicacion.setText(p.getCiudad());
+		nombre.setText("NOMBRE: "+ p.getNombre());
+		ubicacion.setText("CIUDAD: "+p.getCiudad());
 		calificacion.setNumStars(5);
 		calificacion.setRating(Float.parseFloat(p.getRating()));
 		calificacion.setEnabled(false);
@@ -41,7 +42,17 @@ public class ProveedorView extends LinearLayout {
 			@Override
 			public void onClick(View arg0) {
 				Intent i = new Intent(getContext(), Comentarios.class);
-				i.putExtra("id_proveedor", "1");
+				i.putExtra("id_proveedor", id_proveedor);
+				getContext().startActivity(i);
+			}
+		});
+		
+		vermas.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(getContext(), DetalleProveedor.class);
+				i.putExtra("id_proveedor", id_proveedor);
 				getContext().startActivity(i);
 			}
 		});

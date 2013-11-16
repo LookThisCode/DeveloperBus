@@ -26,8 +26,8 @@ public class ComentarioView extends LinearLayout{
 	}
 	
 	public void setComentario(Comentario c) {
-		usuario.setText(c.getUsuario());
-		comentario.setText(c.getComentario());
+		usuario.setText("NOMBRE: "+c.getUsuario());
+		comentario.setText("COMENTARIO: "+c.getComentario());
 		rate.setRating(c.getRating());
 		rate.setEnabled(false);
 		

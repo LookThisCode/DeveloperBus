@@ -33,6 +33,7 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 
     <application
@@ -77,15 +78,23 @@
         <activity
             android:name="com.sothree.slidinguppanel.demo.DetalleProveedor"
             android:label="@string/title_activity_detalle_proveedor" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name="com.sothree.slidinguppanel.demo.Comentarios"
             android:label="@string/title_activity_comentarios" >
         </activity>
         
+        <meta-data android:name="com.google.android.gms.version"
+           android:value="@integer/google_play_services_version" />
         <meta-data
+            
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="your_apikey" />
+            android:value="AIzaSyAcxKOrukm3UGZ3BZufBBLDDhfOe6vasVk" />
     </application>
 
 </manifest>

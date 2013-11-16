@@ -1,27 +1,27 @@
-# view AndroidManifest.xml #generated:59
+# view AndroidManifest.xml #generated:60
 -keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(...); }
 
-# view res/layout/activity_detalle_proveedor.xml #generated:16
--keep class com.google.android.gms.maps.SupportMapFragment { <init>(...); }
+# view res/layout/activity_detalle_proveedor.xml #generated:7
+-keep class com.google.android.gms.maps.MapFragment { <init>(...); }
 
 # view res/layout/activity_demo.xml #generated:8
 -keep class com.sothree.slidinguppanel.SlidingUpPanelLayout { <init>(...); }
 
-# view AndroidManifest.xml #generated:81
+# view AndroidManifest.xml #generated:87
 -keep class com.sothree.slidinguppanel.demo.Comentarios { <init>(...); }
 
-# view AndroidManifest.xml #generated:43
+# view AndroidManifest.xml #generated:44
 -keep class com.sothree.slidinguppanel.demo.DemoActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:77
+# view AndroidManifest.xml #generated:78
 -keep class com.sothree.slidinguppanel.demo.DetalleProveedor { <init>(...); }
 
-# view AndroidManifest.xml #generated:57
+# view AndroidManifest.xml #generated:58
 -keep class com.sothree.slidinguppanel.demo.GCMIntentService { <init>(...); }
 
-# view AndroidManifest.xml #generated:52
+# view AndroidManifest.xml #generated:53
 -keep class com.sothree.slidinguppanel.demo.MainProveedores { <init>(...); }
 
-# view AndroidManifest.xml #generated:74
+# view AndroidManifest.xml #generated:75
 -keep class com.sothree.slidinguppanel.demo.RegisterActivity { <init>(...); }
 
