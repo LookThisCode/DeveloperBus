@@ -1,0 +1,128 @@
+{
+  "extends" : "thirdParty.api",
+  "abstract" : false,
+  "root" : "https://agrono-me.appspot.com/_ah/api",
+  "name" : "agronome",
+  "version" : "v1",
+  "defaultVersion" : false,
+  "adapter" : {
+    "bns" : "https://agrono-me.appspot.com/_ah/spi",
+    "deadline" : 10.0,
+    "type" : "lily"
+  },
+  "auth" : {
+    "allowCookieAuth" : false
+  },
+  "frontendLimits" : {
+    "unregisteredUserQps" : -1,
+    "unregisteredQps" : -1,
+    "unregisteredDaily" : -1,
+    "rules" : [ ]
+  },
+  "cacheControl" : {
+    "type" : "no-cache",
+    "maxAge" : 0
+  },
+  "methods" : {
+    "agronome.proveedor.consultarproveedortag" : {
+      "path" : "consultarProveedorPorTag/{tagname}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "1076828712917" ],
+      "clientIds" : [ "1076828712917", "replace this with your Android client ID", "replace this with your iOS client ID" ],
+      "rosyMethod" : "co.com.agronome.proveedores.spi.ProveedorAPI.consultarProveedorPorTag",
+      "request" : {
+        "parameters" : {
+          "tagname" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    },
+    "agronome.proveedor.consultarproveedorporusuario" : {
+      "path" : "consultarProveedorPorUsuario/{usuario}",
+      "httpMethod" : "POST",
+      "authLevel" : "NONE",
+      "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
+      "audiences" : [ "1076828712917" ],
+      "clientIds" : [ "1076828712917", "replace this with your Android client ID", "replace this with your iOS client ID" ],
+      "rosyMethod" : "co.com.agronome.proveedores.spi.ProveedorAPI.consultarProveedorPorUsuario",
+      "request" : {
+        "parameters" : {
+          "usuario" : {
+            "type" : "string",
+            "required" : true
+          }
+        },
+        "body" : "empty"
+      },
+      "response" : {
+        "body" : "autoTemplate(backendResponse)"
+      }
+    }
+  },
+  "descriptor" : {
+    "schemas" : {
+      "ProveedorDTO" : {
+        "id" : "ProveedorDTO",
+        "type" : "object",
+        "properties" : {
+          "usuario" : {
+            "type" : "string"
+          },
+          "nit" : {
+            "type" : "string"
+          },
+          "nombre" : {
+            "type" : "string"
+          },
+          "telefono" : {
+            "type" : "string"
+          },
+          "latitud" : {
+            "type" : "string"
+          },
+          "longitud" : {
+            "type" : "string"
+          },
+          "rating" : {
+            "type" : "string"
+          },
+          "ciudad" : {
+            "type" : "string"
+          }
+        }
+      },
+      "ProveedorDTOCollection" : {
+        "id" : "ProveedorDTOCollection",
+        "type" : "object",
+        "properties" : {
+          "items" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "ProveedorDTO"
+            }
+          }
+        }
+      }
+    },
+    "methods" : {
+      "co.com.agronome.proveedores.spi.ProveedorAPI.consultarProveedorPorTag" : {
+        "response" : {
+          "$ref" : "ProveedorDTOCollection"
+        }
+      },
+      "co.com.agronome.proveedores.spi.ProveedorAPI.consultarProveedorPorUsuario" : {
+        "response" : {
+          "$ref" : "ProveedorDTO"
+        }
+      }
+    }
+  }
+}

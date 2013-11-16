@@ -2,17 +2,15 @@ package co.com.agronome.proveedores.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.appengine.api.datastore.Entity;
-
 import co.com.agronome.proveedores.modelo.Proveedor;
+
+import com.google.appengine.api.datastore.Entity;
 
 /**
  * @author <a href="mailto:rachirib@gmail.com">Ricardo Alberto Chiriboga</a>
@@ -32,8 +30,18 @@ public class LoginServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
+		resp.setContentType("application/json; charset=utf-8");
+		resp.setHeader("Cache-Control", "no-cache");
+		String action = req.getParameter("action");
+		PrintWriter out = resp.getWriter();
+		if ("sessionUser".equalsIgnoreCase(action)) {
+			String name =  (String) req.getSession().getAttribute("user");
+			if (name == null) {
+				out.println("ERROR");
+			}else{
+				out.println(Util.writeJSON(Proveedor.getProveedor(name)));
+			}
+		}
 	}
 	
 	/** 
@@ -45,14 +53,14 @@ public class LoginServlet extends HttpServlet{
 		String usuario = req.getParameter("usuario");
 		String pass = req.getParameter("pass");
 		
-		Entity proveedor = Proveedor.getSingleProveedor(usuario, pass);
+		Entity proveedor = Proveedor.validateProveedor(usuario, pass);
 		if (proveedor != null) {
-			req.getSession().setAttribute("user", proveedor);
-			resp.sendRedirect("editar.html");
+			req.getSession().setAttribute("user", proveedor.getKey().getName());
+			PrintWriter out = resp.getWriter();
+			out.append("OK");
 		}else{
 			return;
 		}
 		
-		super.doPost(req, resp);
 	}
 }
