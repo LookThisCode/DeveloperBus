@@ -6,6 +6,7 @@ from google.appengine.ext import db
 class Service(db.Model):
 	"""
 	Servicios que prestan las pymes/personas (UserMP)
+	
 	"""
 	name = db.StringProperty(default=None)
 	description = db.StringProperty(default=None)
@@ -21,10 +22,13 @@ class Service(db.Model):
 
 
 
+
 class UserMP(db.Model):
 	"""
 	Usuarios del sistema. Pueden ser pymes, o clientes.
+
 	"""
+	email = db.EmailProperty(default=None)
 	pyme_name = db.StringProperty(default=None)
 	pyme_service = db.ReferenceProperty(Service, default=None)
 	pyme_ubication = db.StringProperty(default=None)
@@ -33,7 +37,8 @@ class UserMP(db.Model):
 	def to_dict(self):
 		r = dict([(p, unicode(getattr(self, p))) for p in self.properties()])
 		r["id"] = str(self.key().id())
-		r["pyme_service"] = self.pyme_service.to_dict()
+		if self.pyme_service != None:
+			r["pyme_service"] = self.pyme_service.to_dict()
 		return r
 
 	def to_json(self):
@@ -41,10 +46,10 @@ class UserMP(db.Model):
 
 
 
-
 class Need(db.Model):
 	"""
 	Necesidades que los usuarios como clientes publican en la plataforma
+
 	"""
 	user = db.ReferenceProperty(UserMP, collection_name="needs", default=None)
 	service = db.ReferenceProperty(Service, default=None)
@@ -92,3 +97,6 @@ class Offer(db.Model):
 
 	def to_json(self):
 		return json.dumps(self.to_dict())
+
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ciudad: MyString
+  pais: MyString
+  lat: 1.5
+  lon: 1.5
+  distribuidor_id: 
+
+two:
+  ciudad: MyString
+  pais: MyString
+  lat: 1.5
+  lon: 1.5
+  distribuidor_id: 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html ng-app>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title></title>
+			<link rel="stylesheet" href="">
+			<script src="lib/angular.js"></script>
+			<script src="app/controllers/controller.js"></script>
+	</head>
+	<body>
+		<div ng-controller='HelloController'>
+			<p>{{greeting.text}}, World</p>
+		</div>
+
+		<div ng-controller='hi'>
+			<h3>{{ name }}</h3>
+			<h2>{{ last_name }}</h2>
+		</div>
+
+		<div ng-controller='BindingController'>
+	        <h3>Nuevo contacto</h3>
+	        <input type='text' ng-model="contacto.nombre" placeholder='Nombre'/>
+	        <input type='text' ng-model="contacto.telefono" placeholder='Teléfono'/>
+	        
+	        <h3>Datos del nuevo contacto</h3>
+	        <p>Nombre: {{contacto.nombre}}</p>
+	        <p>Telefono: {{contacto.telefono}}</p> 
+	        <button ng-click='send()'>Datos de prueba</button> 
+	    </div>
+	</body>
+</html>

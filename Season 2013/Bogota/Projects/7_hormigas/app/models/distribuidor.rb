@@ -1,9 +1,11 @@
 class Distribuidor < ActiveRecord::Base
+	attr_accessible :nombre, :nit_cedula, :nombre_representante_legal, :logo_o_foto, :descripcion, :motivacion_registro, :calificacion
+
   has_one    :user
-  has_many   :imagen_local
+  has_many   :local
   has_many   :keyword
-  has_many   :negociacion
-  has_and_belongs_to_many :producto
+  has_many   :negocio_cerrado
+  has_many   :comentario
 
 #   field :nombre, 											type: String
 #   field :nit_cedula,      						type: String

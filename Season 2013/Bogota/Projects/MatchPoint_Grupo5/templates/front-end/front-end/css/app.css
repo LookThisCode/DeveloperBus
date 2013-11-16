@@ -1,0 +1,280 @@
+input[type=text],
+input[type=email],
+input[type=password] {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  background-color: #f2f2f2;
+  padding: 9px;
+  border: 4px solid #999;
+  margin-bottom: 10px; }
+
+textarea {
+  background-color: #f2f2f2;
+  border: 4px solid #999;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px; }
+
+select {
+  background-color: #f2f2f2;
+  border: 4px solid #999;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  margin-bottom: 10px;
+  padding: 9px;
+  -webkit-appearance: none; }
+
+.btn,
+input[type=submit],
+button {
+  border: none;
+  background: #f15a24;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  opacity: 1;
+  padding: 9px 18px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+  .btn:hover,
+  input[type=submit]:hover,
+  button:hover {
+    opacity: 0.8;
+    color: #fff; }
+  .btn.icon,
+  input[type=submit].icon,
+  button.icon {
+    background: #f15a24 url("../img/submit-icon.png") right center no-repeat;
+    padding-right: 60px; }
+
+/*---------------------------------------*
+ * HTML Tags
+ *---------------------------------------*/
+body {
+  background: url("../img/bg.jpg") no-repeat center top fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #666;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  min-width: 960px;
+  min-height: 100%; }
+
+b {
+  color: #fbb03b;
+  font-weight: 300; }
+
+strong {
+  font-weight: 500; }
+
+.hr-bars {
+  border-top: 20px solid #fbb03b;
+  border-bottom: 20px solid #f7931e;
+  margin: 0; }
+
+.main_content {
+  position: relative;
+  padding: 20px 0; }
+
+.wrapper-page {
+  background: rgba(242, 242, 242, 0.95); }
+
+/*---------------------------------------*
+ * Header
+ *---------------------------------------*/
+header .logo {
+  margin: 0 auto 10px;
+  padding-top: 40px;
+  text-align: center; }
+  header .logo a {
+    display: block; }
+header .slogan {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: center; }
+header .video-reel {
+  margin-left: 20px; }
+  header .video-reel a {
+    color: #666;
+    display: block;
+    background: url(../img/play-video.png) 20px 10px no-repeat;
+    display: block;
+    padding: 10px 20px 10px 40px;
+    width: 180px; }
+    header .video-reel a:hover {
+      background-color: rgba(242, 242, 242, 0.95);
+      text-decoration: none; }
+
+/*---------------------------------------*
+ * Menus
+ *---------------------------------------*/
+nav ul {
+  padding: 0; }
+nav li {
+  list-style: none; }
+
+/*----- Main Nav------*/
+#main-nav {
+  position: absolute;
+  top: 20px;
+  right: 0; }
+  #main-nav li {
+    margin-bottom: 10px;
+    text-align: right; }
+  #main-nav a {
+    color: #fff;
+    display: block;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    opacity: 1;
+    padding: 0 20px 0 50px;
+    text-align: left; }
+    #main-nav a:hover {
+      text-decoration: none;
+      opacity: 0.8; }
+    #main-nav a.about {
+      background: #f7931e url("../img/icons-sprite.png") 10px -95px no-repeat; }
+    #main-nav a.gplus-signin {
+      background: #f15a24 url("../img/icons-sprite.png") 10px -145px no-repeat; }
+
+/*----- Services Filters Nav------*/
+#services-cat {
+  padding-top: 10px; }
+  #services-cat h4 {
+    font-size: 24px;
+    font-weight: 300; }
+  #services-cat ul ul {
+    margin-left: 20px; }
+  #services-cat li a {
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    display: block;
+    padding: 4px 8px; }
+    #services-cat li a:hover {
+      text-decoration: none;
+      background-color: #F9C694; }
+
+/*---------------------------------------*
+* Landig Page
+*---------------------------------------*/
+#form-what-do-you-need #what {
+  width: 100%; }
+#form-what-do-you-need fieldset {
+  display: none; }
+#form-what-do-you-need #category {
+  clear: both;
+  width: 100%; }
+#form-what-do-you-need #city,
+#form-what-do-you-need #deadline,
+#form-what-do-you-need #budget {
+  float: left; }
+#form-what-do-you-need #city {
+  margin-right: 1%;
+  width: 30%; }
+#form-what-do-you-need #deadline {
+  margin-right: 1%;
+  width: 38%; }
+#form-what-do-you-need #budget {
+  float: right;
+  width: 30%; }
+#form-what-do-you-need #submit {
+  float: right; }
+
+/*-----TagLine------*/
+.tagline {
+  background: rgba(242, 242, 242, 0.95);
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 20px;
+  line-height: 22px; }
+  .tagline h4 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 5px; }
+
+/*---------------------------------------*
+ * Pyme - Profile Page
+ *---------------------------------------*/
+.pyme-profile {
+  margin-top: 20px;
+  position: relative;
+  background: #fafafa; }
+  .pyme-profile h2 {
+    font-size: 22px;
+    font-weight: 700; }
+  .pyme-profile .photo {
+    background: #D1D1D1;
+    height: 120px;
+    width: 120px;
+    float: left;
+    margin: 20px; }
+  .pyme-profile .desc {
+    padding: 10px 10px 10px 80px;
+    margin-left: 60px; }
+  .pyme-profile .pyme-cat {
+    color: #f15a24; }
+
+/*----- Pyme - Published Needs ------*/
+.pyme-needs h3 {
+  font-weight: 300; }
+.pyme-needs article {
+  clear: both;
+  margin-bottom: 20px; }
+.pyme-needs article.indented {
+  margin-left: 80px; }
+.pyme-needs .box {
+  background: #fafafa;
+  overflow: hidden;
+  padding: 10px;
+  width: 100%; }
+.pyme-needs .pick {
+  clear: both;
+  text-align: right; }
+.pyme-needs .photo,
+.pyme-needs .content,
+.pyme-needs .offers,
+.pyme-needs .desc {
+  float: left; }
+.pyme-needs .photo {
+  width: 100px;
+  margin-right: 20px;
+  text-align: center; }
+.pyme-needs .offers {
+  padding-top: 20px; }
+  .pyme-needs .offers p {
+    background-color: rgba(242, 242, 242, 0.95);
+    border: 2px solid #666;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    width: 30px; }
+  .pyme-needs .offers.hot-low {
+    background: url("../img/icon-hot-low.png") center 10px no-repeat; }
+  .pyme-needs .offers.hot-mid {
+    background: url("../img/icon-hot-mid.png") center 10px no-repeat; }
+  .pyme-needs .offers.hot-high {
+    background: url("../img/icon-hot-high.png") center 10px no-repeat; }
+.pyme-needs .budget,
+.pyme-needs .deadline {
+  height: 20px;
+  padding-left: 30px; }
+.pyme-needs .budget {
+  background: url(../img/icons-sprite.png) 0 0 no-repeat;
+  height: 40px;
+  line-height: 40px; }
+.pyme-needs .deadline {
+  background: url(../img/icons-sprite.png) 0 -50px no-repeat; }
+
+/*@ sourceMappingURL=app.css.map */
