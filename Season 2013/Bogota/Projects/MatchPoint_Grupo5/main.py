@@ -94,6 +94,8 @@ app = webapp2.WSGIApplication([
     webapp2.Route(r'/api/user/<id:\d+>/<data:needs>' , UserMPHandler),
     #Ofertas que ha publicado un usuario
     webapp2.Route(r'/api/user/<id:\d+>/<data:offers>' , UserMPHandler),
+    #Login - Register
+    webapp2.Route(r'/api/user/login' , UserMPLoginHandler),
     #Todos los servicios
     webapp2.Route(r'/api/service' , ServiceHandler),
     #Un servicio
