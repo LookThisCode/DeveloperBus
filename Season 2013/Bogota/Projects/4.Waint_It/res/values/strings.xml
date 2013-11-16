@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Waint_It</string>
+    <string name="action_settings">Settings</string>
+    <string name="acceso">Acceso</string>
+    <string name="oferta">Oferta</string>
+    <string name="desea">Desea</string>
+    <string name="title_activity_ingreso_perfil">IngresoPerfil</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_perfil_usuario">PerfilUsuario</string>
+    <string name="title_activity_perfil_empresa">PerfilEmpresa</string>
+    <string name="title_activity_perfil_producto_usuario">PerfilProductoUsuario</string>
+    <string name="title_activity_caracteristicas_producto">CaracteristicasProducto</string>
+    <string name="title_activity_ofrecer_producto">OfrecerProducto</string>
+    <string name="title_activity_lista_ofertas">ListaOfertas</string>
+    <string name="title_activity_lista_deseo">ListaDeseo</string>
+    <string name="title_activity_listas_deseo_usuario">ListasDeseoUsuario</string>
+
+</resources>
