@@ -1,10 +1,6 @@
 var Sprint = function () {
 	var self = this;
 
-	this.startDate = ;
-	this.endDate;
-
-	this.start = function () {
-		startDate
-	}
+	this.startDate = ko.observable();
+	this.endDate = ko.observable();
 }
