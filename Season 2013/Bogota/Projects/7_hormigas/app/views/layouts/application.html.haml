@@ -13,12 +13,10 @@
     %script{:src => "//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"}
 
     = csrf_meta_tags
+
   %body
     / Header navbar
     %nav.navbar.navbar-default{role: "navigation"}
-      .navbar-header
-        %a.navbar-brand
-          %img{src: "/assets/logo.png"}
       .collapse.navbar-collapse{id: "bs-example-navbar-collapse-1"}
         .nav.navbar-nav.navbar-right
           %li
@@ -30,4 +28,3 @@
               = link_to("Cerrar sesión", '/logout', method: :get)
             - else
               %a{href: "/auth/google_oauth2"}
-                %img{src: "/assets/sign-in-with-google.png"}

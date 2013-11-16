@@ -1,76 +1,73 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
-
-<html>
+<!DOCTYPE html>
+<html lang="ES">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<link href="http://www.gstatic.com/codesite/ph/17444577587916266307/css/ph_core.css" rel="stylesheet" type="text/css" />
- <link href="http://code.google.com/css/codesite.pack.04102009.css" rel="stylesheet" type="text/css" />
-  <script language="javascript" src='script/jquery-1.6.min.js'></script>
-  <script language="javascript" src='script/ajax.util.js'></script>
-  <script type="text/javascript">
- 	 $( document ).ready(function() {
- 		var usuario = $("#userSession");
- 		$("#nit").val( usuario.nit );
- 		$("#nombre").val( usuario.nombre );
-		$("#telefono").val( usuario.telefono);
-		$("#etiquetas").val(usuario.etiquetas);
-	});
-  </script>
-<title>Editar Info de Proveedores</title>
+	<meta charset="utf-8">
+        <link rel="stylesheet" href="css/estiloslog.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <script language="javascript" src='script/jquery-1.6.min.js'></script>
+        <script language="javascript" src='script/ajax.util.js'></script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="script/jquery-gmaps-latlon-picker.js"></script>
+        <script src="script/jquery-gmaps-latlon-picker.js"></script>
+        <title>Agrono.me | Editar Información</title>
+		<script type="text/javascript">
+		 	 $( document ).ready(function() {
+		 		obtenerUsuarioSession();
+			});
+		  </script>
 </head>
 
+
 <body>
-	<input type="hidden" name="userSession" value="${sessionScope.user} />
-	<!-- ******************************************* Proveedor ******************************************* -->
-	<div class="g-unit" id="customer-tab">
+	<div class="contenedor">
+		<a href="index.html"><h1><img src="img/logoAgronomeWhite.png" alt="Agronome" id="logo"></h1></a>
 		<div class="message" id="proveedor-show-message" style="display: none">
 		</div>
-		<div class="create-ctr" id="proveedor-create-ctr">
-			<h2>Creación Proveedor</h2>
-			<form name="proveedor-create-form" id="proveedor-create-form">
-				<table width="200" cellspacing="0" cellpadding="0">
-					<tbody>
-						<tr>
-							<td>Nit(*)</td>
-							<td><span class="readonly"><input type="text"
-									style="width: 185px;" autocomplete="off" class="gsc-input"
-									maxlength="2048" name="nit" id="nit" /></span></td>
-						</tr>
+		<div class="update-ctr" id="proveedor-update-ctr">
 
-						<tr>
-							<td>Nombre(*)</td>
-							<td><input type="text" style="width: 185px;"
-								autocomplete="off" class="gsc-input" maxlength="2048"
-								name="nombre" id="nombre" /></td>
-						</tr>
-						<tr>
-							<td>Telefono(*)</td>
-							<td><input type="text" style="width: 185px;"
-								autocomplete="off" class="gsc-input" maxlength="2048"
-								name="telefono" id="telefono" /></td>
-						</tr>
-						<tr>
-							<td>Etiquetas(*)</td>
-							<td><input type="text" style="width: 185px;"
-								autocomplete="off" class="gsc-input" maxlength="2048"
-								name="etiquetas" id="etiquetas" /></td>
-						</tr>
-						<tr>
-							<td>&nbsp;</td>
-							<td><input type="button" class="save" title="Save"
-								value="Save" onclick="formValidate('proveedor')" /> </td>
-						</tr>
-					</tbody>
-				</table>
+			<form name="proveedor-update-form" id="proveedor-update-form">
+				<input type="hidden" id="usuario" name="usuario" />
+				<h2>Actualización de Datos</h2>
+				<input type="text" style="width: 285px;" autocomplete="off" class="gsc-input" maxlength="2048" name="nit" id="nit" placeholder="NIT" /> 
+
+				<input type="text" style="width: 285px;" autocomplete="off" maxlength="2048" name="nombre" id="nombre"	placeholder="Nombre*" /> 
+				<input type="text" style="width: 285px;" autocomplete="off" maxlength="2048" name="telefono" id="telefono" placeholder="Teléfono*" /> 
+
+				<input type="text" style="width: 285px;" autocomplete="off" maxlength="2048" name="etiquetas" id="etiquetas" placeholder="Etiquetas*" />
+
+
+				   <aside class="registro-mapa">
+        			    <fieldset class="gllpLatlonPicker">
+                            <input type="text" class="gllpSearchField" placeholder="Dirección*" style="width: 260px"; margin-bottom:"5px;"> 
+
+                            <input type="button" class="gllpSearchButton" value="Buscar">
+                            <div class="gllpMap">Google Maps</div><br/> 
+                            <input id="latitud" type="hidden" name="latitud" class="gllpLatitude" value="20" required=""/> 
+                            <input type="hidden" name="longitud" id="longitud"class="gllpLongitude" value="20" required="" />
+                             <input type="text"class="gllpZoom" value="3" style="visibility: hidden;"/> 
+                             <input type="button"
+						class="gllpUpdateButton" value="Actualizar Mapa" style="visibility: hidden;"> <br />
+                        </fieldset>	
+                    </aside>
+					
+					<input type="button" class="save" title="Save" value="Actualizar"
+					onclick="actualizarProveedor()" />
 			</form>
-		</div>
 
+		</div>
 	</div>
+
+<style type="text/css">
+ 
+ form input{
+	margin-bottom: 1em !important;
+	background-image: none !important;
+}
+
+
+
+
+</style>
+
 </body>
 </html>

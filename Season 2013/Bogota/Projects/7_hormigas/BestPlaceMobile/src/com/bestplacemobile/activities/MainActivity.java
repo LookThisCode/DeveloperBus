@@ -1,8 +1,10 @@
 package com.bestplacemobile.activities;
 
 import com.bestplacemobile.R;
-import com.bestplacemobile.fragment.MainFragments;
+import com.bestplacemobile.fragment.ConfiguracionFragment;
+import com.bestplacemobile.fragment.RegistroFragment;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -67,9 +69,16 @@ public class MainActivity extends FragmentActivity implements
 		Fragment f = null;
 
 		if (position == 0) {
-			f = new MainFragments();
-		} else {
-			f = new MainFragments();
+			f = new ConfiguracionFragment();
+		}
+		if (position == 1) {
+			f = new RegistroFragment();
+		}
+		if (position == 2) {
+			Intent intBusqueda = new Intent(MainActivity.this,
+					BusquedaActivity.class);
+			startActivity(intBusqueda);
+			return;
 		}
 
 		FragmentManager fm = getSupportFragmentManager();
@@ -77,7 +86,6 @@ public class MainActivity extends FragmentActivity implements
 		drawerList.setItemChecked(position, true);
 		setTitle(drawerList.getItemAtPosition(position).toString());
 		drawerLayout.closeDrawer(drawerList);
-
 	}
 
 	@Override

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  acuerdo: MyString
+  condiciones: MyString
+  calificacion_transaccion_distribuidor: MyString
+  calificacion_transaccion_productor: MyString
+  productor_id: 
+  producto_id: 
+
+two:
+  acuerdo: MyString
+  condiciones: MyString
+  calificacion_transaccion_distribuidor: MyString
+  calificacion_transaccion_productor: MyString
+  productor_id: 
+  producto_id: 

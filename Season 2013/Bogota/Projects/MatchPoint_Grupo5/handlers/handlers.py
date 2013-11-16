@@ -30,13 +30,14 @@ class NeedHandler(webapp2.RequestHandler):
 
     def post(self):
         need = Need()
-        need.user = UserMP.get_by_id(6614661952700416)
-        need.service = Service.get_by_id(int(self.request.POST.get('service')))
+        need.user = UserMP.get_by_id(6578378068983808)
+        need.description = self.request.POST.get('description', None)
         need.delivery_time = self.request.POST.get('delivery_time', None)
         need.budget = self.request.POST.get('budget', None)
-        need.life = int(self.request.POST.get('life', 5))
+        need.life = int(self.request.POST.get('life', 2))
         need.local_ubication = (self.request.POST.get('local_ubication') == 'true')
         need.ubication = self.request.POST.get('ubication', None)
+        need.service = Service.get_by_id(int(self.request.POST.get('service')))
         need.put()
 
         self.response.headers.add_header('content-type', 'application/json', charset='utf-8')
@@ -111,3 +112,32 @@ class UserMPHandler(webapp2.RequestHandler):
 
         self.response.headers.add_header('content-type', 'application/json', charset='utf-8')
         self.response.out.write(res)
+
+
+
+class UserMPLoginHandler(webapp2.RequestHandler):
+    def post(self):
+        email = self.request.POST.get("email", "")
+        res = {}
+        if email != "":
+            res["error"] = 0
+            u = UserMP.gql('WHERE email = :1', 'crisanto112@gmail.com').get()
+            if u:
+                res = {
+                "action": "exist",
+                "user": u.to_dict()
+                }
+            else:
+                u = UserMP()
+                u.email = email
+                u.put()
+
+                res = {
+                "action": "new",
+                "user": u.to_dict()
+                }
+        else:
+            res = {"error": "no email"}
+
+        self.response.headers.add_header('content-type', 'application/json', charset='utf-8')
+        self.response.out.write(json.dumps(res))

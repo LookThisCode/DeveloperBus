@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131115202222) do
+ActiveRecord::Schema.define(version: 20131116041134) do
 
   create_table "comentarios", force: true do |t|
     t.string   "comentario"
@@ -39,13 +39,12 @@ ActiveRecord::Schema.define(version: 20131115202222) do
 
   create_table "imagen_locals", force: true do |t|
     t.string   "url"
-    t.string   "descripcion"
-    t.integer  "distribuidor_id"
+    t.integer  "local_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "imagen_locals", ["distribuidor_id"], name: "index_imagen_locals_on_distribuidor_id", using: :btree
+  add_index "imagen_locals", ["local_id"], name: "index_imagen_locals_on_local_id", using: :btree
 
   create_table "keywords", force: true do |t|
     t.string   "tag"
@@ -59,16 +58,32 @@ ActiveRecord::Schema.define(version: 20131115202222) do
   add_index "keywords", ["distribuidor_id"], name: "index_keywords_on_distribuidor_id", using: :btree
   add_index "keywords", ["productor_id"], name: "index_keywords_on_productor_id", using: :btree
 
-  create_table "negociacions", force: true do |t|
-    t.string   "acuerdo"
+  create_table "locals", force: true do |t|
+    t.string   "ciudad"
+    t.string   "pais"
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "comentario"
     t.integer  "distribuidor_id"
-    t.integer  "productor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "negociacions", ["distribuidor_id"], name: "index_negociacions_on_distribuidor_id", using: :btree
-  add_index "negociacions", ["productor_id"], name: "index_negociacions_on_productor_id", using: :btree
+  add_index "locals", ["distribuidor_id"], name: "index_locals_on_distribuidor_id", using: :btree
+
+  create_table "negocio_cerrados", force: true do |t|
+    t.string   "acuerdo"
+    t.string   "condiciones"
+    t.string   "calificacion_transaccion_distribuidor"
+    t.string   "calificacion_transaccion_productor"
+    t.integer  "distribuidor_id"
+    t.integer  "producto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "negocio_cerrados", ["distribuidor_id"], name: "index_negocio_cerrados_on_distribuidor_id", using: :btree
+  add_index "negocio_cerrados", ["producto_id"], name: "index_negocio_cerrados_on_producto_id", using: :btree
 
   create_table "productors", force: true do |t|
     t.string   "nombre"
@@ -85,16 +100,13 @@ ActiveRecord::Schema.define(version: 20131115202222) do
   create_table "productos", force: true do |t|
     t.string   "nombre"
     t.string   "descripcion"
+    t.string   "url_imagen"
+    t.integer  "productor_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "productos_distribuidors", id: false, force: true do |t|
-    t.integer "producto_id"
-    t.integer "distribuidor_id"
-  end
-
-  add_index "productos_distribuidors", ["producto_id", "distribuidor_id"], name: "index_productos_distribuidors_on_producto_id_and_distribuidor_id", using: :btree
+  add_index "productos", ["productor_id"], name: "index_productos_on_productor_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"

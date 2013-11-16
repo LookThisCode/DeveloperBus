@@ -7,25 +7,53 @@
 			<link rel="stylesheet" href="">
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 			<script>
+				window.profile = {}
 				function signinCallback(authResult) {
 				  if (authResult['access_token']) {
-				  	$.ajax({
-					    type: 'GET',
-					    url: 'https://www.googleapis.com/plus/v1/people/me',
-					    async: false,
-					    contentType: "application/json",
-					    dataType: 'jsonp',
-					    success: function(data) {
-					      console.log(data)
-					    },
-					    error: function(e) {
-					      // Gestiona el error
-					      console.log(e);
-					      // Puedes indicar a los usuarios que se desconecten de forma manual si se produce un error
-					      // https://plus.google.com/apps
-					    }
-					  });
+				  	gapi.auth.setToken(authResult)
+
+				  	gapi.client.load('oauth2', 'v2', function() {
+			          var request = gapi.client.oauth2.userinfo.get();
+			          request.execute(function(obj){
+			          	var email = obj["email"]
+			          	$.ajax({
+						  type: "POST",
+						  url: "/api/user/login",
+						  data: {
+						  	email: email
+						  },
+						  dataType: 'json'
+						})
+						.done(function(data){
+							if (data.action == "exist"){
+								console.log("El usuario ya existía")
+								console.log(data)
+								console.log("Aquí se deberia proceder a consultar la información de éste usuario")
+							}
+							if (data.action == "new"){
+								console.log("Bienvenido nuevo usuario")
+								console.log(data)
+							}
+
+							console.log("Consulto la info de Google Plus del Usuario")
+							gapi.client.load('plus','v1', function(){
+							  	var request = gapi.client.plus.people.get( {'userId' : 'me'} );
+							  	request.execute( function( profile ) {
+							  		console.log("Pille la info del usuario")
+							  		console.log(profile)
+							    });
+							});
+						})
+						.fail(function(error){
+							console.log("Error get user.info")
+						  	console.log(error)
+						})
+			          });
+			        });
+
 				    document.getElementById('signinButton').setAttribute('style', 'display: none');
+
+
 				  } else if (authResult['error']) {
 				    // Se ha producido un error.
 				    // Posibles códigos de error:
@@ -33,6 +61,15 @@
 				    //   "immediate_failed": no se ha podido dar acceso al usuario de forma automática.
 				    console.log('There was an error: ' + authResult['error']);
 				  }
+				}
+
+				function renderProfile(){
+					var request = gapi.client.plus.people.get( {'userId' : 'me'} );
+
+				  	request.execute( function(profile) {
+			          console.log( "profile" )
+			          console.log( profile.id )
+			        });
 				}
 			</script>
 	</head>
@@ -47,7 +84,7 @@
 		    data-clientid="632251990694.apps.googleusercontent.com"
 		    data-cookiepolicy="single_host_origin"
 		    data-requestvisibleactions="http://schemas.google.com/AddActivity"
-		    data-scope="https://www.googleapis.com/auth/plus.login">
+		    data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email">
 		  </span>
 		</span>
 

@@ -18,8 +18,9 @@
             android:gravity="fill_horizontal"
             android:text="@string/string_aviso_registro"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@android:color/darker_gray"
-            android:textStyle="bold" />
+            android:textColor="#7b7b7b"
+            android:textStyle="bold"
+            android:padding="15dip" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,7 +36,7 @@
                 android:fontFamily="sans-serif-thin"
                 android:paddingRight="10dip"
                 android:text="@string/tab_registro_productor"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#7b7b7b"
                 android:textStyle="bold" />
 
             <RadioButton
@@ -45,7 +46,7 @@
                 android:checked="false"
                 android:fontFamily="sans-serif-thin"
                 android:text="@string/tab_registro_distribuidor"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#7b7b7b"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -62,15 +63,15 @@
                 android:fontFamily="sans-serif-thin"
                 android:text="@string/string_nombre_negocio"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#7b7b7b"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtNombreNegocio"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dip"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray"
+                android:background="#d9d9d9"
                 android:ems="10"
                 android:fontFamily="sans-serif-thin"
                 android:inputType="textAutoComplete"
@@ -91,15 +92,15 @@
                 android:fontFamily="sans-serif-thin"
                 android:text="@string/string_NIT"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#7b7b7b"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtNit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dip"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray"
+                android:background="#d9d9d9"
                 android:ems="10"
                 android:fontFamily="sans-serif-thin"
                 android:inputType="textAutoComplete"
@@ -121,15 +122,15 @@
                 android:fontFamily="sans-serif-thin"
                 android:text="@string/string_representante_legal"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#7b7b7b"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtRepresentanteLegal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dip"
                 android:layout_weight="1"
-                android:background="@android:color/darker_gray"
+                android:background="#d9d9d9"
                 android:ems="10"
                 android:fontFamily="sans-serif-thin"
                 android:inputType="textAutoComplete"
@@ -151,17 +152,17 @@
                 android:fontFamily="sans-serif-thin"
                 android:text="@string/string_logo_imagen"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/darker_gray"
+                android:textColor="#7b7b7b"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/img_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_width="150dip"
+                android:layout_height="150dip"
+                android:layout_margin="10dp"                
                 android:contentDescription="@string/string_logo_imagen"
-                android:src="@drawable/logo" />
+                android:src="@drawable/img_defbusq" />
         </LinearLayout>
     </LinearLayout>
 
-</ScrollView>
+</ScrollView>	

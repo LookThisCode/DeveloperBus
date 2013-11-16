@@ -1,0 +1,18 @@
+<h3>AngularJS GitHub Issues</h3>
+<table class="table table-striped">
+  <tr>
+    <th>Number</th>
+    <th>State</th>
+    <th>Reporter</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  <tr ng-repeat="issue in data.issues">
+    <td>{{issue.number}}</td>
+    <td>{{issue.state}}</td>
+    <td>{{issue.user.login}}</td>
+    <td>{{issue.title}}</td>
+    <td>{{issue.body}}</td>
+  </tr>
+</table>
+- See more at: http://coder1.com/articles/consuming-rest-services-angularjs#sthash.4KZggpNR.dpuf

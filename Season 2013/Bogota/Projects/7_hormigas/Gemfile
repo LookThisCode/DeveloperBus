@@ -21,6 +21,9 @@ gem 'protected_attributes'
 # Twitter's Bootstrap, converted to Sass and ready to drop into Rails or Compass
 gem 'bootstrap-sass', '~> 2.3.2.2'
 
+# High performance memcached client for Ruby
+gem "dalli", "~> 2.6.4"
+
 # Web server for production performance
 gem 'thin', '~> 1.5.1'
 
@@ -52,10 +55,10 @@ gem 'therubyracer', '0.12.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails', '~> 3.0.4'
+gem 'jquery-rails'
 
 # jQuery UI's JavaScript, CSS, and image files packaged for the Rails 3.1+ asset pipeline
-gem 'jquery-ui-rails', '~> 4.0.4'
+gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

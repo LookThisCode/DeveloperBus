@@ -2,11 +2,11 @@ package com.bestplacemobile.fragment;
 
 import java.util.ArrayList;
 import com.bestplacemobile.R;
+import com.bestplacemobile.activities.DistribuidorDetalleActivity;
 import com.bestplacemobile.adapters.CustomAdapterDistribuidores;
-import com.bestplacemobile.models.ItemConfiguracion;
 import com.bestplacemobile.models.ItemDistribuidor;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,35 +28,46 @@ public class BusquedaFragment extends ListFragment {
 		ArrayList<ItemDistribuidor> items = new ArrayList<ItemDistribuidor>();
 
 		ItemDistribuidor item = null;
-		String[] palabrasClaves = new String[] { "zapatos", "mesas", "Botellas" };
+		String[] palabrasClaves = new String[] { "Zapatos", "Camisas", "Bolsos" };
 
-		item = new ItemDistribuidor("Distribuidores prueba", palabrasClaves,
-				"5", 5, 7);
-
-		items.add(item);
-
-		item = new ItemDistribuidor("Distribuidores prueba 2", palabrasClaves,
-				"6", 6, 6);
+		item = new ItemDistribuidor(1, "Ventas y Servicios al Detal",
+				palabrasClaves, "5", 5, 3);
 
 		items.add(item);
 
-		item = new ItemDistribuidor("Distribuidores prueba 3", palabrasClaves,
+		item = new ItemDistribuidor(2, "Grandes Superficies de Occidente",
+				palabrasClaves, "6", 6, 6);
+
+		items.add(item);
+
+		item = new ItemDistribuidor(3, "Pinilla y Asociados", palabrasClaves,
 				"7", 7, 8);
 
 		items.add(item);
 
 		CustomAdapterDistribuidores adapter = new CustomAdapterDistribuidores(
 				getActivity(), items, true);
-
 		setListAdapter(adapter);
 	}
 
 	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
-		ItemConfiguracion clickedItem = (ItemConfiguracion) l
+		ItemDistribuidor clickedItemDistribuidor = (ItemDistribuidor) l
 				.getItemAtPosition(position);
-		// Intent intent = new Intent(getActivity(), RoomDetailActivity.class);
-		// startActivity(intent);
+		Intent intent = new Intent(getActivity(),
+				DistribuidorDetalleActivity.class);
+		intent.putExtra("nombre", clickedItemDistribuidor.getNombreCompania());
+		intent.putExtra("coment",
+				clickedItemDistribuidor.getNumeroComentarios());
+		intent.putExtra("calificacion",
+				clickedItemDistribuidor.getCalificacion());
+		startActivity(intent);
+	}
+
+	public void updateListView(ArrayList<ItemDistribuidor> items) {
+		CustomAdapterDistribuidores adapter = new CustomAdapterDistribuidores(
+				getActivity(), items, true);
+		setListAdapter(adapter);
 	}
 
 }

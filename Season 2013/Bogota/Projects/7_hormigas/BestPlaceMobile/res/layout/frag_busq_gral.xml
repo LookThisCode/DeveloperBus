@@ -1,14 +1,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent"    
     android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingLeft="20dip"
         android:paddingBottom="5dip"
+        android:paddingLeft="20dip"
         android:paddingTop="30dip" >
 
         <EditText
@@ -19,7 +19,7 @@
             android:background="@android:color/darker_gray"
             android:ems="10"
             android:fontFamily="sans-serif-thin"
-            android:inputType="textAutoComplete"            
+            android:inputType="textAutoComplete"
             android:textColor="@android:color/black"
             android:textStyle="normal" >
         </EditText>
@@ -33,11 +33,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"        
-        android:paddingLeft="10dip"
-        android:paddingTop="15dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="horizontal"
-        android:layout_gravity="center" >
+        android:paddingLeft="10dip"
+        android:paddingTop="15dip" >
 
         <RadioButton
             android:id="@+id/rbProductor"

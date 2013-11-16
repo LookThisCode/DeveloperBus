@@ -21,16 +21,19 @@
     <string name="img_description_config">Configuración</string>
     <string name="string_palabraClave">Palabras Claves:</string>
     <string name="string_num_comentarios">Comentarios</string>
+    <string name="string_detalle_galeria">Galeria de Imagenes</string>
+    <string name="string_distribuidor1">Ventas y Servicios al Detal</string>
+    <string name="string_desc_dist1">Compañia dedicada a la venta de servicios al Detal en la ciudad de Bogota</string>
 
     <string-array name="array_MenuPpal">
-        <item>Registro</item>
-        <item>Configuración</item>
-        <item>Busqueda</item>
-        <item>Acerca</item>
+        <item>CONFIGURACIÓN</item>
+        <item>REGISTRO</item>
+        <item>BUSQUEDA</item>
     </string-array>
 
     <string name="title_activity_inicio">Best Place Mobile Sign In</string>
     <string name="hello_world">Hello world!</string>
-    <string name="title_activity_busqueda">BusquedaActivity</string>
+    <string name="title_activity_busqueda">Busqueda</string>
+    <string name="title_activity_distribuidor_detalle">Detalle Distribuidor</string>
 
 </resources>

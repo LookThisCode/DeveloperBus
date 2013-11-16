@@ -1,0 +1,341 @@
+@import 'config';
+
+/*---------------------------------------*
+ * HTML Tags
+ *---------------------------------------*/
+body {
+    background: url("../img/bg.jpg") no-repeat center top fixed;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  color: #666;
+  @include font_p;
+  font-weight: 300;
+  font-size: 15px;
+  min-width: 960px;
+  min-height: 100%;
+}
+
+b {
+  color: $yellow;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.hr-bars {
+  border-top: 20px solid $yellow;
+  border-bottom: 20px solid $orange;
+  margin: 0;
+}
+
+.content-wrapper {
+
+}
+
+.main_content {
+  position: relative;
+  padding: 20px 0;
+}
+.wrapper-page {
+  background: $white_op;
+}
+
+
+/*---------------------------------------*
+ * Header
+ *---------------------------------------*/
+header {
+  .logo {
+    margin: 0 auto 10px;
+    padding-top: 40px;
+    text-align: center;
+
+    a {
+      display: block;
+    }
+  }
+
+  .slogan {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .video-reel {
+    margin-left: 20px;
+
+    a {
+      color: #666;
+      display: block;
+      background: url(../img/play-video.png) 20px 10px no-repeat;
+      display: block;
+
+      padding: 10px 20px 10px 40px;
+      width: 180px;
+
+      &:hover {
+        background-color: $white_op;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+/*---------------------------------------*
+ * Menus
+ *---------------------------------------*/
+nav {
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+
+/*----- Main Nav------*/
+#main-nav {
+  position: absolute;
+  top: 20px;
+  right: 0;
+
+  li {
+    margin-bottom: 10px;
+    text-align: right;
+  }
+
+  a {
+    color: #fff;
+    display: block;
+    font-weight: 300;
+    height: 40px;
+    line-height: 40px;
+    opacity: 1;
+    padding: 0 20px 0 50px;
+    text-align: left;
+
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+    &.about {
+      background: $orange url("../img/icons-sprite.png") 10px -95px no-repeat;
+    }
+
+    &.gplus-signin {
+      background: $red url("../img/icons-sprite.png") 10px -145px no-repeat;
+    }
+  }
+}
+
+/*----- Services Filters Nav------*/
+#services-cat {
+  padding-top: 10px;
+
+  h4 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  ul ul {
+    margin-left: 20px;
+  }
+
+  li a {
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    display: block;
+    padding: 4px 8px;
+
+    &:hover {
+      text-decoration: none;
+      background-color: #F9C694;
+    }
+  }
+
+
+}
+/*---------------------------------------*
+* Landig Page
+*---------------------------------------*/
+#form-what-do-you-need {
+  #what {
+    width: 100%;
+  }
+
+  fieldset {
+    display: none;
+  }
+
+  #category {
+    clear: both;
+    width: 100%;
+  }
+
+  #city,
+  #deadline,
+  #budget {
+    float: left;
+  }
+
+  #city{
+    margin-right: 1%;
+    width: 30%;
+  }
+
+  #deadline {
+    margin-right: 1%;
+    width: 38%;
+  }
+
+  #budget {
+    float: right;
+    width: 30%;
+  }
+
+  #submit {
+    float: right;
+  }
+}
+/*-----TagLine------*/
+.tagline {
+  background: $white_op;
+  font-size: 20px;
+  margin: 20px 0;
+  padding: 20px;
+  line-height: 22px;
+
+  h4 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 5px;
+  }
+}
+
+
+
+/*---------------------------------------*
+ * Pyme - Profile Page
+ *---------------------------------------*/
+.pyme-profile {
+  margin-top: 20px;
+  position: relative;
+  background: #fafafa;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+
+  .photo {
+    background:#D1D1D1;
+    height: 120px;
+    width: 120px;
+    float: left;
+    margin: 20px;
+  }
+
+  .desc {
+
+    padding: 10px 10px 10px 80px;
+    margin-left: 60px;
+
+  }
+
+  .pyme-cat {
+    color: $red;
+  }
+}
+
+
+/*----- Pyme - Published Needs ------*/
+.pyme-needs {
+
+
+  h3 {
+    font-weight: 300;
+  }
+
+  article {
+    clear: both;
+    margin-bottom: 20px;
+  }
+
+  article.indented {
+    margin-left: 80px;
+  }
+
+  .box {
+    background: #fafafa;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .pick {
+    clear: both;
+    text-align: right;
+
+  }
+
+  .photo,
+  .content,
+  .offers,
+  .desc {
+    float: left;
+
+  }
+
+  .photo {
+    width: 100px;
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .offers {
+    padding-top: 20px;
+
+    p {
+      background-color: $white_op;
+      border: 2px solid #666;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      height: 30px;
+      line-height: 28px;
+      text-align: center;
+      width: 30px;
+    }
+
+    &.hot-low   { background: url("../img/icon-hot-low.png") center 10px no-repeat; }
+    &.hot-mid   { background: url("../img/icon-hot-mid.png") center 10px no-repeat; }
+    &.hot-high  { background: url("../img/icon-hot-high.png") center 10px no-repeat; }
+  }
+
+  .budget,
+  .deadline {
+    height: 20px;
+    padding-left: 30px;
+  }
+  .budget {
+    background: url(../img/icons-sprite.png) 0 0 no-repeat;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .deadline {
+    background: url(../img/icons-sprite.png) 0 -50px no-repeat;
+  }
+}

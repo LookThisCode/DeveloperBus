@@ -1,0 +1,27 @@
+# view AndroidManifest.xml #generated:59
+-keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(...); }
+
+# view res/layout/activity_detalle_proveedor.xml #generated:16
+-keep class com.google.android.gms.maps.SupportMapFragment { <init>(...); }
+
+# view res/layout/activity_demo.xml #generated:8
+-keep class com.sothree.slidinguppanel.SlidingUpPanelLayout { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.sothree.slidinguppanel.demo.Comentarios { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.sothree.slidinguppanel.demo.DemoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class com.sothree.slidinguppanel.demo.DetalleProveedor { <init>(...); }
+
+# view AndroidManifest.xml #generated:57
+-keep class com.sothree.slidinguppanel.demo.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.sothree.slidinguppanel.demo.MainProveedores { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class com.sothree.slidinguppanel.demo.RegisterActivity { <init>(...); }
+
