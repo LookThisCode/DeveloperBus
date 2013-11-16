@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import com.bestplacemobile.R;
 import com.bestplacemobile.adapters.CustomAdapterConfiguracion;
 import com.bestplacemobile.models.ItemConfiguracion;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,10 +45,7 @@ public class ConfiguracionFragment extends ListFragment {
 	}
 
 	@Override
-	public void onListItemClick(ListView l, View v, int position, long id) {
-		ItemConfiguracion clickedItem = (ItemConfiguracion) l.getItemAtPosition(position);
-		//Intent intent = new Intent(getActivity(), RoomDetailActivity.class);		
-		//startActivity(intent);
+	public void onListItemClick(ListView l, View v, int position, long id) {	
 
 	}
 

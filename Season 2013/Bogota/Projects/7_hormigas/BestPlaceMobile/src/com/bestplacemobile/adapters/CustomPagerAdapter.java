@@ -1,6 +1,5 @@
 package com.bestplacemobile.adapters;
 
-import com.bestplacemobile.fragment.BusquedaFragment;
 import com.bestplacemobile.fragment.ConfiguracionFragment;
 import com.bestplacemobile.fragment.RegistroFragment;
 import android.support.v4.app.Fragment;
@@ -13,8 +12,8 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter {
 
 	public CustomPagerAdapter(FragmentManager fm) {
 		super(fm);
-		fragments = new Fragment[] { new BusquedaFragment(),
-				new ConfiguracionFragment(), new RegistroFragment() };
+		fragments = new Fragment[] { new ConfiguracionFragment(),
+				new RegistroFragment() };
 	}
 
 	@Override

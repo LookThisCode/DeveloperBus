@@ -2,19 +2,60 @@ package com.bestplacemobile.models;
 
 public class ItemDistribuidor {
 
+	private int id;
+	private String NIT;
 	private String nombreCompania;
-	private String[] palabrasClaves;
+	private String nombreRepLegal;
+	private String urlLogo;
 	private String calificacion;
 	private int numeroComentarios;
-	private int numeroComentariosGoogle;
+	private int numeroComentariosGoogle;	
+	private String[] palabrasClaves;
 
-	public ItemDistribuidor(String nombreCompania, String[] palabrasClaves,
-			String calificacion, int numComent, int numComentGoogle) {
+	public ItemDistribuidor(int id, String nombreCompania,
+			String[] palabrasClaves, String calificacion, int numComent,
+			int numComentGoogle) {
+		this.id = id;
 		this.nombreCompania = nombreCompania;
 		this.palabrasClaves = palabrasClaves;
 		this.calificacion = calificacion;
 		this.numeroComentarios = numComent;
 		this.numeroComentariosGoogle = numComentGoogle;
+	}
+
+	public String getNombreRepLegal() {
+		return nombreRepLegal;
+	}
+
+	public void setNombreRepLegal(String nombreRepLegal) {
+		this.nombreRepLegal = nombreRepLegal;
+	}
+
+	public String getUrlLogo() {
+		return urlLogo;
+	}
+
+	public void setUrlLogo(String urlLogo) {
+		this.urlLogo = urlLogo;
+	}
+
+	public String getNIT() {
+		return NIT;
+	}
+
+	public void setNIT(String nIT) {
+		NIT = nIT;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public ItemDistribuidor() {
 	}
 
 	public String[] getPalabrasClaves() {

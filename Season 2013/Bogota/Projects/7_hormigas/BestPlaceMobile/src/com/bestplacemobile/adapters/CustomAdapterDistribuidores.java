@@ -1,7 +1,6 @@
 package com.bestplacemobile.adapters;
 
 import java.util.ArrayList;
-
 import com.bestplacemobile.R;
 import com.bestplacemobile.models.ItemDistribuidor;
 import android.content.Context;
@@ -30,8 +29,6 @@ public class CustomAdapterDistribuidores extends ArrayAdapter<ItemDistribuidor> 
 		ViewHolder holder;
 		ItemDistribuidor actual = data.get(position);
 
-		int imgResource = 0;
-
 		int layout = R.layout.list_row_busqueda;
 
 		if (convertView == null) {
@@ -45,8 +42,8 @@ public class CustomAdapterDistribuidores extends ArrayAdapter<ItemDistribuidor> 
 					.findViewById(R.id.txt_row_busq_nombreCompania);
 			holder.palabrasClaves = (TextView) convertView
 					.findViewById(R.id.txt_row_busq_palabrasClaves);
-			holder.calificacion = (TextView) convertView
-					.findViewById(R.id.txt_row_busq_calificacion);
+			// holder.calificacion = (TextView) convertView
+			// .findViewById(R.id.txt_row_busq_calificacion);
 			holder.numComentarios = (TextView) convertView
 					.findViewById(R.id.txt_row_busq_num_comentarios);
 			holder.numComentGooglePlus = (TextView) convertView
@@ -72,11 +69,15 @@ public class CustomAdapterDistribuidores extends ArrayAdapter<ItemDistribuidor> 
 				palabrasClaves.length() - 1);
 
 		holder.palabrasClaves.setText(palClavesConcat);
-		holder.calificacion.setText(actual.getCalificacion());
+		// holder.calificacion.setText(actual.getCalificacion());
 		holder.nombreCompania.setText(actual.getNombreCompania());
-		holder.numComentarios.setText(String.valueOf(actual.getNumeroComentarios()));
-		holder.numComentGooglePlus.setText(String.valueOf(actual.getNumeroComentariosGoogle()));
-		holder.img.setImageResource(imgResource);
+		holder.numComentarios.setText(String.valueOf(actual
+				.getNumeroComentarios()));
+		holder.numComentGooglePlus.setText(String.valueOf(actual
+				.getNumeroComentariosGoogle()));
+
+		//BitmapManager.getInstance().loadBitmap(actual.getUrlLogo(), holder.img);
+		holder.img.setImageResource(0);
 
 		return convertView;
 	}

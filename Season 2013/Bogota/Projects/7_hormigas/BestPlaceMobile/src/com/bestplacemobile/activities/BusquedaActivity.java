@@ -27,6 +27,6 @@ public class BusquedaActivity extends FragmentActivity {
 		transaction.add(R.id.resultados_busqueda_fragment, busquedaFragment);
 
 		transaction.commit();
+				
 	}
-
 }

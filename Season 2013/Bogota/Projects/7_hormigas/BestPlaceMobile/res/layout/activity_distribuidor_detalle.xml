@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/frag_datos_dist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />    
+
+    <FrameLayout
+        android:id="@+id/imgs_distribuidor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
