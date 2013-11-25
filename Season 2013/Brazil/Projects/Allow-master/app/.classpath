@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/objectify-4.0rc2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/resteasy-atom-provider-2.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/resteasy-jaxb-provider-2.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/resteasy-jaxrs-2.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/resteasy-multipart-provider-2.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/resteasy-yaml-provider-2.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/scannotation-1.0.2.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-1.5.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jaxb-api-2.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jaxb-impl-2.1.12.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jaxrs-api-2.0.1.GA.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-client-1.13.2-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-client-appengine-1.13.2-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-services-oauth2-v2-rev29-1.13.2-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-services-plus-v1-rev53-1.13.2-beta-sources.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-services-plus-v1-rev53-1.13.2-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-oauth-client-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-oauth-client-appengine-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-oauth-client-servlet-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/lombok.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-http-client-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-http-client-appengine-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-http-client-gson-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-http-client-jackson-1.13.1-beta.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-http-client-jackson2-1.13.1-beta.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

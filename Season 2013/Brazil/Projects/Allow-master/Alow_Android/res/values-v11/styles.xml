@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+
+    <style name="MyActionBar" parent="@android:Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/bg_login</item>
+    </style>
+</resources>

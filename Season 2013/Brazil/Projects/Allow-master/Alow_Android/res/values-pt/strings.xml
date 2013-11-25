@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Alow</string>
+    <string name="action_settings">Configurações</string>
+	<string name="notification_title">Alguém te mandou um Alow!</string>
+	<string name="notification_message">Você recebeu um Alow de %s!</string>
+	<string name="no_messages">Você ainda não recebeu nenhum Alow.</string>
+	<string name="logout">Logout</string>
+	<string name="device_not_supported">Dispositivo não suportado</string>
+</resources>

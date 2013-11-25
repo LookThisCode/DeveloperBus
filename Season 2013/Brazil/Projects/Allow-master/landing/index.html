@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+
+        <section class="main">
+            <div class="wrapper back">
+                <img src="img/preview.png" width="500" class="preview">
+
+                <div class="info">
+                    <img src="img/logo_big.png" class="logo">
+                    <h1>Conectando Pessoas, Coisas, Micro e Pequenas Empresas</h1>
+                    <p>Comunicação empresarial e coorporativa, com controle de relatórios e possibilidades infinitas</p>
+
+
+                    <!-- Place this asynchronous JavaScript just before your </body> tag -->
+  <script type="text/javascript">
+  (function() {
+    var po = document.createElement('script');
+    po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/client:plusone.js?onload=render';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+
+  function render() {
+    gapi.signin.render('customBtn', {
+      'callback': 'signinCallback',
+      'clientid': '108713759324',
+      'cookiepolicy': 'single_host_origin',
+      'requestvisibleactions': 'http://schemas.google.com/AddActivity',
+      'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.profile'
+    });
+  }
+
+  function signinCallback(authResult) {
+  if (authResult['access_token']) {
+
+    gapi.client.load('plus','v1', function(){
+        var request = gapi.client.plus.people.get({
+            'userId': 'me'
+        });
+        request.execute(function(resp) {
+            console.log('Retrieved profile for:' + resp.id);
+            window.location.href = '../app/index.html#'+resp.id;
+        });
+    });
+
+
+  } else if (authResult['error']) {
+    console.log('Sign-in state: ' + authResult['error']);
+  }
+}
+  </script>
+
+    <div id="gSignInWrapper">
+    <div id="customBtn" class="customGPlusSignIn">
+       <a href="" class="button"> <img src="img/g+.png" width="32"> Teste já!</a>
+    </div>
+  </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section class="content">
+             <div class="wrapper">
+                <dl>
+                    <dd>
+                        <img src="img/icon-home.png">
+
+                    </dd>
+                    <dt><h3>Clientes</h3>Lorem ipsum old styel meu amigo lorem ipsum sobre está parte do serviço, olá maisu ma vezes. preenchendo texto a respeito do cliente</dt>
+                </dl>
+
+                 <dl>
+                    <dd>
+                        <img src="img/icon-retweet.png">
+
+                    </dd>
+                    <dt><h3>Representates</h3>Lorem ipsum old styel meu amigo lorem ipsum sobre está parte do serviço, olá maisu ma vezes. preenchendo texto a respeito do cliente</dt>
+                </dl>
+
+                 <dl class="">
+                    <dd>
+                        <img src="img/icon-clients.png">
+                    </dd>
+                    <dt><h3>Times</h3>
+                        Lorem ipsum old styel meu amigo lorem ipsum sobre está parte do serviço, olá maisu ma vezes. preenchendo texto a respeito do cliente</dt>
+                </dl>
+
+             </div>
+
+        </section>
+
+
+        <footer>
+            <p class="credits">Feito com <span class="love">♥</span> para o #DevBus</p>
+
+        </footer>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/plugins.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
+</html>

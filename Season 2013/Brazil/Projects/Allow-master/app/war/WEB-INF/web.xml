@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+
+    <context-param>
+		<param-name>resteasy.scan</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>resteasy.servlet.mapping.prefix</param-name>
+		<param-value>/rest</param-value>
+	</context-param>
+	
+  	
+  	<servlet>
+    	<servlet-name>SendMessageGCMServlet</servlet-name>
+    	<servlet-class>com.alow.servlet.c2dm.SendMessageGCMServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>SendMessageGCMServlet</servlet-name>
+    	<url-pattern>/SendMessageGCMServlet</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+    	<servlet-name>RegistrationServlet</servlet-name>
+    	<servlet-class>com.alow.servlet.c2dm.RegistrationServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>RegistrationServlet</servlet-name>
+    	<url-pattern>/doRegister</url-pattern>
+  	</servlet-mapping>
+  	
+ 
+	
+	<servlet>
+    <servlet-name>ThemesServlet</servlet-name>
+    <servlet-class>com.alow.servlet.ThemesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ThemesServlet</servlet-name>
+    <url-pattern>/api/themes</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PhotosServlet</servlet-name>
+    <servlet-class>com.alow.servlet.PhotosServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhotosServlet</servlet-name>
+    <url-pattern>/api/photos</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ImagesServlet</servlet-name>
+    <servlet-class>com.alow.servlet.ImagesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ImagesServlet</servlet-name>
+    <url-pattern>/api/images</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UsersServlet</servlet-name>
+    <servlet-class>com.alow.servlet.UsersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersServlet</servlet-name>
+    <url-pattern>/api/users</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>VotesServlet</servlet-name>
+    <servlet-class>com.alow.servlet.VotesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VotesServlet</servlet-name>
+    <url-pattern>/api/votes</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>FriendsServlet</servlet-name>
+    <servlet-class>com.alow.servlet.FriendsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FriendsServlet</servlet-name>
+    <url-pattern>/api/friends</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ConnectServlet</servlet-name>
+    <servlet-class>com.alow.servlet.ConnectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectServlet</servlet-name>
+    <url-pattern>/api/connect</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>DisconnectServlet</servlet-name>
+    <servlet-class>com.alow.servlet.DisconnectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisconnectServlet</servlet-name>
+    <url-pattern>/api/disconnect</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InviteRedirect</servlet-name>
+    <jsp-file>/invite.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InviteRedirect</servlet-name>
+    <url-pattern>/invite.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>PhotoRedirect</servlet-name>
+    <jsp-file>/photo.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PhotoRedirect</servlet-name>
+    <url-pattern>/photo.html</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+    <init-param>
+      <param-name>services</param-name>
+      <param-value/>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SystemServiceServlet</servlet-name>
+    <url-pattern>/_ah/spi/*</url-pattern>
+  </servlet-mapping>
+	
+	<servlet>
+    <servlet-name>ConnectServlet</servlet-name>
+    <servlet-class>com.alow.servlet.ConnectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ConnectServlet</servlet-name>
+    <url-pattern>/api/connect</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>DisconnectServlet</servlet-name>
+    <servlet-class>com.alow.servlet.DisconnectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisconnectServlet</servlet-name>
+    <url-pattern>/api/disconnect</url-pattern>
+  </servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Resteasy</servlet-name>
+		<servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Resteasy</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<servlet>
+		<servlet-name>Alow</servlet-name>
+		<servlet-class>com.alow.AlowServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Alow</servlet-name>
+		<url-pattern>/alow</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>plus.html</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rounded"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/txtSender"
+            style="@style/text_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/txtTime"
+            android:layout_toRightOf="@+id/imgPhoto"
+            android:text="@null" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/txtSender"
+            android:text="@null"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/txtSender"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txtMessage"
+            style="@style/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtSender"
+            android:layout_toLeftOf="@+id/imgRead"
+            android:layout_below="@+id/txtSender"
+            android:layout_marginLeft="5dp"
+            android:text="@null" />
+
+        <ImageView
+            android:id="@+id/imgRead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTime"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_unread" />
+
+    </RelativeLayout>
+
+</FrameLayout>

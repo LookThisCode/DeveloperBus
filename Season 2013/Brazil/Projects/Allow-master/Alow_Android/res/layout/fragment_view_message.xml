@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:padding="10dp"
+    tools:context=".ViewMessageActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_rounded"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".ViewMessageActivity" >
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txtSender"
+            android:layout_below="@+id/txtSender"
+            android:layout_marginLeft="5dp"
+            android:text="@null" />
+
+        <TextView
+            android:id="@+id/txtSender"
+            style="@style/text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imgPhoto"
+            android:layout_toRightOf="@+id/imgPhoto"
+            android:layout_marginLeft="5dp"
+            android:text="@null" />
+
+        <TextView
+            android:id="@+id/txtMessage"
+            style="@style/text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imgPhoto"
+            android:layout_below="@+id/imgPhoto"
+            android:text="@null" />
+
+    </RelativeLayout>
+
+</FrameLayout>

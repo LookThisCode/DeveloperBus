@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ngvl.android.imfine"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="ngvl.android.imfine.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
+    <permission
+        android:name="ngvl.android.imfine.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:name="ngvl.android.imfine.Alow"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:logo="@drawable/logo_small"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="ngvl.android.imfine.ui.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoTitle" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ngvl.android.imfine.ui.MainActivity"
+            android:label="" />
+        <activity
+            android:name="ngvl.android.imfine.ui.ViewMessageActivity"
+            android:label="" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ngvl.android.imfine.MainActivity" />
+        </activity>
+
+        <receiver
+            android:name="ngvl.android.imfine.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="ngvl.android.imfine.gcm.GcmIntentService" />
+
+        <provider
+            android:name="ngvl.android.imfine.persistence.MessageProvider"
+            android:authorities="ngvl.android.imfine"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

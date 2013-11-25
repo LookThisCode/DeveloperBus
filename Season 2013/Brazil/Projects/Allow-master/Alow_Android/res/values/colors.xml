@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_login">#ed5565</color>
+    <color name="bg_app">#f3f1f5</color>
+    <color name="text_1">#ed5565</color>
+    <color name="text_2">#7b7b7b</color>
+</resources>
