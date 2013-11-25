@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue 1.1 by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vila do Corretor</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600" rel="stylesheet" type="text/css" />
+		[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<style type="text/css">
+		body.bg-home{
+			background-image: url('images/bg-home.jpg');
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center top;
+			background-color: #000;
+			margin: 0 auto;
+			padding: 0px;
+		}		
+
+		.logo-home{
+			display: block;
+			margin: 0 auto;
+		}
+		.home-desc{
+			font-family: Tahoma, Helvetica Neue, Helvetica, sans-serif;
+			font-size: 24px;
+			text-align: center;
+			color:#fff;
+			width:50%;
+			border-top: #ff9933 solid 1px;
+			border-bottom: #ff9933 solid 1px;
+			padding: 10px;
+			margin: 0 auto;
+			margin-top: 20px;
+		}
+		.clear{
+			margin-top:20px; 
+		}
+		.fluxo{display: block;margin: 0 auto;width:55%;padding-top: 40px}
+		.line {margin: 0 auto;width:88%;border-bottom: 1px solid #fff;}
+		.line-wrap{display: block;margin: 0 auto;width:50%;margin-top: 41px;}
+		.fluxo-items{
+			float:left;
+			margin-left: 38px;
+			height:130px;
+			width:95px;
+			background-position: top;
+			background-repeat: no-repeat;
+		}
+		.fluxo-items h1{font-family: Tahoma, Helvetica Neue, Helvetica, sans-serif;
+			font-size: 14px;text-align:center;color:#fff;margin-top: 85px;}
+		.item-imovel{
+			background-image: url('images/item-imovel.png');
+		}
+		.item-email{
+			background-image: url('images/item-email.png');
+		}
+		.item-cliente{
+			background-image: url('images/item-cliente.png');
+		}
+		.item-visita{
+			background-image: url('images/item-visita.png');
+		}
+		.item-negocio{
+			background-image: url('images/item-negocio.png');
+		}
+		.participe {display: block;margin:0 auto;width:200px;font-family: 'Source Sans Pro', sans-serif;font-size:32px;color:#fff;text-align: center;clear: both;background-color: #ff9933;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;margin-top: 160px;}
+		.participe p {padding: 10px;}
+		.participe span.small {display:block;margin-top: -4px;font-size: 14px;}
+		.footer-home{
+			position: relative;
+			background-color: #323030;
+			margin-top: 80px;
+			padding: 0px;
+			height:45px;
+			width:100%;
+		}
+		.footer-wrap  {width:50%;display:block;margin: 0 auto;text-align:center;}
+		.footer-item {color:#fff;font-family: 'Source Sans Pro', sans-serif;font-size:14px;float: left;}
+		p.footer-item {margin-top:5px;margin-right: 10px;}
+		a.footer-item  {margin-left:5px;text-decoration: none;margin-top:10px;}
+		.align-top {}
+		.divider 	  {height:40px;width:2px;background-color:#666;}
+		#signinButton {vertical-align: bottom;}
+		div#___signin_0 {
+		margin-top:4px; 
+		}
+		img {max-width: 100%;}
+
+		</style>
+				<!-- Place this asynchronous JavaScript just before your </body> tag -->
+				    <script type="text/javascript">
+				      (function() {
+				       var po = document.createElement('script'); po.type = 'text/javascript' ; po.async = true;
+				       po.src = 'https://apis.google.com/js/client:plusone.js';
+				       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				     })();
+				    </script>
+				    				    <script type="text/javascript">
+
+				    function signinCallback(authResult) {
+					  	if (authResult['access_token']) {
+					    // Update the app to reflect a signed in user
+					    // Hide the sign-in button now that the user is authorized, for example:
+					gapi.client.load('plus','v1', function(){
+							 var request = gapi.client.plus.people.get({
+							   'userId': 'me'
+							 });
+							 request.execute(function(resp) {
+							   //console.log('Retrieved profile for:' + resp.displayName);
+							   	  console.log(JSON.stringify(resp));
+								  var url = "http://trekoapp.appspot.com/json";
+								  $.get(url, {choice: "user",  id: resp.id}, function(data){
+									  console.log(data.name);
+									  console.log(data.plusid);
+									  console.log('imagem:' + resp.image.url);
+									  if(data.plusid != resp.id){
+									  	var params = {nome: resp.displayName, plusid: resp.id, email: resp.emails[0].value, plusurl: resp.url, imagem: resp.image.url, token: authResult['access_token']};
+									  	console.log(params);
+									  	$.get(url, {choice: 'saveme',  me: params})
+									  }
+									  window.location.href = "/p?id="+resp.id;
+								  });
+							 });
+					});
+				    document.getElementById('signinButton').setAttribute('style', 'display: none');
+				  } else if (authResult['error']) {
+				    // Update the app to reflect a signed out user
+				    // Possible error values:
+				    //   "user_signed_out" - User is signed-out
+				    //   "access_denied" - User denied access to your app
+				    //   "immediate_failed" - Could not automatically log in the user
+				    console.log('Sign-in state: ' + authResult['error']);
+				  }
+				}
+		    </script>
+	</head>
+	<body class="bg-home">
+		<div id="wrap">
+			<img src="images/villa-do-corretor.png" title="Villa do Corretor" data-type="logo" alt="Villa do Corretor" class="logo-home" />
+			<div class="clear"></div>
+			<p class="home-desc">Tenha seu própio site, mostre seus <span class="orange"> imóveis disponiveis</span>, <br/>
+				e faça negócio direto com seus clientes.</p>
+
+			<div class="fluxo">
+				<div class="fluxo-items item-imovel">
+					<h1>Mostre seus imóveis</h1>
+				</div>
+				<div class="fluxo-items item-email">
+					<h1>Envie e-mails personalizados</h1>
+				</div>
+				<div class="fluxo-items item-cliente">
+					<h1>Gerencie seus clientes</h1>
+				</div>
+				<div class="fluxo-items item-visita">
+					<h1>Agende mais visitas</h1>
+				</div>
+				<div class="fluxo-items item-negocio">
+					<h1>Negocie direto com o cliente</h1>
+				</div>
+			</div>
+			<div class="line-wrap">
+				<div class="line"></div>
+			</div>
+			<div class="participe">
+				<p>Participe Já<br/><span class="small">Primeiro mês grátis*</span></p>
+			</div>
+		</div>
+	<footer>
+		<div class="footer-home">
+			<div class="footer-wrap">
+				<p class="footer-item">Se já tiver cadastro,<br/>faça seu login</p>
+				<span id="signinButton" class="footer-item">
+				  <span
+				    class="g-signin"
+				    data-callback="signinCallback"
+				    data-clientid="524940015622-ibd7s8381chd4ha7alofb6roiinfgqt9.apps.googleusercontent.com"
+				    data-cookiepolicy="single_host_origin"
+				    data-requestvisibleactions="http://schemas.google.com/AddActivity"
+				    data-scope="https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/userinfo.email">
+				  </span>
+				</span>
+				
+				<div class="divider footer-item"></div>
+				<div class="align-top">
+					<a class="footer-item" href="#">FAQ</a>
+					<a class="footer-item" href="#">Planos</a>
+					<a class="footer-item" href="#">Fale Conosco</a>
+				</div>
+			</div>
+	</footer>
+	</div>
+		<!-- Place this asynchronous JavaScript just before your </body> tag -->
+		<!-- Javascript after DOM ready-->	
+		<script src="js/jquery.min.js"></script>
+	</body>
+</html>

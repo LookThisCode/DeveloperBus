@@ -1,0 +1,317 @@
+<?php 
+	$url = "http://trekoapp.appspot.com/json?choice=user&id=".$_GET['id'];
+	$ar  = file_get_contents($url);
+	$user = json_decode($ar, TRUE);
+?>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Villa do Corretor</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+		<style type="text/css">#map-canvas { width:100%;height: 300px }</style>
+   <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4Z4e5swq-uPOGdi7UfxLuMeKnW2t0S04&sensor=true">
+    </script>
+    <script type="text/javascript">
+      	//var url = "trekoapp.appspot.com/json?callback=";
+				//var url = "http://maps.googleapis.com/maps/api/geocode/json?address=984+Faustolo,+Sao+paulo,+SP&sensor=true";
+
+				var locs 	= [ ["-23.5238753", "-46.6949295"], ["-23.526535", "-46.694323"] ];
+				var lat 	= ["-23.5238753","-23.526535"];
+				var lng 	= ["-23.5238753","-23.526535"];
+
+function initialize() {
+  var mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng(-23.5489433,-46.6388182)
+		
+  }
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+  setMarkers(map, locais);
+}
+
+
+var locais = [
+  ['Faustolo', -23.5238753, -46.6949295],
+  ['Caio Graco', -23.526535, -46.694323],
+  ['Av Paulista', -23.5630733,-46.6543584]
+];
+
+
+function attachSecretMessage(marker, num) {
+  var message = ['<span>Hello</span>', 'is', 'the', 'secret', 'message'];
+	  var infowindow = new google.maps.InfoWindow({
+	    content: message[num]
+	  });
+	 
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(marker.get('map'), marker);
+  });
+}
+
+function drop() {
+  for (var i = 0; i < locais.length; i++) {
+    setTimeout(function() {
+      setMarkers();
+    }, i * 500);
+  }
+}
+
+function setMarkers(map, locations) {
+  var image = 'images/pin.png';
+  for (var i = 0; i < locations.length; i++) {
+    var local = locations[i];
+    var myLatLng = new google.maps.LatLng(local[1], local[2]);
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        icon: image,
+        animation: google.maps.Animation.DROP,
+        zIndex: local[1]
+    });
+    marker.setTitle((local[0]).toString());
+    attachSecretMessage(marker, i);
+  }
+}
+
+	google.maps.event.addDomListener(window, 'load', initialize);    
+</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header" class="skel-panels-fixed">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar"><img src="<?php echo $user['imagem']; ?>" alt="" /></span>
+							<h1 id="title"><?php echo $user['name'];?></h1>
+							<span class="byline">Cresci: 106.217</span>
+							<span class="byline">Cel: (11) 9876-1265</span>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#mapa" id="mapa-link" class="skel-panels-ignoreHref"><span class="fa fa-map-marker">Mapa de Imóveis</span></a></li>
+								<li><a href="#destaque" id="destaque-link" class="skel-panels-ignoreHref"><span class="fa fa-star">Imóvel em destaque</span></a></li>
+								<li><a href="#todosImoveis" id="todosImoveis-link" class="skel-panels-ignoreHref"><span class="fa fa-th">Todos os imóveis</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-panels-ignoreHref"><span class="fa fa-user">Sobre o corretor</span></a></li>
+								<li><a href="#contact" id="contact-link" class="skel-panels-ignoreHref"><span class="fa fa-envelope">Fale com ele</span></a></li>
+							</ul>
+						</nav>
+						
+				</div>
+				
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="<?php echo $user['plusurl'];?>" class="fa fa-google-plus solo"><span>Plus</span></a></li>
+							<li><a href="mailto:<?php echo $user['email'];?>" class="fa fa-envelope solo"><span>Email</span></a></li>
+						</ul>
+				
+				</div>
+			
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+			
+				<!-- Mapa imoveis -->
+					<section>
+						<header><h2 class="alt">Mapa de imóveis disponíveis</h2> </header>
+						<div id="map-canvas"/>
+						
+					</section>
+
+					<!-- Imovel em destaque -->
+					<section id="destaque" class="two">
+						<div class="container">
+							<header><h2>Imóvel em destaque</h2></header>
+						
+							<div class="row">
+								<a href="#" class="image full"><img src="images/imgdestaque.jpg" alt="" /></a>
+								<div class="barraLaranja">
+									<h3>Casa na Vila Mariana</h3>
+									<p>Ótima oportunidade, 278m2, piscina, quadra poliesportiva, churrascaira campo de futebol.</p>
+								</div>
+							</div>
+
+						</div>
+					</section>
+					
+				<!-- todos imóveis -->
+					<section id="todosImoveis" class="one">
+						<div class="container">
+							<header><h2>Todos os imóveis</h2></header>
+							
+							<div class="row">
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="row">
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+
+								<div class="3u">
+									<article class="item">
+										<a href="#" class="image full"><img src="images/imgcasa.jpg" alt="" /></a>
+										<div class="infoImovel">
+											<h4>Vila Olímpia</h4>
+											<p>2 Dorms, 86m2, 2 Vagas</p>
+										</div>
+									</article>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- About Me -->
+					<section id="about" class="three">
+						<div class="container">
+
+							<header>
+								<h2>Sobre mim</h2>
+							</header>
+							
+							<p>Começou a atuar como corretor em 2000 e já participou de grandes lançamentos, tem grande experiéncia com apartamentos, imóveis para familias, procura sempre visar o melhor negocio para seu conforto e comodidade, grande experência em reigiõs como Zona Sul, Norte e Centro.
+
+							<p>CGanhou 2 prêmios de melhor corretor pela CRECI-SP.</p>
+
+							<p>Confira alguns comentários de clientes sobre ele. </p>
+
+						</div>
+					</section>
+			
+				<!-- Contact -->
+					<section id="contact" class="four">
+						<div class="container">
+
+							<header>
+								<h2>Entre em contato</h2>
+							</header>
+
+							<p>Caso tenha interesse em algum imóvel, ou dúvida, ou queria mais informações basta entrar em contato pelo formulário abaixo.</p>
+							
+							<form method="post" action="#">
+								<div class="row half">
+									<div class="6u"><input type="text" class="text" name="name" placeholder="Name" /></div>
+									<div class="6u"><input type="text" class="text" name="email" placeholder="Email" /></div>
+									<div class="6u"><input type="text" class="text" name="telefone" placeholder="Telefone" /></div>
+									<div class="6u"><input type="text" class="text" name="assunto" placeholder="Assunto" /></div>
+								</div>
+								<div class="row half">
+									<div class="12u">
+										<textarea name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="12u">
+										<a href="#" class="button submit">Enviar</a>
+									</div>
+								</div>
+							</form>
+
+						</div>
+					</section>
+			
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				
+				<!-- Copyright -->
+					<div class="copyright">
+						<p>&copy; 2013 Villa do Corretor</p>
+					</div>
+				
+			</div>
+
+	</body>
+</html>
