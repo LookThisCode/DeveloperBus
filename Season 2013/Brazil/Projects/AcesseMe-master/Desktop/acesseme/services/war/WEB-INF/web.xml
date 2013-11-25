@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Busca</servlet-name>
+		<servlet-class>br.com.devbus.acesseme.BuscaServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CadastraUser</servlet-name>
+		<servlet-class>br.com.devbus.acesseme.CadastraUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ExisteUser</servlet-name>
+		<servlet-class>br.com.devbus.acesseme.ExisteUsuarioServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ObtemN</servlet-name>
+		<servlet-class>br.com.devbus.acesseme.ObtemNecessidadeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DetalhesProduto</servlet-name>
+		<servlet-class>br.com.devbus.acesseme.DetalhesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Busca</servlet-name>
+		<url-pattern>/busca</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ExisteUser</servlet-name>
+		<url-pattern>/existe</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ObtemN</servlet-name>
+		<url-pattern>/getn</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CadastraUser</servlet-name>
+		<url-pattern>/cadastra</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DetalhesProduto</servlet-name>
+		<url-pattern>/detalhe</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+</web-app>

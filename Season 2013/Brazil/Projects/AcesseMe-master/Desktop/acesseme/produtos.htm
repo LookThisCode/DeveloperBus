@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>AcesseMe</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/fontello.css">
+  <!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
+  <link rel="stylesheet" href="css/mine.css">
+</head>
+<body ng-app="app">
+  <header role="banner">
+    <div class="wrapper">
+      <h1 class="grid grid-3 logo">
+        <a href="home.htm"><img src="images/logo-acesseme.png" alt=""></a>
+      </h1>
+      
+      <a href="#content" class="nav-link hidden" aria-label="pular para o conteúdo">Pular para o conteúdo</a>
+      <a href="#busca" class="nav-link hidden" aria-label="pular para a busca">Pular para a busca</a>
+
+      <nav class="no-bullet grid grid-4 nav" role="navigation">
+        <li class="nav-item"><a href="" class="nav-link" aria-label="O que é Acess Me">O que é?</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Contato</a></li>
+      </nav>
+
+      <button class="grid btn btn-small btn-radius btn-contraste" contrast>Habilitar contraste</button>
+
+      <menu class="no-bullet grid right fontsize">
+        <button class="btn btn-fontsize">A+</button>
+        <button class="btn btn-fontsize">A-</button>
+      </menu>
+    </div>
+  </header>
+  <section class="headpage">
+    <div class="wrapper">
+      <div class="grid grid-4">
+        <h2 class="headpage-title">Produtos</h2>
+        <a href="#" class="btn btn-small btn-radius">Voltar</a>
+      </div>
+
+      <div class="grid grid-5 right opcoes-mini">
+        <a href="cadstro.htm" class="grid grid-4 opcoes-link">
+          <span class="opcoes-item"><i class="icon icon-registro opcoes-icon"></i></span>
+        </a>
+        <a href="listagem.htm" class="grid grid-4 opcoes-link">
+          <span class="opcoes-item"><i class="icon icon-servicos opcoes-icon"></i></span>
+        </a>
+        <a href="listagem.htm" class="grid grid-4 opcoes-link">
+          <span class="opcoes-item"><i class="icon icon-produtos opcoes-icon"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div ng-controller="mainController" ng-init="init()">
+    <div class="wrapper top-dist" style="margin-top: 50px;"> 
+        <div class="form-busca" role="search" id="busca">
+            <input type="text" ng-model="filterText.descricao" placeholder="Digite sua busca">    
+            <button ng-click="search()" role="button">Buscar</button>
+        </div>
+    </div>
+    <div class="wrapper">
+      <h3 class="subtitle">Listagem</h3>
+
+      <ul class="no-bullet listagem" role="tablist" id="content">
+         <li ng-repeat="item in results" class="listagem-item" role="tab">
+          <span class="listagem-vendedor">
+            {{item.loja}}
+          </span>
+          <span class="listagem-descricao">
+            {{item.descricao}}
+          </span>
+          <span class="listagem-preco">
+            <!--De R$ 1.990,00 <strong>por R$ 899,90</strong> em <strong>12x de R1 74,99</strong> sem juros -->
+             {{item.preco}}
+          </span>
+          <a href="#" rel="external" class="btn btn-middle btn-options btn-radius" ng-click="detail(item.link)" aria-label="Clique para comprar {{item.descricao}} da loja {{item.loja}} pelo valor {{item.preco}} reais">Comprar</a>
+        </li>
+      </ul>
+      <ul class="no-bullet navigation">
+        <li class="navigation-item"><a href="#" class="navigation-link active">1</a></li>
+        <li class="navigation-item"><a href="#" class="navigation-link">2</a></li>
+        <li class="navigation-item"><a href="#" class="navigation-link">3</a></li>
+        <li class="navigation-item"><a href="#" class="navigation-link">4</a></li>
+        <li class="navigation-item"><a href="#" class="navigation-link">5</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <footer>
+    <a href="#">duvidas@acesse.me</a>
+  </footer>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

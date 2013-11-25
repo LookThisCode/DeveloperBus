@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/jsoup-1.7.3.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-client-java6-1.17.0-rc.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/google-api-client-extensions-1.6.0-beta.jar"/>
+	<classpathentry kind="con" path="com.google.gdt.eclipse.managedapis.MANAGED_API_CONTAINER/adsense-v1.3r38lv1.16.0-rc"/>
+	<classpathentry kind="con" path="com.google.gdt.eclipse.managedapis.MANAGED_API_CONTAINER/oauth2-v1r59lv1.16.0-rc"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

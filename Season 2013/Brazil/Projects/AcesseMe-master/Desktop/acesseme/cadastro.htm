@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AcesseMe - Plataforma de serviços especiais para pessoas especiais</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/fontello/css/fontello.css">
+  <link rel="stylesheet" href="css/fontello/css/animation.css">
+  <!--[if IE 7]><link rel="stylesheet" href="css/fontello/css/fontello-ie7.css"><![endif]-->
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1 class="grid grid-3 logo"><a href="#"><img src="images/logo-acesseme.png" alt=""></a></h1>
+      
+      <nav class="no-bullet grid grid-4 nav">
+        <li class="nav-item"><a href="" class="nav-link">O que é?</a></li>
+        <li class="nav-item"><a href="" class="nav-link">FAQ</a></li>
+        <li class="nav-item"><a href="" class="nav-link">Contato</a></li>
+      </nav>
+
+      <button class="grid btn btn-small btn-radius btn-contraste">Habilitar contraste</button>
+
+      <menu class="no-bullet grid right fontsize">
+        <button class="btn btn-fontsize">A+</button>
+        <button class="btn btn-fontsize">A-</button>
+      </menu>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrapper">
+      <h3 class="subtitle">Selecione o tipo de perfil</h3>
+
+      <div class="grid grid-12 opcoes">
+        <a href="cadastro.htm" class="grid grid-4 grid-space-1 opcoes-link">
+          <span class="opcoes-item" id="signinButton">
+            <span
+              class="g-signin"
+              data-callback="signinCallback"
+              data-clientid="CLIENT_ID"
+              data-cookiepolicy="single_host_origin"
+              data-requestvisibleactions="http://schemas.google.com/AddActivity"
+              data-scope="https://www.googleapis.com/auth/plus.login">
+            </span>
+          </span>
+          Consumidor
+        </a>
+        <a href="cadastro-form.htm" class="grid grid-4 grid-space-1 opcoes-link">
+          <span class="opcoes-item"><i class="icon icon-servicos opcoes-icon"></i></span>
+          Fornecedor
+        </a>
+      </div>
+  </section>
+  
+  <footer>
+    <a href="#">duvidas@acesse.me</a>
+  </footer>
+
+  <script type="text/javascript">
+      (function() {
+       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+       po.src = 'https://apis.google.com/js/client:plusone.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+     })();
+    </script>
+</body>
+</html>
