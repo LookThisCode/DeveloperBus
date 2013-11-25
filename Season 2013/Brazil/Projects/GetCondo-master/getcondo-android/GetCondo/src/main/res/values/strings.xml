@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GetCondo</string>
+    <string name="title_news">Notícias</string>
+    <string name="title_problems">Incidentes</string>
+    <string name="title_maintenances">Manutenções</string>
+    <string name="title_events">Eventos</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_news">News Activity</string>
+    <string name="action_create_issue">Reportar incidente</string>
+    <string name="title_activity_create_issue">CreateIssueActivity</string>
+    <string name="title_create_issue">Novo Incidente</string>
+    <string name="label_issue_image">Imagem</string>
+    <string name="label_issue_text">Descrição</string>
+    <string name="label_button_create_issue">Criar incidente</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_login">Início</string>
+    <string name="title_login_message">Utilize a conta que o seu síndico providenciou</string>
+    <string name="label_login_email">Email</string>
+    <string name="label_login_password">Senha</string>
+    <string name="label_button_login">Acessar</string>
+    <string name="label_button_from_gallery">Procurar na galeria</string>
+
+</resources>

@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity$PlaceholderFragment"
+    android:gravity="center_horizontal"
+    android:background="@drawable/background">
+
+
+
+    <ImageView android:id="@+id/imageLogo"
+        android:layout_height="96dp"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/logo"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText android:id="@+id/textFieldLoginEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_login_email"
+        android:singleLine="true"
+        android:padding="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:layout_below="@id/imageLogo"/>
+
+    <EditText android:id="@+id/textFieldLoginPassword"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:password="true"
+        android:padding="5dp"
+        android:hint="@string/label_login_password"
+        android:background="#FFFFFF"
+        android:layout_below="@id/textFieldLoginEmail"/>
+
+    <Button android:id="@+id/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textFieldLoginPassword"
+        android:text="@string/label_button_login"/>
+
+</RelativeLayout>

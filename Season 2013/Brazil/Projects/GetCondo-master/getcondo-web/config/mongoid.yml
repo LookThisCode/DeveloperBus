@@ -1,0 +1,14 @@
+development:
+  sessions:
+    default:
+      database: getcondo_dev
+      hosts:
+        - localhost:27017
+production:
+  sessions:
+    default:
+      database: getcondo_dev
+      hosts:
+        - localhost:27017
+
+

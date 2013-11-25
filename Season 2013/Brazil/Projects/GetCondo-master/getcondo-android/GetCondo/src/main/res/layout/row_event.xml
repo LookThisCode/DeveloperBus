@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dip" >
+
+    <TextView
+        android:id="@+id/eventPlace"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_toRightOf="@id/icon"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:textSize="16sp" />
+
+    <TextView
+    android:id="@+id/eventTime"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/eventPlace"
+
+    android:gravity="center_vertical"
+    android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/eventResident"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/eventTime"
+        android:gravity="center_vertical"
+        android:textSize="12sp" />
+
+</RelativeLayout> 
