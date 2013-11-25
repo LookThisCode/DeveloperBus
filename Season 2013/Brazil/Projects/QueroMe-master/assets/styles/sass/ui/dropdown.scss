@@ -1,0 +1,88 @@
+.ui.dropdown {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  @include transition(
+    border-radius 100ms ease,
+    width 200ms ease
+  );
+
+  .menu {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: auto;
+    display: none;
+    font-size: 90%;
+    text-shadow: none;
+    top: 100%;
+    margin: 0;
+    min-width: 100%;
+    position: absolute;
+    @include transition(opacity 200ms ease);
+    white-space: nowrap;
+    z-index: 11;
+
+    a { text-decoration: none; }
+
+    .item {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      color: rgba(0, 0, 0, 0.75);
+      cursor: pointer;
+      display: block;
+      text-align: left;
+      padding: 10px 15px;
+      @include transition(background 250ms ease);
+      &:first-child {
+        border-top: none;
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+        z-index: 12;
+      }
+    }
+  }
+
+  &.pointing {
+    .menu {
+      margin-top: 10px;
+
+      &:after {
+        background-color: #fff;
+        border: 0 solid rgba(0, 0, 0, 0.1);
+        border-width: 1px 0 0 1px;
+        content: "";
+        display: block;
+        height: 8px;
+        pointer-events: none;
+        position: absolute;
+        @include transform(rotate(45deg));
+        width: 8px;
+        z-index: 2;
+      }
+
+      &:after {
+        left: 50%;
+        margin: 0 0 0 -4px;
+        top: -5px;
+      }
+    }
+  }
+
+  &.top.right {
+    .menu {
+      bottom: auto;
+      left: auto;
+      right: 0;
+      top: 100%;
+
+      &:after {
+        left: auto;
+        margin: 0;
+        right: 16px;
+      }
+
+      .item { text-align: right; }
+    }
+  }
+}

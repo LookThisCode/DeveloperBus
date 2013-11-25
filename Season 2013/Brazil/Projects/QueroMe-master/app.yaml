@@ -1,0 +1,54 @@
+application: teste-querome
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+builtins:
+- remote_api: on
+
+inbound_services:
+- warmup
+
+libraries:
+- name: django
+  version: latest
+
+handlers:
+- url: /_ah/queue/deferred
+  script: djangoappengine.deferred.handler.application
+  login: admin
+
+- url: /_ah/stats/.*
+  script: djangoappengine.appstats.application
+
+- url: /media/admin
+  static_dir: django/contrib/admin/media
+  expiration: '0'
+
+- url: /static/admin
+  static_dir: django/contrib/admin/static/admin
+  expiration: '0'
+
+- url: /static_files/
+  static_dir: static_files
+  expiration: '0'
+
+- url: /styles
+  static_dir: assets/styles
+  expiration: '0'
+
+- url: /images
+  static_dir: assets/images
+  expiration: '0'
+
+- url: /fonts
+  static_dir: assets/fonts
+  expiration: '0'
+
+- url: /scripts
+  static_dir: assets/scripts
+  expiration: '0'
+
+- url: /.*
+  script: djangoappengine.main.application

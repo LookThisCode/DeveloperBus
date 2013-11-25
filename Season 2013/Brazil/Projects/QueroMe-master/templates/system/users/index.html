@@ -1,0 +1,79 @@
+{% extends "system.html" %}
+
+{% block system %}
+<section class="login column-6">
+  <h2>Entrar</h2>
+
+  <div class="social-login">
+    <p>Economize tempo, acesse sua conta utilizando o <strong>Google Plus</strong>.</p>
+    <a href="/openid/login/" class="ui button red"><i class="icon icon-google-plus"></i>Entrar com o Google +</a>
+  </div>
+
+  <div class="ui divider horizontal">Ou</div>
+
+  <form action="" method="POST" class="ui form">
+    <p>Entre com os seus dados:</p>
+    
+    <div class="field">
+      <label for="id_username">E-mail</label>
+      <div class="input prepend">
+        <div class="prepend"><i class="icon icon-envelope"></i></div>
+        <input id="id_username"  name="username_login" type="email" placeholder="email@example.com" required autofocus>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="id_password">Senha</label>
+      <div class="input prepend">
+        <div class="prepend"><i class="icon icon-lock"></i></div>
+        <input id="id_password"  name="password_login" type="password" placeholder="*******" required>
+      </div>
+    </div>
+
+    <input type="hidden" name="tipo_form" value="login">
+
+    <div class="actions">
+      <button type="submit" class="ui button green">Entrar</button>
+    </div>
+  </form>
+</section>
+
+<section class="register column-6">
+  <h2>Cadastre-se</h2>
+
+  <form action="" method="POST" class="ui form">
+    <p>Faça parte da maior rede... parte da maior rede parte da maior rede parte da maior rede parte da maior rede parte da maior rede...</p>
+
+    <div class="field half">
+      <label for="id_first_name">Nome</label>
+      <input id="id_first_name"  name="first_name" type="text" required>
+    </div>
+
+    <div class="field half">
+      <label for="id_last_name">Sobrenome</label>
+      <input id="id_last_name"  name="last_name" type="text" required>
+    </div>
+
+    <div class="field">
+      <label for="id_email">E-mail</label>
+      <input id="id_email"  name="email" type="email" required>
+    </div>
+
+    <div class="field half">
+      <label for="id_password">Senha</label>
+      <input id="id_password"  name="password" type="password" required>
+    </div>
+
+    <div class="field half">
+      <label for="id_password_confirmation">Confirme sua senha</label>
+      <input id="id_password_confirmation"  name="password_confirmation" type="password" required>
+    </div>
+
+    <input type="hidden" name="tipo_form" value="register">
+
+    <div class="actions">
+      <button type="submit" class="ui button green">Quero me cadastrar!</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

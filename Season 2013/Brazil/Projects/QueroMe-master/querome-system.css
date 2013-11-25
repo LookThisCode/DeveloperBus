@@ -1,0 +1,25 @@
+/*
+Errno::ENOENT: No such file or directory - assets/sass/querome-system.scss
+
+Backtrace:
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:360:in `read'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:360:in `update_stylesheet'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:235:in `watch'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/plugin.rb:107:in `method_missing'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/exec.rb:463:in `watch_or_update'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/exec.rb:326:in `process_result'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/exec.rb:41:in `parse'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/lib/sass/exec.rb:21:in `parse!'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/gems/sass-3.2.12/bin/sass:9:in `<top (required)>'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/bin/sass:23:in `load'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/bin/sass:23:in `<main>'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/bin/ruby_executable_hooks:15:in `eval'
+/Users/caiotarifa/.rvm/gems/ruby-2.0.0-p247@querome/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Errno::ENOENT: No such file or directory - assets/sass/querome-system.scss"; }

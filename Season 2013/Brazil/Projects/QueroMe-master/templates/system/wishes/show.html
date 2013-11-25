@@ -1,0 +1,53 @@
+{% extends "system.html" %}
+
+{% block system %}
+<div class="row">
+<aside role="sidebar" class="sidebar column-4">
+  <div class="image">
+      {% if w.file %}
+          <img src="{{ w.file.url }}" alt="{{ w.product }}">
+      {% else %}
+          <img src="http://placehold.it/300x200" alt="{{ w.product }}">
+      {% endif %}
+  </div>
+
+  <div class="actions">
+    <a href="#" class="ui button"><i class="icon icon-pencil"></i> Editar</a>
+    <a href="{% url remove_wish w.id %}" class="ui button" data-confirm="Tem certeza que deseja remover?"><i class="icon icon-times"></i> Remover</a>
+  </div>
+</aside>
+
+<section class="content column-8">
+  <h1 class="name">{{ w.product }}</h1>
+  <p class="description">{{ w.description|linebreaks }}</p>
+
+  {% if results.count %}
+      <div class="subtitle">
+        <h2>Ofertas</h2>
+      </div>
+
+      <table class="ui table">
+        <thead>
+          <tr>
+            <th>Anunciantes</th>
+            <th>Produto</th>
+            <th>Valor</th>
+            <th></th>
+          </tr>
+        </thead>
+          {% for r in results %}
+          <tr>
+            <td>{{ r.company }}</td>
+            <td>{{ r.product }}</td>
+            <td>{{ r.price }}</td>
+            <td><a href="{% url track_bid r.id %}"><i class="icon icon-shopping-cart"></i></a></td>
+          </tr>
+          {% endfor %}
+        <tbody>
+        </tbody>
+      </table>
+    {% endif %}
+
+</section>
+</div>
+{% endblock %}

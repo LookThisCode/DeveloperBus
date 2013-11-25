@@ -1,0 +1,85 @@
+.ui.alert {
+  background-color: #d0e3ef;
+  @include background-image(linear-gradient(top, #d8ebf8, #d0e3ef));
+  border: 1px solid #97c1da;
+  border-radius: 3px;
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  color: #264C73;
+  font-size: 100%;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 15px 46px 15px 15px;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  @include transition(all 250ms);
+
+  &:hover {
+    border-color: #5f9fc6;
+  }
+
+  & > p {
+    margin-bottom: 0;
+  }
+
+  p + p {
+    margin-top: 5px;
+  }
+
+  .buttons {
+    margin-top: 15px;
+  }
+
+  .close {
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    opacity: 0.5;
+    position: absolute;
+    right: 12px;
+    text-decoration: none;
+    top: 17px;
+    @include transition(opacity 250ms ease);
+    width: 16px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+  &.danger {
+    background-color: #efd0d0;
+    @include background-image(linear-gradient(top, #f8d8d8, #efd0d0));
+    border-color: #da9797;
+    color: #9c2400;
+
+    &:hover {
+      border-color: #c65f5f;
+    }
+  }
+
+  &.success {
+    background-color: #dff0d8;
+    @include background-image(linear-gradient(top, #e2eed9, #d5e5cf));
+    border-color: #a3d48e;
+    color: #468847;
+
+    &:hover {
+      border-color: #82ac73;
+    }
+  }
+
+  &.warning {
+    background-color: #f5dac0;
+    @include background-image(linear-gradient(top, #ffe3c8, #f5dac0));
+    border-color: #dca874;
+    color: #613a00;
+
+    &:hover {
+      border-color: #cd8237;
+    }
+  }
+
+}

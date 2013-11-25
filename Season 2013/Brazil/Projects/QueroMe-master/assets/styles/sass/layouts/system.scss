@@ -1,0 +1,56 @@
+body {
+  background: url('../images/background.png');
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font: normal 13px 'Roboto', sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+  &:hover {text-decoration: underline; }
+}
+
+/* Content */
+.page-content {
+  margin: 0 auto;
+  min-width: $content-width;
+  padding: 0 10px;
+  width: $content-width;
+
+  @include clearfix;
+}
+
+.header {
+  [class*="column"] {
+    margin-top: 8px;
+  }
+
+  .logo {
+    img {
+      width: 255px;
+      height: 100px;
+    }
+  }
+
+  .add {
+    margin-top: 35px;
+  }
+
+  .user {
+    margin-top: 32px;
+    img {
+      border-radius: 100%;
+      display: block;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+main {
+  flex: 1;
+  padding: 30px 0 50px !important;
+}

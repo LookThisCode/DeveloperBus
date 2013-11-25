@@ -1,0 +1,183 @@
+[data-page="wishes#index"] {
+  .ui.items .item {
+    height: 340px;
+  }
+
+  .no-products {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+[data-page="wishes#show"] {
+
+  .sidebar {
+    .image {
+      position: relative;
+      &:before {
+        background: url('/images/system/tape.png');
+        content: '';
+        height: 26px;
+        left: 100px;
+        opacity: 0.75;
+        position: absolute;
+        top: -15px;
+        width: 99px;
+      }
+      img {
+        border-radius: 2px;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .actions {
+      clear: both;
+      margin-top: 20px;
+      text-align: center;
+      .button {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .content {
+    background: #fff;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+    position: relative;
+
+    &:before, &:after {
+      background: #fff;
+      box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+      content: '';
+      display: block;
+      height: 100%;
+      left: -1px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    &:before {
+      @include transform(rotate(1.2deg));
+      z-index: -1;
+    }
+
+    &:after {
+      @include transform(rotate(-1.2deg));
+      z-index: -1;
+    }
+
+    .name {
+      border-bottom: 1px dotted #ddd;
+      font-weight: 100;
+      margin: 0 0 10px;
+      padding: 0 0 10px;
+    }
+
+    .description {
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 130%;
+    }
+
+    .subtitle {
+      text-align: center;
+    }
+
+    h2 {
+      color: #999;
+      display: inline-block;
+      font-size: 120%;
+      text-transform: uppercase;
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        display: block;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 100px;
+      }
+
+      &:before {
+        @include background-image(linear-gradient(left, transparent, #ddd));
+        left: -105px;
+      }
+
+      &:after {
+        @include background-image(linear-gradient(right, transparent, #ddd));
+        right: -105px;
+      }
+    }
+
+    table { width: 100%; }
+  }
+
+}
+
+[data-page="wishes#new"] {
+  .new-product {
+    @extend %box;
+    padding: 15px;
+    @include clearfix;
+    .image-upload {
+      background: #fafafa;
+      border: 3px solid #eee;
+      border-radius: 5px;
+      color: #666;
+      cursor: pointer;
+      padding: 50px 25px;
+      text-align: center;
+      text-transform: uppercase;
+      @include transition(all 250ms ease);
+      &:hover {
+        background: #f7f7f7;
+        border-color: #ddd;
+      }
+      &.selected { padding: 0; }
+      .icon {
+        color: #999;
+        font-size: 300%;
+      }
+      img {
+        border-radius: 5px;
+        display: block;
+        width: 284px;
+      }
+    }
+    aside {
+      input { display: none; }
+    }
+    .content {
+      float: right;
+      .categories {
+        padding: 0;
+        list-style-type: none;
+        li {
+          border: 2px solid #eee;
+          border-radius: 4px;
+          cursor: pointer;
+          display: inline-block;
+          text-align: center;
+          margin-right: 4px;
+          padding: 10px 20px;
+          @include transition(all 250ms ease);
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            border-color: #ccc;
+          }
+          &.active {
+            background: #e9fffc;
+            border-color: #ccc;
+          }
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

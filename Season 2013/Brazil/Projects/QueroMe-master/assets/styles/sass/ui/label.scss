@@ -1,0 +1,46 @@
+.ui.label {
+  background: #825aa6;
+  border-color: #652c90;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  &.floating {
+    background: #d95c5c;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: bold;
+    left: 99%;
+    margin: 0em 0em 0em -15px !important;
+    padding: 4px 8px;
+    position: absolute;
+    top: -10px;
+    z-index: 100;
+  }
+
+  &.ribbon {
+    border-radius: 0 2px 2px 0;
+    color: #fff;
+    display: inline-block;
+    left: -20px;
+    position: relative;
+
+    &:after {
+      border: 0 solid transparent;
+      border-top: 0 solid transparent;
+      border-right-width: 10px;
+      border-right-color: inherit;
+      border-right-style: solid;
+      border-bottom: 10px solid transparent;
+      border-left: 0 solid transparent;
+
+      content: '';
+      left: 0;
+      height: 0;
+      position: absolute;
+      top: 100%;
+      width: 0;
+    }
+  }
+}

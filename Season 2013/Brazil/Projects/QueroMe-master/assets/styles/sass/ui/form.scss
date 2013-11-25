@@ -1,0 +1,124 @@
+.ui.form {
+  max-width: 100%;
+
+  > p {
+    color: rgba(0, 0, 0, 0.65);
+    margin: 15px 0;
+  }
+
+  .field {
+    clear: both;
+    margin: 0 0 10px;
+    position: relative;
+
+    > label {
+      color: #555;
+      display: block;
+      font-size: 110%;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .hint {
+      color: #999;
+      display: block;
+      font-size: 90%;
+      margin-top: 2px;
+    }
+  }
+
+  .actions {
+    text-align: center;
+  }
+
+  %input {
+    @include appearance(none);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @include box-sizing(border-box);
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    outline: 0;
+    padding: 10px;
+    position: relative;
+    @include transition(
+      background 250ms ease,
+      border 250ms ease,
+      box-shadow 250ms ease
+    );
+    width: 100%;
+  }
+
+  %input-focus {
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  textarea,
+  #{$all-text-inputs} {
+    @extend %input;
+    &:focus { @extend %input-focus; }
+  }
+
+  textarea,
+  input[type="checkbox"] {
+    vertical-align: top;
+  }
+
+  textarea {
+    height: 100px;
+    max-height: 200px;
+    min-height: 75px;
+    resize: vertical;
+  }
+
+  .input {
+    width: 100%;
+
+    &.prepend, &.append {
+      display: table;
+    }
+
+    &.prepend {
+      .prepend {
+        border-radius: 4px 0 0 4px;
+        border-right: none;
+      }
+      input { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+    }
+
+    &.append {
+      .append {
+        border-radius: 0 4px 4px 0;
+        border-left: none;
+      }
+      input { border-top-right-radius: 0; border-bottom-right-radius: 0; }
+    }
+
+    .prepend, .append {
+      border: 1px solid rgba(0, 0, 0, 0.10);
+      @include box-sizing(border-box);
+      background: #f7f7f7;
+      color: #666;
+      display: table-cell;
+      padding: 0 7px;
+      text-align: center;
+      text-shadow: 0 1px 0 #ffffff;
+      vertical-align: middle;
+      width: auto;
+
+      i { font-size: 130%; }
+    }
+    input {
+      display: table-cell;
+      width: 100%;
+    }
+  }
+
+  @include placeholder {
+    color: #aaa;
+    &:focus { color: #999; }
+  }
+}

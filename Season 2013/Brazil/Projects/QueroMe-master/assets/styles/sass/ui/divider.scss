@@ -1,0 +1,56 @@
+.ui.divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  @include box-sizing(border-box);
+  height: 0;
+  line-height: 1;
+  margin: 15px 0;
+  @include user-select(none);
+
+  &.horizontal,
+  &.vertical {
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 80%;
+    font-weight: bold;
+    height: 0;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    
+  }
+
+  &.horizontal {
+    height: auto;
+    left: 0;
+    line-height: 1;
+    margin: 15px 20px;
+    padding: 0;
+    position: relative;
+    top: 0;
+
+    &:before, &:after {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      content: '';
+      height: 0;
+      position: absolute;
+      top: 50%;
+      width: 50%;
+      z-index: 3;
+    }
+
+    &:before {
+      left: 0;
+      margin-left: -20px;
+    }
+
+    &:after {
+      margin-right: -20px;
+      left: auto;
+      right: 0;
+    }
+  }
+}

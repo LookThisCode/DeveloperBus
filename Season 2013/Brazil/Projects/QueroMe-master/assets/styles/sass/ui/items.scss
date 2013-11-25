@@ -1,0 +1,71 @@
+.ui.items {
+
+  .item {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.05);
+    padding-bottom: 15px;
+    position: relative;
+
+    &, &:before, &:after { @include transition(all 250ms ease); }
+
+    &:before, &:after {
+      background-color: rgba(0, 0, 0, 0.02);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      bottom: -3px;
+      content: '';
+      height: 5px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:before {
+      bottom: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      @include transform(scale(1.05));
+      &, &:before, &:after {
+        border-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    > .image {
+      position: relative;
+      > img {
+        border-radius: 2px;
+        display: block;
+        max-height: 200px;
+        width: 100%;
+      }
+
+      .ui.label.ribbon {
+        bottom: 10px;
+        position: absolute;
+      }
+    }
+
+    >.content {
+      .name {
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 150%;
+        font-weight: 700;
+        margin: 15px 0 0;
+      }
+      .description {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 110%;
+      }
+      .meta {
+        color: rgba(0, 0, 0, 0.25);
+        display: block;
+        text-align: right;
+      }
+    }
+  }
+
+}

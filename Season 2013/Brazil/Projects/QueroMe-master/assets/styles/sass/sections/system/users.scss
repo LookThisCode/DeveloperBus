@@ -1,0 +1,41 @@
+[data-page="users#index"] {
+  .login, .register {
+    @extend %box;
+  }
+
+  .login {
+    .social-login {
+      p {
+        color: rgba(0, 0, 0, 0.65);
+        float: left;
+        width: 200px;
+      }
+      .ui.button {
+        float: right;
+        margin-top: 11px;
+      }
+      @include clearfix;
+    }
+    .prepend .prepend {
+      width: 40px;
+    }
+  }
+
+  .register {
+    @include clearfix;
+
+    .ui.form p { margin-top: 22px; }
+
+    .field.half {
+      clear: none;
+      float: left;
+      width: 48%;
+      
+      &:nth-child(3), &:nth-child(6) { float: right; }
+    }
+
+    .actions {
+      clear: both;
+    }
+  }
+}

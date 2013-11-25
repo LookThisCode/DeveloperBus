@@ -1,0 +1,19 @@
+{% extends 'system.html' %}
+{% block title %}quero.me!{% endblock %}
+
+{% block system %}
+<h1>Bem vindo!</h1>
+<p>
+    {%if request.user.is_authenticated%}
+            Olá, {{request.user.first_name}} :)
+            <p>
+                <a href="{% url listar %}">Você tem {{ request.user.wishlist_set.count }} desejos na sua lista.</a>
+                <a href="{% url wish %}">Cadastre + desejos!</a>
+            </p>
+            Fazer <a href="{%url logout%}">Logout</a>
+    {%else%}
+        Olá, faca seu <a href="{%url login%}">Login</a> ou <a href="{%url register%}">Cadastre-se!</a>
+    {%endif%}
+</p>
+
+{% endblock %}

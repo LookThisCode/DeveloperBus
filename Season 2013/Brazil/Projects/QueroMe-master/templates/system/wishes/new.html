@@ -1,0 +1,59 @@
+{% extends "system.html" %}
+
+{% block system %}
+
+<section class="new-product">
+  <h2>Cadastro do produto</h2>
+
+  <form action="{{ upload_url }}" method="POST" enctype="multipart/form-data" class="ui form">
+      {% load filetransfers %}
+      {% csrf_token %}
+      {% render_upload_data upload_data %}
+    <aside role="sidebar" class="column-4">
+      <div class="image-upload">
+        <i class="icon icon-upload"></i>
+        <p>Clique aqui para enviar sua imagem.</p>
+      </div>
+      <input class="image-upload-field" type="file" id="id_file" name="file">
+    </aside>
+
+    <div class="content column-7">
+      <div class="field">
+        <label for="id_product">Título</label>
+        <input type="text" id="id_product" name="product" autofocus required>
+      </div>
+
+      <div class="field">
+        <label>Categoria</label>
+        <ul class="categories">
+          <li class="active" data-value="5741031244955648"><img src="/images/icons/roupas.png" alt="Roupas"> <span>Roupas</span></li>
+          <li data-value="6270652252160000"><img src="/images/icons/eletronicos.png" alt="Eletrônicos"> <span>Eletrônicos</span></li>
+          <li data-value="5649050225344512"><img src="/images/icons/jogos.png" alt="Jogos"> <span>Jogos</span></li>
+          <li data-value="5724160613416960"><img src="/images/icons/outros.png" alt="Outros"> <span>Outros</span></li>
+        </ul>
+        <input type="hidden" name="category" value="1">
+      </div>
+
+      <div class="field">
+        <label for="id_description">Descrição</label>
+        <textarea id="id_description" name="description"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="ui button green">Salvar</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+
+
+<!-- {% load filetransfers %}
+<form action="{{ upload_url }}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% render_upload_data upload_data %}
+    <table>{{ form }}</table>
+    <p>&nbsp;</p>
+    <input type="submit" value="Cadastrar desejo!" />
+</form> -->
+{% endblock %}

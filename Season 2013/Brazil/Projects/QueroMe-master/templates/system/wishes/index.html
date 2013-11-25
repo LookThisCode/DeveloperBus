@@ -1,0 +1,32 @@
+{% extends "system.html" %}
+
+{% block system %}
+
+<div class="ui items">
+{% for w in request.user.wishlist_set.all %}
+  <a href="{% url show w.id %}" class="item column-4">
+    {% if w.count_bids %}<span class="ui label floating">{{ w.count_bids }}</span>{% endif %}
+    <div class="image">
+      {% if w.file %}
+          <img src="{{ w.file.url }}" alt="{{ w.product }}">
+      {% else %}
+        <img src="http://placehold.it/300x200" alt="{{ w.product }}">
+      {% endif %}
+      <span class="ui ribbon label">{{ w.category }}</span>
+    </div>
+    <div class="content">
+      <h3 class="name">{{ w.product }}</h3>
+      <p class="description">{{ w.description }}</p>
+      <span class="meta">3 dias atrás</span>
+    </div>
+  </a>
+{% endfor %}
+</div>
+
+{% if not request.user.wishlist_set.count %}
+<div class="no-products">
+  <img src="/images/system/no-products.png" alt="Comece a cadastrar seus produtos e monte sua lista de desejos.">
+</div>
+{% endif %}
+
+{% endblock %}
