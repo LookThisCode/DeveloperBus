@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+	<!-- Servlets -->
+
+	<servlet>
+		<servlet-name>Buscar</servlet-name>
+		<servlet-class>supply.me.server.BuscarServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Buscar</servlet-name>
+		<url-pattern>/buscar</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Povoador</servlet-name>
+		<servlet-class>supply.me.server.povoador.PovoadorServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Povoador</servlet-name>
+		<url-pattern>/povoar</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>charsetencoding</filter-name>
+		<filter-class>supply.me.server.CharsetEncodingFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>charsetencoding</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

@@ -1,0 +1,2 @@
+# Module supply_me
+# RPC service class, partial path of RPC policy file
