@@ -1,0 +1,103 @@
+<div class="span12" ng-controller='DemoCtrl'>
+
+    <div>
+        <button class="btn btn-large btn-primary" type="button" ng-click="fetchHcps()" ng-hide="hcps.length">Fetch Healthcare Professionals</button>
+    </div>
+
+    <div modal="showProgressBar()" options="opts" keyboard="false" backdrop="false">
+        <div class="modal-header">
+            <h5>Loading data from BigQuery</h5>
+        </div>
+        <div class="modal-body">
+            <div class="progress progress-striped active">
+                <div class="bar" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div modal="showModal()" close="close()" options="opts" keyboard="false">
+        <div class="modal-header">
+            <h5>Recommended contents</h5>
+        </div>
+        <div class="modal-body">
+            <p ng-show="isFetchingRecommendations">Waiting for big query to respond...</p>
+            <div class="progress progress-striped active" ng-show="isFetchingRecommendations">
+                <div class="bar" style="width: 100%;"></div>
+            </div>
+            <p ng-show="!isFetchingRecommendations">{{recommendation_msg}}</p>
+
+            <accordion close-others="oneAtATime" ng-show="recommendations">
+                <accordion-group heading="{{prod.split('_').join(' ')}}" ng-repeat="(prod, items) in recommendations">
+                    <ul>
+                        <li ng-repeat="c in items" ng-switch on="c.mime">
+                            <i ng-switch-when="audio/mp3" class="icon-headphones"> </i>
+                            <i ng-switch-when="video/mp4" class="icon-film"> </i>
+                            <i ng-switch-when="application/pdf" class="icon-book"> </i>
+                            <i ng-switch-when="text/html" class="icon-globe"> </i>
+                            <i ng-switch-default="text/html" class="icon-globe"> </i>
+                            <a target="_blank" href="{{ c.url }}">{{ c.url }}</a>
+                        </li>
+                    </ul>
+                </accordion-group>
+            </accordion>
+
+
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-warning cancel" ng-click="close()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="row-fluid" style="margin-bottom: 5px">
+    <input type="text" class="search-query pull-right" ng-show="hcpsFecthed(currentPage)" placeholder="Search" ng-model="searchText" ng-disabled="!hcps.length">
+    </div>
+
+    <div class="row-fluid text-center" style="margin-bottom: 5px">
+        <button class="btn btn-primary btn-medium" type="button" ng-click="batchAnalysis()" ng-show="hcpsFecthed()">Analyse!</button>
+    </div>
+
+    <table class="table table-bordered table-hover table-condensed" ng-show="hcps.length">
+        <caption style="padding-top: 5px"><alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert></caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>Age</th>
+                <th>Specialty</th>
+                <th>Prescriptions</th>
+                <th>Visits</th>
+                <th>Calls</th>
+                <th>Contents Viewed</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="hcp in hcps | filter:searchText | startFrom:currentPage*pageSize | limitTo:pageSize">
+            <td>{{hcp.f[19].v}}</td>
+            <td>{{hcp.f[0].v}}</td>
+            <td>{{hcp.f[1].v}}</td>
+            <td>{{hcp.f[2].v}}</td>
+            <td>{{hcp.f[20].v}}</td>
+            <td>{{hcp.f[3].v}}</td>
+            <td>{{hcp.f[4].v}}</td>
+            <td>{{hcp.f[5].v}}</td>
+            <td>{{hcp.f[12].v}}</td>
+            <td>{{hcp.f[14].v}}</td>
+            <td>{{hcp.f[17].v}}</td>
+            <td>
+                <button class="btn btn-mini btn-recommend" ng-disabled="false" type="button" ng-show="true"  ng-click="recommendContents(hcp)">Recommend Content</button>
+                <button class="btn btn-mini btn-churn" ng-class="{'btn-warning': hcp.isRisky, 'btn-success': !hcp.isRisky, 'btn-info': !hcp.isRisky && !hcp.churnAnalysisCompleted}" ng-disabled="hcp.churnAnalysisCompleted" type="button" ng-click="performChurnAnalysis(hcp)"><i class="icon-thumbs-down icon-white" ng-show="hcp.isRisky"> </i><i class="icon-thumbs-up icon-white" ng-show="!hcp.isRisky"> </i>{{!hcp.isPredictingChurn && ' ' || 'Analyzing'}}</button>
+                <button class="btn btn-mini btn-create-task" ng-class="{'btn-inverse': !hcp.taskCreated, 'btn-success': hcp.taskCreated}" ng-disabled="!hcp.isRisky || hcp.taskCreated" type="button" ng-click="requestSalesForceCreation(hcp)">{{!hcp.isCreatingTask && 'Create Task' || 'Creating'}}</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul class="pager" ng-show="hcpsFecthed()">
+        <li><a href="javascript:void(0)" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">Previous</a></li>
+        <li><a href="javascript:void(0)" ng-disabled="currentPage >= hcps.length/pageSize - 1" ng-click="currentPage=currentPage+1">Next</a></li>
+    </ul>
+</div>

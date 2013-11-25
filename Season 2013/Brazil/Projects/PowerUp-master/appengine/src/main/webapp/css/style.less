@@ -1,0 +1,1357 @@
+/* ==========================================================================
+   Normatização CSS
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #444;
+}
+
+body {
+    font-size: 62.5%;
+    line-height: 1.4;
+    font-family: 'Roboto', arial, sans-serif;  
+    background: #f4f4f4;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+img {
+    vertical-align: middle;
+}
+
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==|=======================================================================
+   Grid //  http://semantic.gs/ 
+========================================================================== */
+ 
+/*Altere estes valores de acordo com a largura das colunas, largura das margens e o número de colunas do seu grid.*/
+@column-width: 60;
+@gutter-width: 40;
+@columns: 10;
+ 
+@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+ 
+/*Delete a linha abaixo se desejar trabalhar com valores em pixel.*/
+@total-width: 100%;
+ 
+.clearfix() {
+	*zoom:1;
+ 
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+	width: 100%;
+	.clearfix;
+}
+ 
+.row(@columns:@columns) {
+	display: block;
+	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	margin: 0 @total-width*(((@gutter-width*.5)/@gridsystem-width)*-1);
+	.clearfix;
+}
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@gridsystem-width);
+	}
+ 
+.push(@offset:1) {
+	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width);
+}
+
+/* ==|== BORDAS ==|==*/
+.borderRadius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+/*==|== SOMBRAS ==|==*/
+.boxShadow {
+    -webkit-box-shadow: 0px 2px 7px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow:    0px 2px 7px rgba(50, 50, 50, 0.2);
+    box-shadow:         0px 2px 7px rgba(50, 50, 50, 0.2);
+}
+
+/* ==|== CORES ==|==*/
+@corPrincipal: #0ad000;
+@laranja: #ff7200;
+
+
+.gradiente (@origin: top, @alpha: 0.15) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+ 
+/*Determine a largura do seu container.*/
+.wrap {
+	max-width: 1040px;
+	margin: 0 auto;
+}
+
+/*Estilos Comuns*/
+.botao {
+    background: @laranja;
+    .borderRadius(3px);
+    color: #FFF;
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    background: @corPrincipal;
+    .borderRadius(3px);
+    color: #FFF;
+    &:hover {
+        .gradiente;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+.ficha-full {
+    .column(10);
+    background: #FFF;
+    .boxShadow;
+}
+
+/* ==|== Estilos Principais ==================================================
+   Autor: Galera do PowerUp
+   ========================================================================== */
+
+
+/*Topo*/
+.head {
+    width: 100%;
+    overflow: hidden;
+    padding: 1.5em 0 1.6em 0;
+    background: #FFF;
+
+    .menu-top {
+        .column(6);
+        padding: 1.5em 0;
+
+        li {
+            display: inline;
+            margin-right: 2em;
+            font-size: 1.8em;
+            color: #676767;
+            font-weight: 400;
+
+            a {
+                color: #676767;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: none;
+                    color: @corPrincipal;
+                }
+            }
+        }
+    }
+
+    .prof-nome {
+        .column(3);
+        .push(1);
+        margin-top: 1em;
+        overflow: hidden;
+
+        .professor {
+            width: 50px;
+            .borderRadius(50px);
+            float: right;
+            margin-right: 1em;
+        }
+
+        p {
+            color: @corPrincipal;
+            font-size: 1.8em;
+            margin: 0;
+            font-weight: 500;
+            float: right;
+        }
+
+        a {
+            color: #cccccc;
+            font-size: .9em;
+            text-decoration: none;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*Barra*/
+.barra-top {
+    width: 100%;
+    background: #676767;
+    overflow: hidden;
+    padding: 3em;
+
+    h1 {
+        .column(4);
+        font-size: 2.8em;
+        font-weight: 400;
+        color: #cccccc;
+        margin-top: 5px;
+
+        img {
+            margin-top: -7px;
+        }
+    }
+
+    .itens-direita {
+        .column(6);
+        position: relative;
+        overflow: hidden;
+
+        input[type="text"] {
+            width: 67%;
+            margin-right: 3%;
+            float: left;
+            border: none;
+            .borderRadius(3px);
+            background: #808080 url("../img/icone-lupa.png") no-repeat center right;
+            color: #FFF;
+            height: 48px;
+            padding: 14px 60px 14px 14px;
+            font-size: 1.8em;
+            outline: none;
+
+            &:focus {
+                border: 1px solid #ccc;
+            }
+        }
+
+        .novo-aluno {
+            width: 30%;
+            height: 48px;
+            float: left;
+            font-size: 1.8em;
+            text-align: center;
+            padding: 12px;
+            &:hover {
+                .gradiente;
+            }
+        }
+    }
+}
+
+/*Footer*/
+.footer {
+    width: 100%;
+    background: #FFF;
+    height: 62px;
+    .clearfix;
+    font-size: 1.4em;
+    margin: 0;
+    padding: 24px 0;
+
+    ul {
+        .column(6);
+        float: left;
+        overflow: hidden;
+
+        li {
+            display: inline;
+            margin: 0 .3em;
+
+            a {
+                text-decoration: none;
+                color: #444;
+
+                &:hover {
+                    text-decoration: none;
+                    color: @corPrincipal;
+                }
+            }
+        }
+    }
+}
+
+/*Ficha Aluno*/
+.principal {
+    .clearfix;
+    margin-bottom: 4em;
+    padding-top: 24px;
+
+    h2 {
+        .column(10);
+        margin-top: 2em;
+        margin-bottom: 1em;
+        font-size: 2.4em;
+    }
+}
+
+.ficha-aluno {
+    overflow: hidden;
+    padding: 3em 2em;
+    margin-bottom: 24px;
+    position: relative;
+
+    .foto-aluno {
+        .borderRadius(50px);
+        width: 73px;
+        height: 73px;
+        float: left;
+        margin-right: 15px;
+    }
+
+    h1 {
+        color: @corPrincipal;
+        font-size: 2.4em;
+        margin: 8px 0 2px 0;
+
+        a {
+            color: @corPrincipal;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    h3 {
+        color: #444;
+        font-size: 1.8em;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .info-aluno {
+        .column(4);
+    }
+
+    .info-dir {
+        .column(6);
+        border-left: 1px solid #ccc;
+
+        .ultimo {
+            width: 35.678571428571%;
+            margin-right: 04.107142857143%;
+            float: left;
+            padding: 2em;
+
+            h2 {
+                color: #444;
+                font-size: 1.6em;
+                margin: 0;
+            }
+
+            span {
+                color: #aaa;
+            }
+        }
+
+        a {
+            display: block;
+            width: 27.678571428571%;
+            margin-right: 04.107142857143%;
+            float: left;
+            text-align: center;
+            background: #ccc;
+            color: #FFF;
+            .borderRadius(6px);
+            height: 48px;
+            margin-top: 1.4em;
+            padding-top: 14px;
+            font-size: 1.6em;
+            text-decoration: none;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:hover {
+                .gradiente;
+                text-decoration: none;
+            }
+        }
+
+        .novo {
+            background: @corPrincipal;
+
+            a:hover {
+                text-decoration:none;
+                .gradiente;
+            }
+        }
+    }
+
+    .editar-int {
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 17.678571428571%;
+        margin-right: 0;
+        float: left;
+        text-align: center;
+        background: #ccc;
+        color: #FFF;
+        .borderRadius(6px);
+        height: 48px;
+        margin-top: 1.4em;
+        padding-top: 14px;
+        font-size: 1.6em;
+        text-decoration: none;
+        &:hover {
+            .gradiente;
+            text-decoration: none;
+        }
+    }
+
+    .e-perfil {
+        right: 2%;
+        background: #aaa;
+    }
+
+    .e-treino {
+        right: 21%;
+        background: @corPrincipal;
+    }
+
+    .excluir-perfil {
+        position: absolute;
+        bottom: 1em;
+        right: 2%;
+        display: block;
+        width: 10.678571428571%;
+        margin-right: 0;
+        float: left;
+        text-align: right;
+        color: #FFF;
+        .borderRadius(6px);
+        height: 30px;
+        margin-top: 1.4em;
+        padding-top: 8px;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: red;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .dados-aluno {
+        margin-left: 88px;
+
+        li {
+            font-size: 1.6em;
+            color: #aaa;
+            margin-top: .8em;
+
+            b {
+                color: #aaa;
+            }
+        }
+    }
+}
+
+.exercicios {
+    .clearfix;
+    margin-bottom: 6em;
+
+    .exercicio {
+        padding: 3em 3em;
+        margin-bottom: 24px;
+        overflow: hidden;
+
+        fieldset {
+            div {
+               width: 14%; /*120*/
+               margin-right: 06.875%; /*66*/
+               float: left;
+
+               &:last-child {
+                    margin-right: 0;
+               } 
+
+               label {
+                    font-size: 1.4em;
+                    color: #aaa;
+                    font-weight: 400;                    
+                    display: block;
+                    margin-bottom: 5px;
+               }
+
+               input {
+                    width: 100%;
+                    border: 1px solid #dddddd;
+                    height: 36px;
+                    padding: 8px;
+                    font-size: 1.8em;
+                    color: @corPrincipal;
+                    outline: none;
+                    .borderRadius(4px);
+                    background-color: #fbfbfb;
+
+                    &:focus {
+                        border: 1px solid @corPrincipal;
+                    }
+               }
+
+               .minutos {
+                    background: url("../img/form-minutos.png") no-repeat center right;
+               }
+
+               .carga {
+                    background: url("../img/form-kg.png") no-repeat center right;
+               }
+
+               .repeticoes {
+                    background: url("../img/form-vezes.png") no-repeat center right;
+               }
+
+               .series {
+                    background: url("../img/form-vezes.png") no-repeat center right;
+               }
+
+               .intervalo {
+                    background: url("../img/form-segundos.png") no-repeat center right;
+               }
+            }
+        }
+
+        h1 {
+            font-size: 2.4em;
+
+            img {
+                margin-top: -4px;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        .column(2);
+        float: right;
+        outline: none;
+        height: 48px;
+        &:hover {
+            .gradiente;
+            text-decoration: none;
+        }
+    }
+}
+
+.aparelho {
+    .column(5);
+    background: #FFF;
+    .boxShadow;
+    margin-bottom: 24px;
+    margin-top: 24px;
+
+    h2 {
+        margin: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .descricao {
+        padding: 20px;
+        .clearfix;
+
+        p {
+            font-size: 1.6em;
+            line-height: 1.8em;
+            margin-bottom: 1em;
+            color: #999;
+        }
+
+        .editar-aparelho {
+            display: block;
+            width: 36.678571428571%;
+            margin-right: 04.107142857143%;
+            float: left;
+            text-align: center;
+            background: #ccc;
+            color: #FFF;
+            .borderRadius(6px);
+            height: 48px;
+            padding-top: 14px;
+            font-size: 1.6em;
+            text-decoration: none;
+            &:hover {
+                text-decoration:none;
+                .gradiente;
+            }
+        }
+
+        .imprimir-qr {
+            display: block;
+            float: right;
+            font-size: 1.6em;
+            text-decoration: none;
+            color: #444;
+        }
+    }
+
+    .foto-aparelho {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.texto {
+    padding: 20px;
+
+    h1 {
+        margin: 0 0 .5em 0;
+        font-size: 3em;
+    }
+
+    h2 {
+        width: 100%;
+        margin: 0 0 .5em 0;
+    }
+
+    h4 {
+        font-size: 1.6em;
+        margin-bottom: .6em;
+    }
+
+    p {
+        font-size: 1.4em;
+
+        a {
+            color: @corPrincipal;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .integrante {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 25px;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    .redes {
+        font-size: 1.4em;
+        overflow: hidden;
+
+        li {
+            margin-right: 1em;
+            float: left;
+
+            a {
+                color: @corPrincipal;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+.contato{ 
+    .column(6);
+    .push(2);
+    padding: 20px;
+    margin-top: 24px;
+
+    h1 {
+        margin: 0 0 .5em 0;
+        font-size: 3em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+
+    .form-contato {
+        margin-top: 24px;
+        input {
+            width: 100%;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            height: 42px;
+            padding: 10px;
+            font-size: 1.4em;
+            .borderRadius(2px);
+        }
+
+        input[typo="submit"] {
+            border: none;
+        }
+
+        textarea {
+            width: 100%;
+            .borderRadius(2px);
+            border: 1px solid #ccc;
+            padding: 10px;
+            height: 100px;
+            resize: none;
+            margin-bottom: 2em;
+            font-size: 1.4em;
+        }
+    }
+}
+
+.index {
+    background: #FFF;
+}
+
+.home {
+    background: #FFF url('../img/background.jpg') no-repeat left top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 480px;
+    margin-bottom: 0;
+
+    .mockup {
+        .column(3);
+        margin-top: 3em;
+    }
+
+    .texto-home {
+        .column(7);
+        color: #FFF;
+        margin-top: 8em;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 1.8em;
+            font-weight: 400;
+            line-height: 1.8em;
+        }
+
+        form {
+            margin-top: 4em;
+            input {
+                width: 30%;
+                float: left;
+                margin-right: 2%;
+                height: 38px;
+                padding: 10px;
+                font-size: 1.4em;
+                .borderRadius(5px);
+                border: none;
+            }
+        }
+    }
+}
+
+/*checkbox*/
+.roundedTwo {
+    width: 28px;
+    height: 28px;
+    background: @corPrincipal;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.roundedTwo label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    left: 4px;
+    top: 4px;
+}
+
+.roundedTwo label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    background: transparent;
+    top: 5px;
+    left: 4px;
+    border: 3px solid #fff;
+    border-top: none;
+    border-right: none;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.roundedTwo label:hover::after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+    filter: alpha(opacity=30);
+    opacity: 1;
+}
+
+.roundedTwo input[type=checkbox]:checked + label:after {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.exercicio input[type=checkbox] {
+    visibility: hidden;
+}
+
+.exercicios .exercicio h1 {
+  display: block;
+  float: left;
+  margin-top: 0;
+  margin-left: 36px;
+  clear: right;
+  .clearfix;
+}
+
+.exercicios fieldset {
+    width: 100%;
+}
+
+@media only screen and (max-width: 769px) { 
+    .wrap {
+        width: 95%;
+        margin-top: 0 2.5%;
+    }
+
+    /*Topo*/
+    .head {
+
+        .menu-top {
+            .column(10);
+            text-align: center;
+
+            li {
+                display: block;
+                margin-right: 0;
+                text-align: center;
+                width: 50%;
+                float: left;
+            }
+
+            li.logo {
+                width: 100%;
+                margin-bottom: .8em;
+                display: block;
+                float: none;
+            }
+        }
+
+        .prof-nome {
+            .column(10);
+            .push(0);
+            margin-top: 1em;
+            overflow: hidden;
+
+            .professor {
+                display: none;
+            }
+
+            p {
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+
+    /*Barra*/
+    .barra-top {
+
+        h1 {
+            .column(10);
+            margin-bottom: .8em;
+        }
+
+        .itens-direita {
+            .column(10);
+
+            input[type="text"] {
+                width: 100%;
+                margin-right: 0;
+                float: none;
+                margin-bottom: 1em;
+            }
+
+            .novo-aluno {
+                width: 100%;
+                height: 48px;
+                float: left;
+                font-size: 1.8em;
+                text-align: center;
+                padding: 12px;
+            }
+        }
+    }
+
+
+    .footer {
+        width: 100%;
+        height: auto;
+        padding: 0;
+
+        ul {
+            .column(10);
+            float: none;
+            overflow: hidden;
+            text-align: center;
+
+            li {
+                display: block;
+                margin: .8em .3em;
+
+                a {
+                    text-decoration: none;
+                    color: #444;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .separador {
+                display: none;
+            }
+        }
+    }
+
+    /*Ficha Aluno*/
+    .principal {
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .ficha-aluno {
+        overflow: hidden;
+        padding: 3em 2em;
+        margin-bottom: 24px;
+        position: relative;
+        text-align: center;
+
+        .foto-aluno {
+            float: none;
+            margin-right: 0;
+        }
+
+        h3 {
+            color: #444;
+            font-size: 1.8em;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .info-aluno {
+            .column(10);
+        }
+
+        .info-dir {
+            .column(10);
+            border-left: none;
+            margin-top: 20px;
+
+            .ultimo {
+                width: 100%;
+                margin-right: 0;
+                float: none;
+                padding: 0;
+
+                h2 {
+                    margin: 0;
+                }
+
+                span {
+                    color: #aaa;
+                }
+            }
+
+            a {
+                display: block;
+                width: 46%;
+                margin-right: 4%;
+
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                    .gradiente;
+                }
+            }
+        }
+
+        .editar-int {
+            position: relative;
+            top: 0;
+            display: block;
+            width: 46%;
+            margin-bottom: 30px;
+        }
+
+        .e-perfil {
+            left: 2%%;
+            margin-right: 2%;
+            background: #aaa;
+        }
+
+        .e-treino {
+            left: 6%%;
+            background: @corPrincipal;
+        }
+
+        .excluir-perfil {
+            position: relative;
+            width: 100%;
+            margin-bottom: 0;
+            margin-top: 50px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .dados-aluno {
+            margin-left: 0;
+            margin-top: 50px;
+            width: 100%;
+            text-align: left;
+
+            li {
+                font-size: 1.6em;
+                color: #ccc;
+                margin-top: .8em;
+
+                b {
+                    color: #aaa;
+                    display: block;
+                    float: none;
+                }
+            }
+        }
+    }
+
+    .exercicios {
+
+        .exercicio {
+
+            fieldset {
+                margin-top: 2em;
+
+                div {
+                   width: 100%;
+                   margin-right: 0;
+                   float: none;
+                   margin-bottom: 2em;
+                }
+            }
+
+            h1 {
+                font-size: 2.4em;
+
+                img {
+                    margin-top: -4px;
+                }
+            }
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            .column(10);
+            float: right;
+            outline: none;
+            height: 48px;
+        }
+    }
+
+    .aparelho {
+        .column(10);
+        margin-bottom: 48px;
+        
+
+        .descricao {
+            p {
+                font-size: 1.2em;
+            }
+
+            .editar-aparelho {
+                display: block;
+                width: 100%;
+                margin-right: 0%;
+                float: none;
+            }
+
+            .imprimir-qr {
+                display: block;
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin-top: 2em;
+            }
+        }
+    }
+
+    .contato{ 
+        .column(10);
+        .push(0);
+    }
+
+    .texto {
+        h2 {
+            text-align: left;
+        }
+    }
+
+.home {
+    background: #f4f4f4;
+    -webkit-background-size: none;
+    -moz-background-size: none;
+    -o-background-size: none;
+    background-size: none;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 4em;
+
+    .mockup {
+        display: none;
+    }
+
+    .texto-home {
+        .column(10);
+        color: #444;
+        margin-top: 2em;
+
+        form {
+            margin-top: 3em;
+            input {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
+
+}
+
+
+
+
+/* ==========================================================================
+   Classes Auxiliares
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table; 
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* ==========================================================================
+   Estilos para impressão
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; 
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,60 @@
+<div class="row-fluid" ng-controller="EventCtrl">
+    <form class="span6 form-horizontal" novalidate accept-charset="UTF-8" name="eventForm" method="POST" action="/event" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <legend>Event</legend>
+
+            <div >
+                <div class="control-group" ng-class="{error: eventForm.action.$invalid}">
+                    <label class="string required control-label" for="action">Action</label>
+                    <div class="controls">
+                        <input required type="text" class="input-block-level" ng-model="evento.action" placeholder="Action name" name="action" id="action">
+                        <ul class="help-block">Ex:
+                            <li ng-repeat="act in sampleActions">
+                                <a ng-click="fillAction(act)">{{act}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="control-group" ng-class="{error: eventForm.data.$invalid}">
+                    <label class="string required control-label" for="data">Data (JSON object payload)</label>
+                    <div class="controls">
+
+                        <textarea required json name="data" id="data" ng-model="evento.data" class="input-block-level" rows="10"></textarea>
+                        <p class="help-block">Ex:
+                            <code>
+                                {
+                                "user": { "guid": "12342143214214" }
+
+                                }
+                            </code>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-primary pull-right" ng-disabled="eventForm.$invalid" ng-click="save()">Add event</button>
+            </div>
+        </fieldset>
+    </form>
+
+    <table class="span6 table table-striped">
+        <thead>
+        <tr>
+            <th>Action</th>
+            <th>Data payload</th>
+            <th>Reuse</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="evt in savedEvents | filter:search | orderBy:'action'">
+            <td>{{evt.action}}</td>
+            <td><code>{{evt.data}}</code></td>
+            <td>
+                <a ng-click="fillEvent(evt)"><i class="icon-pencil"></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

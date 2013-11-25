@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/gray" >
+    
+	<ImageView
+	    android:id="@+id/buttonMenu"
+	    android:layout_width="wrap_content"
+	    android:layout_height="50dp"
+	    android:src="@drawable/icone_menu" />
+	
+	<ImageView
+	    android:id="@+id/logo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="50dp"
+	    android:src="@drawable/logo_powerup"
+	    android:layout_centerHorizontal="true" />
+	
+	<ImageView
+	    android:id="@+id/buttonCamera"
+	    android:layout_width="wrap_content"
+	    android:layout_height="50dp"
+	    android:layout_marginRight="10dp"
+	    android:src="@drawable/icone_camera"
+	    android:layout_alignParentRight="true" />	
+    
+	<View
+	    android:id="@+id/socialInfo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="120dp"
+	    android:layout_below="@+id/logo"
+	    android:background="@color/dark_gray"
+	    android:layout_centerHorizontal="true" />
+
+	<ScrollView
+	    android:id="@+id/scrollContent"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentRight="true"
+	    android:layout_below="@+id/socialInfo" >
+
+ 			<TableLayout
+                android:id="@+id/tableLayoutList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+	</ScrollView>
+
+	<ImageButton
+	    android:id="@+id/gplusImage"
+	    android:layout_width="120dp"
+	    android:layout_height="120dp"
+	    android:layout_above="@+id/scrollContent"
+	    android:layout_alignParentLeft="true"
+	    android:src="@drawable/foto_usuario"
+	    android:background="@color/dark_gray" />
+
+	<TextView
+	    android:id="@+id/gplusName"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/gplusImage"
+	    android:layout_toRightOf="@+id/gplusImage"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginTop="10dp"
+	    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	<TextView
+	    android:id="@+id/userLevel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/gplusName"
+	    android:layout_below="@+id/gplusName"
+	    android:textColor="@color/gray"
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<TextView
+	    android:id="@+id/userTraining"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignLeft="@+id/userLevel"
+	    android:layout_below="@+id/userLevel"
+	    android:textColor="@color/green"
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+	<ImageView
+	    android:id="@+id/achievement"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:src="@drawable/achievement1"
+	    android:background="@color/transparent"
+	    android:visibility="invisible" />
+
+</RelativeLayout>

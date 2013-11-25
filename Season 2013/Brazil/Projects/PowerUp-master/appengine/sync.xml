@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<project default="main" basedir=".">
+
+	<property name="target.webapp.dir"
+		value="${basedir}/target/appengine-jersey-guice-1.0.0-LOCAL" />
+	<property name="src.webapp.dir" value="${basedir}/src/main/webapp" />
+  
+	<target name="main">
+   
+		<sync verbose="true" todir="${target.webapp.dir}"
+			includeEmptyDirs="true">
+			<fileset dir="${src.webapp.dir}" />
+			<preserveintarget>
+				<include name="WEB-INF/lib/**" />
+				<include name="WEB-INF/classes/**" />
+				<include name="WEB-INF/appengine-generated/**" />
+			</preserveintarget>
+		</sync>
+
+		<sync verbose="true" todir="${target.webapp.dir}/WEB-INF/classes">
+			<fileset dir="${basedir}/target/classes" />
+		</sync>	
+
+	</target>
+
+</project>

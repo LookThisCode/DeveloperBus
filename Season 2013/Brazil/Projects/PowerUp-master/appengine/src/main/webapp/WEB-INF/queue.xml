@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<queue-entries>
+
+<!--     <queue>
+        <name>image-export-queue</name>
+        <rate>5/s</rate>
+        <retry-parameters>
+            <task-retry-limit>7</task-retry-limit>
+        </retry-parameters>
+    </queue>
+    <queue>
+        <name>test-pull-queue</name>
+        <mode>pull</mode>
+        <acl>
+            <user-email>1097000816937-ve6nv8828qn9n6lrbmmsgv0ne1t7s0rr@developer.gserviceaccount.com</user-email>     
+            <writer-email>1097000816937-ve6nv8828qn9n6lrbmmsgv0ne1t7s0rr@developer.gserviceaccount.com</writer-email> 
+        </acl>
+    </queue>    
+ -->
+</queue-entries>
