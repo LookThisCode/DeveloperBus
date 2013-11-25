@@ -1,0 +1,520 @@
+/*
+Theme Name: GamEscola
+Theme URI: 
+Author: GamEscola - Hussani - Michelli - Tiago - Silvia
+Author URI: https://plus.google.com/u/0/b/112977374414232772041/
+Description: Aplicação online que visa promover a melhoria no ensino básico
+Version: 0.1
+
+*/
+
+*{
+	font-family: 'Open Sans', sans-serif;
+}
+
+header{
+	background: none repeat scroll 0 0 #F5F5F5;
+	border-bottom-right-radius: 450px 10px;
+	border-bottom-left-radius: 450px 10px;
+	height: 80px;
+	width: 100%;	
+	box-shadow: 0 -4px 8px -8px rgba(0,0,0,0.15) inset;
+}
+
+.cont-home{
+	position: relative;
+	top: 60px;
+}
+
+.logo img{
+	height: 50px;
+	margin-top: 15px;
+}
+
+.orbit-bullets, .orbit-slide-number, .orbit-timer{
+	display: none !important;
+}
+
+.cont-slider{
+	position: relative;	
+}
+
+.text-slider{
+	position: absolute;
+	top: 60px;
+	left: 10%;
+}
+
+.text-slider p{
+	font-size: 3.2vw;
+	color: #099e57;
+	margin-bottom: 0px;
+	letter-spacing: -2px;
+	line-height: 1.6;
+}
+
+.text-slider p:first-child{
+	margin-left: 20px;
+}
+
+.text-slider p:last-child{
+	margin-left: 40px;
+}
+
+.dados-land{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h2{
+	font-size: 30px;
+	color: #099e57;
+	font-weight: 300;
+	letter-spacing: -2px;
+	font-family: 'Open Sans', sans-serif !important;
+}
+
+.txt-dados p{
+	font-size: 12px;
+	color: #222222;
+	line-height: 1.6;
+}
+
+.form-contato{
+	text-align: center
+}
+
+.form-contato label{
+	display: none;
+}
+
+.form-contato input, .form-contato textarea{	
+	background: #F5F5F5;
+	border: none;
+	border-radius: 5px 5px 5px 5px;
+	color: #333333;	
+	height: 40px;
+}
+
+.form-contato input:after{
+	content: '*';
+	color: #df4a32;
+}
+
+.form-contato textarea{
+	height: 107px;
+	margin-bottom: 10px;
+}
+
+.body-feed p{
+	border-bottom: 1px dotted #dddddd;
+	margin: 10px 0px;
+	padding-bottom: 10px;
+}
+
+#bt-contato{
+	margin-top: 5px;
+	color: #FFFFFF;
+	width: 100%;
+	background: #e45f56;	
+	background:-webkit-gradient(linear, left top, left bottom, from(#eb8982), to(#e45f56));
+	background:-moz-linear-gradient(top, #eb8982, #e45f56);
+}
+
+#bt-contato:hover{
+	background: #DD352A;
+	background:-webkit-gradient(linear, left top, left bottom, from(#e45f56), to(#dd352a));
+	background:-moz-linear-gradient(top, #e45f56, #dd352a);
+}
+
+footer{
+	background: #F5F5F5;
+	padding: 20px 0px;
+	position: relative;
+	top: 70px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.foot_feed{
+	background: #F5F5F5;
+	color: #777777;
+	text-align: center;	
+	padding: 10px 0px;
+}
+
+.loginform label{
+	display: none;
+}
+
+#wp-submit{
+	background: #df4a32;
+	color: #ffffff;
+	width: 10%;
+	float: left;
+	margin-top: 3px;
+	padding: 3px 0px;
+}
+
+.login_g{
+	background: #df4a32;
+	border-radius: 5px;
+	color: #FFFFFF;
+	padding: 12px 30px 12px 2px;
+	position: relative;
+	top: 6px;
+}
+
+.login_g:hover{
+	color: #FFFFFF;
+	/*text-decoration: underline;*/
+}
+
+.login_g:before{
+	background: none repeat scroll 0 0 #CE3E26;
+	border-radius: 5px;
+	content: "g+";
+	padding: 12px;
+	text-align: center;
+	margin-right: 20px;
+}
+
+footer section{
+	color: #777777;
+	text-align: center;
+}
+
+.log-dados h2{
+	font-size: 14px;
+	color: #222222;
+	letter-spacing: 0px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	/*display: inline;*/
+}
+
+.user-data span p{
+	font-size: 12px;
+	margin-bottom: 0px;
+}
+
+.user-data{
+	text-align: right;
+	padding-top: 12px;
+}
+
+.user-data span{
+	float: left;
+}
+
+.user-data img.avatar{
+	margin-left: 15px;
+	float: left;
+	padding-right: 10px;
+	border-right: 1px solid #d7d7d7;
+	margin-top: -12px;
+	padding-top: 12px;
+}
+
+.award{
+	text-align: left;
+}
+
+.award img{
+	margin-left: 15px;
+	float: left;
+	padding-right: 10px;
+	height: 50px;
+}
+
+.prem{
+	font-size: 14px;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+
+.prem-num{
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.log-g{
+	text-align: right;
+	margin-top: 25px;
+}
+
+.log-g:hover{
+	color: #FFFFFF;
+}
+
+.log-out{
+	font-size: 12px;
+	color: #222222;
+}
+
+.log-out:hover{
+	text-decoration: underline;
+	color: #222222;
+}
+
+.int-home{
+	background: url('images/fundo-inside.jpg') top center no-repeat;
+	background-size: cover;
+	position: relative;
+	top: 70px;	
+}
+
+.fundo-int{
+	background: rgba(255,255,255,0.8);
+	padding-top: 20px;
+	position: relative;
+	overflow-x: hidden;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.fundo-int h2{
+	font-size: 30px;
+	color: #222222;
+	margin: 10px 0px 0px 32px;
+	border-bottom: 2px solid #f7b30b;
+	width: 80%;
+	padding-left: 0px;
+}
+
+.icon-som{
+	background: #d43f36;
+	padding: 15px 10px;
+	border-radius: 80px;
+	cursor: pointer;
+}
+
+.sound-bl{
+	margin-top: 22px;
+	text-align:center;
+}
+
+.sound-bl span{
+	color: #099e57;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.slide-int{
+	float: left;
+	width: 960px;
+	min-height: 100%;
+}
+
+.person {
+width: 225px;
+margin: 0 32px;
+float: left;
+}
+
+ul, li{
+	list-style: none;
+}
+
+.answ{
+	width: 4800px;
+	position: relative;
+	left: 0px;
+	display: table;
+}
+
+.bxslider {
+	width: 960px;
+}
+
+.bx-viewport {
+	min-height: 300px;
+}
+
+.bxslider .instrucoes {
+	width: 600px;
+	font-size: 36px;
+	text-align: left;
+	margin-left: 32px;
+	float: left;
+}
+
+.bxslider .instrucoes p:last-child {
+	font-size: 14px;
+}
+
+.bxslider .iniciar_jogo {
+	font-size: 36px;
+	display: block;
+	width: 296px;
+	float: right;
+	margin-right: 15px;
+}
+
+.bxslider .iniciar_jogo img {
+	display: block;
+	margin-left: 48px;
+}
+
+.bxslider li {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.bxslider li.pergunta_item img {
+	margin: 0 45px;
+	cursor: pointer;
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+
+.bxslider li.pergunta_item img:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
+	transform-origin: center center;
+}
+
+.slide-int h3{
+	font-size: 36px;
+	color: #222222;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+
+.small_bee {
+	width: 37px;
+	height: 36px;
+	position: absolute;
+	left: -40px;
+}
+
+.top-ranking div:first-child{
+	padding-left: 32px;
+}
+
+.medal-awd{
+	text-align:center;
+	margin: 50px 0px;
+}
+
+.medals {
+	width: 960px;
+}
+
+.medals h3{
+	font-size: 25px;
+}
+
+.foot-int{
+	position: relative;
+	height: 112px;
+	background: url('images/etapas.png') top center no-repeat;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+
+@media only screen and (min-width: 640px) {
+	.button-slider{
+		position: absolute;
+		bottom: 40px;
+		left: 10%;
+	}
+	
+	.button-slider a{
+		color: #FFFFFF;
+		font-size: 24px;
+		background: #df4a32;
+		padding: 16px 42px;
+		border-radius: 5px;
+	}
+	
+	.txt-dados{
+		padding-right: 20px;
+	}
+	
+	.loginform input{
+		width: 40%;
+		float: left;
+		margin-right: 20px;
+		background: #FFFFFF;
+		border: none;
+		border-radius: 5px 5px 5px 5px;
+		color: #333333;	
+	}	
+		
+}
+
+@media only screen and (max-width: 639px) {
+	header{
+		height: 180px;
+		position: relative !important;
+	}
+	
+	.logo{
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	
+	.logo img{
+		height: 30px;
+	}
+	
+	.form-contato{
+		padding: 0px 10px;
+	}
+	
+	.button-slider{
+		text-align: center;
+		margin: 10px 0px;
+	}
+	
+	.button-slider a{
+		color: #FFFFFF;
+		font-size: 24px;
+		background: #df4a32;
+		padding: 16px 42px;
+		border-radius: 5px;
+		display: block;
+	}
+	
+	.cont-home{
+		top: 0px;
+	}
+	
+	.loginform{
+		text-align: center;
+	}
+	
+	.loginform p{
+		margin-bottom: 5px;
+	}
+	
+	.loginform input{
+		font-size: 12px;
+		margin-right: 20px;
+		background: #FFFFFF;
+		border: none;
+		border-radius: 5px 5px 5px 5px;
+		color: #333333;	
+	}
+	
+	footer{		
+		top: 0px;
+		padding: 20px 10px;
+	}
+		
+}
+
+li.mood{
+	width: 960px !important;
+	text-align: center;
+	margin: 40px 0px;
+}
+
+li.mood section{
+	margin-bottom: 60px;
+}

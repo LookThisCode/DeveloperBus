@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<FileZilla3>
+    <Servers>
+        <Server>
+            <Host>162.243.107.164</Host>
+            <Port>22</Port>
+            <Protocol>1</Protocol>
+            <Type>0</Type>
+            <User>gamescola</User>
+            <Pass>gamescola3124</Pass>
+            <Logontype>1</Logontype>
+            <TimezoneOffset>0</TimezoneOffset>
+            <PasvMode>MODE_DEFAULT</PasvMode>
+            <MaximumMultipleConnections>0</MaximumMultipleConnections>
+            <EncodingType>Auto</EncodingType>
+            <BypassProxy>0</BypassProxy>
+            <Name>gamescola</Name>
+            <Comments></Comments>
+            <LocalDir></LocalDir>
+            <RemoteDir></RemoteDir>
+            <SyncBrowsing>0</SyncBrowsing>gamescola
+        </Server>
+    </Servers>
+</FileZilla3>
