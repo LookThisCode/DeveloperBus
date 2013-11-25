@@ -1,0 +1,149 @@
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3>Criar Nova Quest</h3>
+    </div>
+    <div class="modal-body">
+      <div class="row-fluid">
+        <div class="span9">
+          <label>Quest</label>
+          <input type="text" placeholder="Nome da Quest">
+        </div>
+        <div class="span3">
+          <label>Categoria</label>
+          <input type="text" placeholder="Escolha uma Categoria">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span9"><a href="" ng-click="">Descrição</a></div>
+        <div class="span3">
+          <label>Categoria</label>
+          <input type="text" placeholder="Escolha uma Categoria">
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span9">
+          <div class="row-fluid">
+            <label>Adicionar Tarefas</label>
+            <div class="span9"><input type="text" placeholder="+ Task"></div>
+            <div class="span3"><input type="text" placeholder="Peso XP"></div>
+          </div>
+          <div class="row-fluid">
+            <ul>
+              <li>
+                <div class="span9">Desenvolver o mockup do projeto</div>
+                <div class="span3">+20</div>
+              </li>
+              <li>
+                <div class="span9">Projeto de interface</div>
+                <div class="span3">+80</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="span3">
+          <label>Notificar Usuários</label>
+          <img/><img/><img/>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">Criar Nova Quest</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+
+<div class="container projeto">
+  <div class="row">
+    <div class="span12">
+      <div class="container">
+        <h1 class="pull-left">
+          <a href="" ng-click="isCollapsed = !isCollapsed" class="expand">
+            Projeto: {{project.name}}
+            <i ng-class="{true:'icon-chevron-down', false:'icon-chevron-up'}[isCollapsed]"></i>
+          </a>
+        </h1>
+        <a href="" class="pull-right nova-quest" ng-click="newQuestBox()">Criar Nova Quest</a>
+      </div>
+      <div collapse="isCollapsed">
+        <div class="row description">
+          <div class="span8">
+            {{project.description}}
+          </div>
+          <div class="span4">
+            <div class="row-fluid">
+              <img ng-src="{{user.picture}}" alt="" ng-repeat="user in project.users">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid no-expand">
+        <div class="span8"><progress percent="project.progress"></progress></div>
+        <div class="span4 deadline">Deadline: 30/11/2013</div>
+      </div>
+      <hr>
+    </div>
+  </div>
+  <div class="row" masonry-wall-dir=".quest" masonry-wall-options="{gutter: 0}">
+    <section class="span6 quest card" ng-class="{true:'done', false:''}[quest.progress == 100]" ng-repeat="quest in project.quests" masonry-item-dir="">
+        <header>
+          <div class="row-fluid">
+            <div class="span7">
+              <progress percent="quest.progress"></progress>
+            </div>
+            <div class="reward">{{quest.xp}}</div>
+          </div>
+          <div class="row-fluid">
+            <h1>{{quest.name}}</h1>
+          </div>
+        </header>
+        <div collapse="questCollapse(quest.progress)">
+          <div class="row-fluid">
+            <ul>
+              <li class="task" ng-repeat="task in quest.tasks">
+                  <input type="checkbox" ng-model="task.id" ng-checked="task.done" ng-click="quest.progress = quest.progress + task.progress;
+                              project.progress = project.progress + (100/project.progressFactor)">
+                  <span>{{task.name}}</span>
+                  <img ng-src="{{task.user.picture}}" alt="{{task.user.name}}" ng-show="task.user.picture != null" class="pull-right">
+                  <span class="pull-right" ng-hide="task.user.picture != null"><input type="checkbox" ng-click=""> Eu faço</span>
+                  <span class="pull-right xp">+{{task.xp}}</span>
+              </li>
+            </ul>
+          </div>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="flag" fromnow="" day="{{quest.deadline}}" from="YYYY-MM-DD" to="DD/MM"></div>
+              </div>
+            <div class="span6">
+              <a moment="" day="{{quest.deadline}}" from="YYYY-MM-DD" to="DD/MM" href="" class="date-icon"></a>
+              <a href="" ng-click="attCollapsed = 'false'; commentCollapsed = !commentCollapsed" class="comment-icon">Comentários</a>
+              <a href="" ng-click="commentCollapsed = 'false'; attCollapsed = !attCollapsed" class="attachment-icon">Anexos</a>
+            </div>
+          </div>
+          <div class="row-fluid comments" collapse="commentCollapsed">
+            <ul>
+              <li class="comment" ng-repeat="comment in quest.comments">
+                <img ng-src="{{comment.user.picture}}" alt="{{comment.user.name}}">
+                <span>{{comment.content}}</span>
+                <br class="clear">
+              </li>
+            </ul>
+          </div>
+          <div class="row-fluid attachments" collapse="attCollapsed">
+            <ul>
+              <li class="attachment" ng-repeat="attachment in quest.attachments">
+                <div class="row-fluid">
+                  <div class="span6">
+                    <span class="row-fluid">{{attachment.title}}</span>
+                    <span class="row-fluid">{{attachment.name}}</span>
+                  </div>
+                  <div class="span4">
+
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  </div>
+</div>

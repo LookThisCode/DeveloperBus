@@ -1,0 +1,251 @@
+{
+  "id": 1,
+  "name": "Google Dev Bus",
+  "description": "Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
+  "xp": 100,
+  "progress": 50,
+  "users":[{
+      "id": 1,
+      "name": "Ana",
+      "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Jean",
+      "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+    }],
+  "quests": [{
+      "id": 1,
+      "progress": 70,
+      "name": "Quest legal",
+      "description": "",
+      "xp": 100,
+      "deadline": "2013-11-30",
+      "attachments": [{
+          "id": 1,
+          "title": "Título do anexo",
+          "name": "anexo.pdf",
+          "when": "2013-11-22",
+          "type": "pdf",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        }],
+      "comments": [{
+          "id": 1,
+          "content": "Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. ",
+          "when": "2013-11-22",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        },
+        {
+          "id": 1,
+          "content": "Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. ",
+          "when": "2013-11-22",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        },
+        {
+          "id": 1,
+          "content": "Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.",
+          "when": "2013-11-22",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        }],
+      "tasks": [{
+          "id": 1,
+          "name": "Desenvolver Mockup do Projeto",
+          "done": true,
+          "xp": 20,
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        }]
+    },
+    {
+      "id": 2,
+      "progress": 23,
+      "name": "Quest 2",
+      "description": "",
+      "xp": 100,
+      "deadline": "2013-11-30",
+      "attachments": [{
+          "id": 1,
+          "title": "Título do anexo",
+          "name": "anexo.pdf",
+          "when": "2013-11-22",
+          "type": "pdf",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        }],
+      "comments": [{
+          "id": 1,
+          "content": "Quest da hora",
+          "when": "2013-11-22",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        }],
+      "tasks": [{
+          "id": 1,
+          "name": "Desenvolver Mockup do Projeto",
+          "done": true,
+          "xp": 20,
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        }]
+    },
+    {
+      "id": 2,
+      "progress": 23,
+      "name": "Quest 2",
+      "description": "",
+      "xp": 100,
+      "deadline": "2013-11-30",
+      "attachments": [{
+          "id": 1,
+          "title": "Título do anexo",
+          "name": "anexo.pdf",
+          "when": "2013-11-22",
+          "type": "pdf",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        }],
+      "comments": [{
+          "id": 1,
+          "content": "Quest da hora",
+          "when": "2013-11-22",
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        }],
+      "tasks": [{
+          "id": 1,
+          "name": "Desenvolver Mockup do Projeto",
+          "done": true,
+          "xp": 20,
+          "user": {
+            "id": 1,
+            "name": "Ana",
+            "picture": "https://lh4.googleusercontent.com/-E8IEvJ7crg0/AAAAAAAAAAI/AAAAAAAAAAA/8LCdDrfyYDQ/s46-c-k-no/photo.jpg"
+          }
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        },
+        {
+          "id": 2,
+          "name": "Frontend",
+          "done": false,
+          "user": {},
+          "xp": 80
+        }]
+    }]
+}

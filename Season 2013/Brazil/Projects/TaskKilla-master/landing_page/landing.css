@@ -1,0 +1,108 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header, .marketing, .footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0px;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 7px 24px;
+}
+
+/* Make something awesome! */
+.main-well h1 {
+  margin-top: 0px;
+  font: 40px Arial;
+  color: #666;
+}
+.main-well div {
+  line-height: 110%;
+  width: 270px;
+  float: right;
+  font: 18px Arial;
+  color: #666;
+  margin-top: 60px;
+}
+.main-cta {
+  background-color: #3366cc;
+  border-radius: 0px;
+  color:#fff;
+  font: 20px Arial;
+  height: 40px;
+
+}
+
+.main-well {
+  background-image:url('imgs/banner-bg.jpg');
+  width: 750px;
+  height: 350px;
+  margin-left: 38px;
+}
+
+.container {
+  background-color: #fff;
+  float: none;
+  box-shadow:0 4px 8px #666;
+  -moz-box-shadow:0 4px 8px #666;
+  -webkit-box-shadow:0 4px 8px #666;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+.header {
+  margin: 35px 0px 43px 0px;
+}
+
+.header .login {
+  color: #009933;
+  font: 18px Arial;
+  padding: 15px 23px 0px 0px;
+}
+
+.features {
+  text-align: center;
+}
+.features .feature img{
+  padding-bottom: 30px; 
+}
+.features .feature strong {
+  font: bold 18px Arial;
+  color: #666;
+}
+
+.cta-button {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+}
+
+.cta-button a {
+  background-image: url('imgs/button-start.png');
+  width: 235px;
+  height: 52px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.cta-button a:hover {
+  background-image: url('imgs/button-start_hover.png');
+}
