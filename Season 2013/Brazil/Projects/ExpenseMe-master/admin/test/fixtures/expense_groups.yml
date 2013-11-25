@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startdate: 2013-11-22 22:33:12
+  enddate: 2013-11-22 22:33:12
+  budget: 9.99
+
+two:
+  startdate: 2013-11-22 22:33:12
+  enddate: 2013-11-22 22:33:12
+  budget: 9.99

@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  host: localhost
+  username: felipe
+  database: expenseme-dev
+
+test:
+  adapter: postgresql
+  host: localhost
+  username: felipe
+  database: expenseme-test
+
+production:
+  adapter: postgresql
+  host: localhost
+  username: root
+  database: expenseme-prod

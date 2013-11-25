@@ -1,0 +1,7 @@
+<factorypath>
+    <factorypathentry kind="PLUGIN" id="com.amazonaws.eclipse.simpleworkflow" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/br.com.easyexpense/libs/dagger-compiler-1.1.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/br.com.easyexpense/libs/javax.inject.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/br.com.easyexpense/libs/dagger-1.1.0.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/br.com.easyexpense/libs/javawriter-1.0.5.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">expense.me</string>
+    <string name="content_column">Content</string>
+    <string name="page_referrers">Referrers</string>
+    <string name="refresh_action">Refresh</string>
+    <string name="logout_action">Logout</string>
+    <string name="page_news">News</string>
+    <string name="page_users">Users</string>
+    <string name="page_checkins">Check In\'s</string>
+    <string name="title_column">Title</string>
+    <string name="location_column">Location</string>
+    <string name="user_column">User</string>
+    <string name="date_column">Date</string>
+    <string name="error_loading_users">Loading users failed</string>
+    <string name="error_loading_news">Loading news failed</string>
+    <string name="error_loading_checkins">Loading check-ins failed</string>
+    <string name="no_users">No Users</string>
+    <string name="no_news">No News</string>
+    <string name="avatar">Avatar</string>
+    <string name="choose">Choose</string>
+
+    <!-- AuthenticatorActivity -->
+    <string name="label_email_address">Email Address</string>
+    <string name="label_password">Senha</string>
+    <string name="label_sign_in">Entrar</string>
+    <string name="message_signing_in">Signing in…</string>
+    <string name="blank_field_warning">Please populate this field</string>
+    <string name="signup_link">New to Bootstrap? &lt;a href=http://www.androidbootstrap.com>Click here&lt;/a> to learn more.</string>
+    <string name="message_bad_credentials">Email Address or Password is incorrect</string>
+    <string name="message_auth_failed">Please enter a valid password</string>
+    <string name="message_auth_failed_new_account">Please enter a valid email address &amp; password</string>
+    <string name="timer_running">Timer is running</string>
+    <string name="timer_is_paused">Timer is paused</string>
+    <string name="stop">Stop</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="timer">Timer</string>
+    <string name="home">Home</string>
+    <string name="cadastrar_gasto">Cadastrar gasto</string>
+    <string name="estabelecimentos_conveniados">Estabelecimentos</string>
+    <string name="sair">Sair</string>
+    <string name="hist_rico_de_gastos">Histórico de gastos</string>
+    <string name="tra_ar_rota">Traçar rota</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="por_favor_preencha_a_data_da_despesa">Por favor, preencha a data da despesa.</string>
+    <string name="por_favor_preencha_o_valor_">Por favor, preencha o valor.</string>
+    <string name="por_favor_preencha_o_local_da_despesa">Por favor, preencha o local da despesa</string>
+    <string name="por_favor_preencha_a_descri_o">Por favor, preencha a descrição</string>
+    <string name="data_inv_lida">Data inválida</string>
+    <string name="por_favor_insira_um_pre_o_v_lido">Por favor, insira um preço válido</string>
+    <string name="despesa_cadastrada_com_sucesso">Despesa cadastrada com sucesso!</string>
+    <string name="por_favor_insira_uma_imagem_com_a_nota_fiscal_do_seu_gasto">Por favor, insira uma imagem com a nota fiscal do seu gasto.</string>
+    <string name="ocorreu_um_erro_ao_enviar_seu_gasto_">Ocorreu um erro ao enviar seu gasto.</string>
+
+
+</resources>
