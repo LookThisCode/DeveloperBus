@@ -1,0 +1,205 @@
+{%extends "template.html"%}
+{%block body%}
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyAom9Y_NulAT3FThzdwDrHg2CTLFS3fODA"></script>
+    <script type="text/javascript" src="/js/map.js"></script>
+    <script type="text/javascript" src="/js/jquery.timer.js"></script>
+
+    <!-- onLoad Modal-->
+    <script type="text/javascript">
+
+        function updateModalOffer(deliverId){
+          $.get('listOffers?deliverId='+deliverId, function(data){
+                  $('#listOffers').html(data);           
+              });
+        }
+
+        function applyConfirm(offerId){
+            $.post("confirmOffer", { offerId: offerId })
+        }
+
+        function updateDeliverInfo(deliverId){
+          $.get('deliverInfo?deliverId='+deliverId, function(data){
+            $('#deliver-info').html(data);           
+          }); 
+        }
+
+        $(window).load(function(){
+            $('#btnRefresh').click(function(){  
+                 $.get('listDeliveries', function(data){
+                  $('#deliveryTable').html(data);           
+              });
+            });
+
+            $('#btnNewFrete').click(function(){  
+                 $.get('createDeliverFee', function(data){
+                  $('#modal-content').html(data);           
+              });
+            });
+
+            var requestDeliveries = function(){
+                $.get('listDeliveries', function(data){
+                  $('#deliveryTable').html(data);           
+              });
+            }
+
+            var timer = $.timer(requestDeliveries);
+
+            timer.set({ time : 10000, autostart : true });
+
+            requestDeliveries();
+
+        });
+
+    </script>
+
+
+
+  <style>
+      #map-canvas {
+        height: 100% !important;
+        min-width: 400px;
+        min-height: 400px;
+        margin: 0px;
+        padding: 0px;
+        width: 100% !important;
+        display: block;
+      }
+    </style>
+
+
+  </head>
+
+
+
+ <body>
+
+    
+
+   <div class="container">
+
+
+
+    <div class="row">
+      
+      <div class="col-xs-12 col-sm-6 col-md-8" style="position: relative;">
+        <div id="map-canvas" ></div>
+      </div>
+      
+      <div class="col-xs-6 col-md-4 text-center">
+
+        <div id="deliver-info"></div>
+
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
+
+    <p class="text-center">
+    <button type="button" class="btn2 btn-success " data-toggle="modal" data-target="#ModalFrete" id="btnNewFrete">Fazer novo frete</button>  
+    </p>
+    </div>
+    <div class="col-xs-6 col-md-4"></div>
+
+    <div class="container">
+    <div class="row">    
+      <div class="table-responsive" id="deliveryTable"></div>
+    </div>
+    </div>
+
+      <!-- Modal de Cadastro -->
+
+     
+
+        <!-- Modal -->
+        <div class="modal fade" id="Oferta" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Profissionais disponíveis</h4>
+              </div>
+
+              <div class="modal-body">
+
+              				<div id="listOffers">
+
+
+
+                          
+                          <!--                          
+                          <table class="table table-condensed">    
+                              
+                              <tr>
+                                
+                                <th>Nome do Profissional</th>
+                                <th>Última localização</th>                                
+                                <th class="text-right">Status</th>
+                                <th></th>
+                                <th></th>
+                              </tr>
+
+                              <tr>
+                                  
+                                  <td>Usuário</td>
+                                  <td>OfferInfo</td>                                  
+                                  <td>Última localização</td>
+                                  <td>Status</td>
+                                  <td><img src="/images/user.png"></td>
+                              </tr>
+
+                          
+                          </table>
+                        -->
+
+                      </div>
+                          
+              </div>
+              <!--<div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+        <!-- Modal de Solicitação de Frete -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="ModalFrete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Faça a solicitação do Frete</h4>
+              </div>
+
+              <div class="modal-body">
+
+                      <div id="modal-content">
+                        
+
+                      </div>
+                        
+                        
+                          
+              </div>
+              <!--<div class="modal-footer">
+               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div> -->
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+       
+
+    </div><!-- /.container -->
+
+
+    </div>
+  </body>
+</html>
+
+
+{%endblock%}

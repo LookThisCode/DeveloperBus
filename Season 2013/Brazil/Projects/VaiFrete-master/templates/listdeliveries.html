@@ -1,0 +1,31 @@
+<table class="table table-striped">  
+<tr>
+    <th>Nº do Pedido</th>
+    <th>Endereço para entrega</th>
+    <th>Detalhes</th>
+    <th class="text-right">Status</th>
+
+</tr>
+ 
+{%for deliver in deliveries%}
+
+
+    <tr>
+    	<td>{{deliver.key.id}} </td>
+        <td>{{deliver.destination_address|escape}}</td>
+        <td>{{deliver.item|escape}}</td>
+        
+        {% if deliver.state == 'Pendente' and deliver.offers > 0 %}
+      		<td><p class="text-right">
+                <button type="button" data-toggle="modal" data-target="#Oferta" id="btnNewOffer" class="btn btn-danger" onClick="updateModalOffer({{deliver.key.id}})"><a href="#">Ofertas {{deliver.offers}}</a>
+                </button>
+            </p></td>
+        {% elif deliver.state == 'Pendente' %}
+            <td><p class="text-right"><button type="button" class="btn btn-danger">Aguardando...</button></p></td>
+    	{% else %}
+      		<td><p class="text-right"><button type="button" class="btn btn-waiting" onClick="updateMap({{deliver.key.id}});updateDeliverInfo({{deliver.key.id}})"><a href="#">Ver no Mapa</a></button></p></td>
+    	{% endif %}
+    </tr>
+
+{%endfor%}
+</table>

@@ -1,0 +1,23 @@
+input {
+  height: 35px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+  border-color: #666666;
+}
+
+select {
+  height: 35px;
+  line-height: 35px;
+  border-color: #666666;
+}
+
+textarea {
+  height: auto;
+  
+   border-color: #666666;
+	border-style: solid;
+	border-width: thin;
+	padding: 3px;
+}
